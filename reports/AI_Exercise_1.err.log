@@ -1,0 +1,80 @@
+Traceback (most recent call last):
+  File "C:\Users\Saeid Haji-Aghajany\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\Saeid Haji-Aghajany\anaconda3\Lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Saeid Haji-Aghajany\AppData\Roaming\Python\Python311\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Saeid Haji-Aghajany\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Saeid Haji-Aghajany\anaconda3\Lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\Saeid Haji-Aghajany\anaconda3\Lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\Saeid Haji-Aghajany\anaconda3\Lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+
+print('Hello Artificial Intelligence !')  # This will be executed first
+print(5 + 10)
+y = 20 * 5
+z = 20 / 5
+
+# Printing the result
+print(y)
+print(z)
+print("Total:", y+z)
+
+# Asking for user input
+user_name = input("Please enter your name: ")
+print("Hello, " + user_name + "!")
+
+# Asking for numeric input
+user_age = input("Please enter your age: ")
+user_age = int(user_age)  # Convert string input to an integer
+print("You are " + str(user_age) + " years old!")
+
+# Asking for multiple inputs
+user_name = input("Please enter your name: ")
+favorite_color = input("What is your favorite color? ")
+user_age = input("Please enter your age: ")
+user_age = int(user_age)  # Convert string input to an integer
+
+print(f"Your name is {user_name}, Your favorite color is {favorite_color}, and you are {user_age} years old!")
+
+------------------
+
+----- stdout -----
+Hello Artificial Intelligence !
+15
+100
+4.0
+Total: 104.0
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+Cell [1;32mIn[1], line 12[0m
+[0;32m      9[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mTotal:[39m[38;5;124m"[39m, y[38;5;241m+[39mz)
+[0;32m     11[0m [38;5;66;03m# Asking for user input[39;00m
+[1;32m---> 12[0m user_name [38;5;241m=[39m [38;5;28minput[39m([38;5;124m"[39m[38;5;124mPlease enter your name: [39m[38;5;124m"[39m)
+[0;32m     13[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mHello, [39m[38;5;124m"[39m [38;5;241m+[39m user_name [38;5;241m+[39m [38;5;124m"[39m[38;5;124m![39m[38;5;124m"[39m)
+[0;32m     15[0m [38;5;66;03m# Asking for numeric input[39;00m
+
+File [1;32m~\AppData\Roaming\Python\Python311\site-packages\ipykernel\kernelbase.py:1281[0m, in [0;36mKernel.raw_input[1;34m(self, prompt)[0m
+[0;32m   1279[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_allow_stdin:
+[0;32m   1280[0m     msg [38;5;241m=[39m [38;5;124m"[39m[38;5;124mraw_input was called, but this frontend does not support input requests.[39m[38;5;124m"[39m
+[1;32m-> 1281[0m     [38;5;28;01mraise[39;00m StdinNotImplementedError(msg)
+[0;32m   1282[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_input_request(
+[0;32m   1283[0m     [38;5;28mstr[39m(prompt),
+[0;32m   1284[0m     [38;5;28mself[39m[38;5;241m.[39m_parent_ident[[38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m],
+[0;32m   1285[0m     [38;5;28mself[39m[38;5;241m.[39mget_parent([38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m),
+[0;32m   1286[0m     password[38;5;241m=[39m[38;5;28;01mFalse[39;00m,
+[0;32m   1287[0m )
+
+[1;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+
