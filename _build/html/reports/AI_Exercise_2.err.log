@@ -18,52 +18,21 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-
-print('Hello Artificial Intelligence !')  # This will be executed first
-print(5 + 10)
-y = 20 * 5
-z = 20 / 5
-
-# Printing the result
-print(y)
-print(z)
-print("Total:", y+z)
-
-# Asking for user input
-user_name = input("Please enter your name: ")
-print("Hello, " + user_name + "!")
-
-# Asking for numeric input
-user_age = input("Please enter your age: ")
-user_age = int(user_age)  # Convert string input to an integer
-print("You are " + str(user_age) + " years old!")
-
-# Asking for multiple inputs
-user_name = input("Please enter your name: ")
-favorite_color = input("What is your favorite color? ")
-user_age = input("Please enter your age: ")
-user_age = int(user_age)  # Convert string input to an integer
-
-print(f"Your name is {user_name}, Your favorite color is {favorite_color}, and you are {user_age} years old!")
-
+# User input until valid input
+user_input = ""
+while user_input.lower() != "exit":
+    user_input = input("Type 'exit' to quit: ")
+    print("You entered:", user_input)
 ------------------
 
------ stdout -----
-Hello Artificial Intelligence !
-15
-100
-4.0
-Total: 104.0
-------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-Cell [1;32mIn[1], line 12[0m
-[0;32m      9[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mTotal:[39m[38;5;124m"[39m, y[38;5;241m+[39mz)
-[0;32m     11[0m [38;5;66;03m# Asking for user input[39;00m
-[1;32m---> 12[0m user_name [38;5;241m=[39m [38;5;28minput[39m([38;5;124m"[39m[38;5;124mPlease enter your name: [39m[38;5;124m"[39m)
-[0;32m     13[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mHello, [39m[38;5;124m"[39m [38;5;241m+[39m user_name [38;5;241m+[39m [38;5;124m"[39m[38;5;124m![39m[38;5;124m"[39m)
-[0;32m     15[0m [38;5;66;03m# Asking for numeric input[39;00m
+Cell [1;32mIn[2], line 4[0m
+[0;32m      2[0m user_input [38;5;241m=[39m [38;5;124m"[39m[38;5;124m"[39m
+[0;32m      3[0m [38;5;28;01mwhile[39;00m user_input[38;5;241m.[39mlower() [38;5;241m!=[39m [38;5;124m"[39m[38;5;124mexit[39m[38;5;124m"[39m:
+[1;32m----> 4[0m     user_input [38;5;241m=[39m [38;5;28minput[39m([38;5;124m"[39m[38;5;124mType [39m[38;5;124m'[39m[38;5;124mexit[39m[38;5;124m'[39m[38;5;124m to quit: [39m[38;5;124m"[39m)
+[0;32m      5[0m     [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mYou entered:[39m[38;5;124m"[39m, user_input)
 
 File [1;32m~\AppData\Roaming\Python\Python311\site-packages\ipykernel\kernelbase.py:1281[0m, in [0;36mKernel.raw_input[1;34m(self, prompt)[0m
 [0;32m   1279[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_allow_stdin:
