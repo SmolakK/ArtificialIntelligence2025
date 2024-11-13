@@ -17,14 +17,20 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-data
+counter = 0
+for x in data:
+    if x == 9:
+        counter += 1
+print(counter/number_of_datapoints)
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mNameError[0m                                 Traceback (most recent call last)
-Input [1;32mIn [3][0m, in [0;36m<cell line: 1>[1;34m()[0m
-[1;32m----> 1[0m [43mdata[49m
+Input [1;32mIn [3][0m, in [0;36m<cell line: 5>[1;34m()[0m
+[0;32m      3[0m     [38;5;28;01mif[39;00m x [38;5;241m==[39m [38;5;241m9[39m:
+[0;32m      4[0m         counter [38;5;241m+[39m[38;5;241m=[39m [38;5;241m1[39m
+[1;32m----> 5[0m [38;5;28mprint[39m(counter[38;5;241m/[39m[43mnumber_of_datapoints[49m)
 
-[1;31mNameError[0m: name 'data' is not defined
-NameError: name 'data' is not defined
+[1;31mNameError[0m: name 'number_of_datapoints' is not defined
+NameError: name 'number_of_datapoints' is not defined
 
