@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Lecture 5: Pracitcal approach to using machine learning with Python &#8212; Artificial Intelligence</title>
   
@@ -15,56 +14,53 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '5. AI 5';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Exercise 6: Implementation (Probability)" href="AI_Exercise_6.html" />
     <link rel="prev" title="Lecture 4: Advanced regression models" href="4.%20AI%204.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -75,28 +71,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -118,12 +109,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -138,9 +137,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="1.%20AI%201.html">
+  
   
   
   
@@ -150,12 +153,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Artificial Intelligence - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Artificial Intelligence - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -183,6 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_5.html">Exercise 5: Python Knowledge Repetition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_6.html">Exercise 6: Implementation (Probability)</a></li>
 </ul>
 
     </div>
@@ -198,7 +213,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -207,14 +222,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -336,26 +351,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -397,15 +414,15 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-5-pracitcal-approach-to-using-machine-learning-with-python">
-<h1>Lecture 5: Pracitcal approach to using machine learning with Python<a class="headerlink" href="#lecture-5-pracitcal-approach-to-using-machine-learning-with-python" title="Permalink to this heading">#</a></h1>
+<h1>Lecture 5: Pracitcal approach to using machine learning with Python<a class="headerlink" href="#lecture-5-pracitcal-approach-to-using-machine-learning-with-python" title="Link to this heading">#</a></h1>
 <section id="let-s-focus-on-the-practical-use-of-machine-learning-tools-with-python-and-without">
-<h2>Let’s focus on the practical use of machine learning tools with Python (and without)<a class="headerlink" href="#let-s-focus-on-the-practical-use-of-machine-learning-tools-with-python-and-without" title="Permalink to this heading">#</a></h2>
+<h2>Let’s focus on the practical use of machine learning tools with Python (and without)<a class="headerlink" href="#let-s-focus-on-the-practical-use-of-machine-learning-tools-with-python-and-without" title="Link to this heading">#</a></h2>
 <p><b>First, we will try to see how to understand probability with simple calculations</b></p>
 <section id="probability-of-event-based-on-the-available-data">
-<h3>Probability of event based on the available data<a class="headerlink" href="#probability-of-event-based-on-the-available-data" title="Permalink to this heading">#</a></h3>
+<h3>Probability of event based on the available data<a class="headerlink" href="#probability-of-event-based-on-the-available-data" title="Link to this heading">#</a></h3>
 <p>We are given a data, where some numbers were drawn from a basket. These are the following drawing results:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -440,7 +457,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
@@ -452,7 +469,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.08
 </pre></div>
 </div>
 </div>
@@ -474,7 +491,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1
 </pre></div>
 </div>
 </div>
@@ -488,7 +505,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
@@ -510,7 +527,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.08
 </pre></div>
 </div>
 </div>
@@ -523,11 +540,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 8, 5, 7, 2, 7, 1, 9, 6, 1, 5, 7, 5, 9, 9, 7, 9, 4, 2, 5, 7, 6,
-       5, 7, 5, 5, 6, 1, 8, 3, 1, 7, 9, 6, 3, 9, 6, 5, 9, 3, 6, 2, 5, 3,
-       9, 5, 4, 9, 3, 7, 3, 2, 5, 4, 3, 7, 8, 3, 3, 8, 2, 8, 5, 8, 1, 1,
-       8, 4, 6, 1, 2, 9, 6, 4, 9, 6, 1, 5, 8, 1, 6, 1, 4, 9, 4, 2, 8, 2,
-       3, 2, 3, 4, 8, 6, 8, 3, 8, 9, 1, 4])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([9, 5, 7, 7, 5, 5, 3, 8, 5, 4, 4, 1, 6, 8, 2, 1, 1, 2, 1, 5, 3, 8,
+       2, 5, 6, 9, 3, 4, 5, 2, 3, 5, 8, 1, 8, 9, 4, 2, 4, 7, 9, 8, 1, 3,
+       3, 2, 3, 5, 8, 9, 9, 7, 7, 3, 7, 1, 4, 4, 6, 1, 4, 2, 5, 8, 4, 2,
+       4, 2, 6, 8, 4, 2, 6, 2, 7, 6, 1, 3, 9, 5, 5, 1, 4, 2, 3, 2, 8, 2,
+       1, 9, 6, 6, 2, 5, 2, 7, 2, 2, 7, 2])
 </pre></div>
 </div>
 </div>
@@ -550,7 +567,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
 </div>
@@ -574,7 +591,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.08
 </pre></div>
 </div>
 </div>
@@ -632,48 +649,48 @@ We have lottery drawings from few weeks:</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>9</td>
-      <td>12</td>
-      <td>15</td>
-      <td>17</td>
-      <td>23</td>
-      <td>48</td>
+      <td>13</td>
+      <td>27</td>
+      <td>28</td>
+      <td>32</td>
+      <td>36</td>
+      <td>47</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>5</td>
-      <td>7</td>
-      <td>9</td>
-      <td>16</td>
-      <td>19</td>
-      <td>36</td>
+      <td>23</td>
+      <td>26</td>
+      <td>35</td>
+      <td>39</td>
+      <td>40</td>
+      <td>41</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>5</td>
-      <td>13</td>
+      <td>2</td>
+      <td>14</td>
       <td>16</td>
-      <td>19</td>
-      <td>31</td>
+      <td>26</td>
+      <td>32</td>
+      <td>36</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>6</td>
-      <td>17</td>
-      <td>31</td>
-      <td>33</td>
+      <td>4</td>
+      <td>8</td>
+      <td>19</td>
+      <td>36</td>
+      <td>44</td>
       <td>45</td>
-      <td>46</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>7</td>
-      <td>13</td>
-      <td>19</td>
-      <td>27</td>
-      <td>28</td>
+      <td>2</td>
+      <td>5</td>
+      <td>24</td>
+      <td>32</td>
       <td>43</td>
+      <td>46</td>
     </tr>
     <tr>
       <th>...</th>
@@ -686,47 +703,47 @@ We have lottery drawings from few weeks:</p>
     </tr>
     <tr>
       <th>95</th>
-      <td>13</td>
-      <td>22</td>
-      <td>30</td>
-      <td>34</td>
-      <td>41</td>
-      <td>43</td>
+      <td>2</td>
+      <td>14</td>
+      <td>35</td>
+      <td>38</td>
+      <td>39</td>
+      <td>40</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>7</td>
-      <td>17</td>
-      <td>28</td>
-      <td>36</td>
-      <td>43</td>
+      <td>9</td>
+      <td>12</td>
+      <td>13</td>
+      <td>16</td>
+      <td>30</td>
       <td>45</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>4</td>
-      <td>16</td>
-      <td>29</td>
-      <td>30</td>
-      <td>38</td>
-      <td>49</td>
+      <td>1</td>
+      <td>8</td>
+      <td>23</td>
+      <td>27</td>
+      <td>37</td>
+      <td>47</td>
     </tr>
     <tr>
       <th>98</th>
+      <td>3</td>
       <td>4</td>
-      <td>8</td>
-      <td>10</td>
-      <td>13</td>
-      <td>33</td>
-      <td>48</td>
+      <td>22</td>
+      <td>25</td>
+      <td>40</td>
+      <td>46</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>6</td>
-      <td>8</td>
-      <td>36</td>
-      <td>39</td>
-      <td>42</td>
+      <td>2</td>
+      <td>19</td>
+      <td>27</td>
+      <td>29</td>
+      <td>37</td>
       <td>47</td>
     </tr>
   </tbody>
@@ -777,148 +794,112 @@ We have lottery drawings from few weeks:</p>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <th>9</th>
+      <td>1</td>
+      <td>5</td>
       <td>9</td>
-      <td>12</td>
-      <td>15</td>
-      <td>17</td>
-      <td>23</td>
-      <td>48</td>
+      <td>13</td>
+      <td>18</td>
+      <td>41</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>5</td>
+      <th>19</th>
+      <td>4</td>
+      <td>9</td>
+      <td>20</td>
+      <td>32</td>
+      <td>33</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>3</td>
+      <td>9</td>
+      <td>30</td>
+      <td>35</td>
+      <td>39</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>9</td>
+      <td>21</td>
+      <td>23</td>
+      <td>25</td>
+      <td>26</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>1</td>
       <td>7</td>
       <td>9</td>
       <td>16</td>
-      <td>19</td>
-      <td>36</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>5</td>
-      <td>9</td>
-      <td>32</td>
-      <td>33</td>
-      <td>45</td>
-      <td>48</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>9</td>
-      <td>14</td>
-      <td>24</td>
-      <td>33</td>
-      <td>38</td>
-      <td>48</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>9</td>
-      <td>12</td>
-      <td>31</td>
-      <td>33</td>
-      <td>39</td>
-      <td>49</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>9</td>
-      <td>31</td>
-      <td>33</td>
       <td>41</td>
       <td>42</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>1</td>
+      <td>9</td>
+      <td>22</td>
+      <td>43</td>
       <td>44</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>9</td>
-      <td>20</td>
-      <td>28</td>
-      <td>34</td>
-      <td>42</td>
-      <td>43</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>9</td>
-      <td>17</td>
-      <td>18</td>
-      <td>32</td>
-      <td>40</td>
-      <td>42</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>4</td>
-      <td>9</td>
-      <td>20</td>
-      <td>26</td>
-      <td>35</td>
-      <td>43</td>
+      <td>46</td>
     </tr>
     <tr>
       <th>60</th>
+      <td>3</td>
+      <td>9</td>
+      <td>17</td>
+      <td>32</td>
+      <td>38</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>7</td>
+      <td>9</td>
+      <td>18</td>
+      <td>23</td>
+      <td>26</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>68</th>
       <td>2</td>
-      <td>4</td>
-      <td>8</td>
       <td>9</td>
       <td>23</td>
+      <td>36</td>
+      <td>42</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>1</td>
+      <td>9</td>
+      <td>24</td>
+      <td>37</td>
+      <td>43</td>
       <td>49</td>
     </tr>
     <tr>
-      <th>64</th>
+      <th>94</th>
+      <td>1</td>
       <td>9</td>
-      <td>22</td>
-      <td>24</td>
-      <td>29</td>
-      <td>30</td>
+      <td>16</td>
+      <td>19</td>
+      <td>42</td>
       <td>46</td>
     </tr>
     <tr>
-      <th>67</th>
+      <th>96</th>
       <td>9</td>
       <td>12</td>
       <td>13</td>
-      <td>14</td>
-      <td>15</td>
-      <td>46</td>
-    </tr>
-    <tr>
-      <th>69</th>
-      <td>9</td>
-      <td>20</td>
-      <td>24</td>
-      <td>34</td>
-      <td>48</td>
-      <td>49</td>
-    </tr>
-    <tr>
-      <th>72</th>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-      <td>27</td>
-      <td>41</td>
-      <td>48</td>
-    </tr>
-    <tr>
-      <th>78</th>
-      <td>1</td>
-      <td>4</td>
-      <td>9</td>
-      <td>24</td>
-      <td>32</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>8</td>
-      <td>9</td>
-      <td>11</td>
-      <td>40</td>
-      <td>47</td>
-      <td>48</td>
+      <td>16</td>
+      <td>30</td>
+      <td>45</td>
     </tr>
   </tbody>
 </table>
@@ -931,7 +912,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.16
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12
 </pre></div>
 </div>
 </div>
@@ -979,7 +960,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([0.11, 0.15, 0.11, 0.15, 0.13, 0.12, 0.1, 0.19, 0.16, 0.08, 0.06, 0.11, 0.16, 0.12, 0.13, 0.11, 0.13, 0.17, 0.12, 0.16, 0.09, 0.1, 0.11, 0.19, 0.07, 0.1, 0.09, 0.14, 0.1, 0.11, 0.15, 0.13, 0.14, 0.13, 0.09, 0.13, 0.08, 0.05, 0.14, 0.1, 0.13, 0.13, 0.08, 0.14, 0.09, 0.16, 0.08, 0.21, 0.17])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([0.15, 0.15, 0.11, 0.14, 0.08, 0.04, 0.12, 0.18, 0.12, 0.1, 0.1, 0.09, 0.12, 0.06, 0.15, 0.17, 0.14, 0.11, 0.18, 0.07, 0.15, 0.13, 0.18, 0.11, 0.11, 0.13, 0.14, 0.1, 0.1, 0.1, 0.09, 0.12, 0.11, 0.11, 0.19, 0.18, 0.16, 0.13, 0.12, 0.12, 0.11, 0.11, 0.14, 0.12, 0.11, 0.12, 0.11, 0.09, 0.13])
 </pre></div>
 </div>
 </div>
@@ -994,7 +975,7 @@ We have lottery drawings from few weeks:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 49 artists&gt;
 </pre></div>
 </div>
-<img alt="_images/4594c3deda9f06e177f27bb51ab850a6be4d571f0831737c3d0b5b44ed58a773.png" src="_images/4594c3deda9f06e177f27bb51ab850a6be4d571f0831737c3d0b5b44ed58a773.png" />
+<img alt="_images/2d20161af8ee1aefd6b2c793060d58f755b2c9bf1c472389a65ac9f2bc652e09.png" src="_images/2d20161af8ee1aefd6b2c793060d58f755b2c9bf1c472389a65ac9f2bc652e09.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1017,12 +998,12 @@ We have lottery drawings from few weeks:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 49 artists&gt;
 </pre></div>
 </div>
-<img alt="_images/3d7605e5b68fecf008d6b725a794984e6e146fcf3120fdc90a48217a181574fa.png" src="_images/3d7605e5b68fecf008d6b725a794984e6e146fcf3120fdc90a48217a181574fa.png" />
+<img alt="_images/f420d802876a019563b17016f754807278a59f232f57d9e9a939281915ed7785.png" src="_images/f420d802876a019563b17016f754807278a59f232f57d9e9a939281915ed7785.png" />
 </div>
 </div>
 </section>
 <section id="let-s-use-python-to-make-a-simulation-of-some-event">
-<h3>Let’s use Python to make a simulation of some event<a class="headerlink" href="#let-s-use-python-to-make-a-simulation-of-some-event" title="Permalink to this heading">#</a></h3>
+<h3>Let’s use Python to make a simulation of some event<a class="headerlink" href="#let-s-use-python-to-make-a-simulation-of-some-event" title="Link to this heading">#</a></h3>
 <p>This way we can simulate even very complex situations with Python and calculate probability of occurences.</p>
 <p>Let’s start with coin toss:</p>
 <div class="cell docutils container">
@@ -1035,7 +1016,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.51
 </pre></div>
 </div>
 </div>
@@ -1053,10 +1034,10 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1f81d49f580&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x2704bc5e2d0&gt;]
 </pre></div>
 </div>
-<img alt="_images/b45863594205ad2f95c192bfe69e172989542c7e8080da7c767e2abb028cd1c4.png" src="_images/b45863594205ad2f95c192bfe69e172989542c7e8080da7c767e2abb028cd1c4.png" />
+<img alt="_images/76c66cdfef0f648446820d49987457965cdc6d57ca8ca16667b02a50b9094aae.png" src="_images/76c66cdfef0f648446820d49987457965cdc6d57ca8ca16667b02a50b9094aae.png" />
 </div>
 </div>
 <p>Now, let’s calculate probability of winning in roulette while always betting on black.</p>
@@ -1095,15 +1076,15 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/9d8fec12e117242f0f438117fd800a3ab927993c60bc580c4676c206a83eb72d.png" src="_images/9d8fec12e117242f0f438117fd800a3ab927993c60bc580c4676c206a83eb72d.png" />
+<img alt="_images/b95b760fe0cd7a15defa2a22746cf8d6862feb14b8e639c34840c9bde157a54c.png" src="_images/b95b760fe0cd7a15defa2a22746cf8d6862feb14b8e639c34840c9bde157a54c.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="i-hope-that-using-python-to-calculate-probabilities-is-clear-now">
-<h2>I hope that using Python to calculate probabilities is clear now.<a class="headerlink" href="#i-hope-that-using-python-to-calculate-probabilities-is-clear-now" title="Permalink to this heading">#</a></h2>
+<h2>I hope that using Python to calculate probabilities is clear now.<a class="headerlink" href="#i-hope-that-using-python-to-calculate-probabilities-is-clear-now" title="Link to this heading">#</a></h2>
 <section id="let-s-move-to-how-to-use-linear-regression-and-scikit-learn-library-in-python">
-<h3>Let’s move to how to use Linear Regression and scikit-learn library in Python<a class="headerlink" href="#let-s-move-to-how-to-use-linear-regression-and-scikit-learn-library-in-python" title="Permalink to this heading">#</a></h3>
+<h3>Let’s move to how to use Linear Regression and scikit-learn library in Python<a class="headerlink" href="#let-s-move-to-how-to-use-linear-regression-and-scikit-learn-library-in-python" title="Link to this heading">#</a></h3>
 <p>First we start with importing the library</p>
 <p>Let’s define some exemplary data</p>
 <div class="cell docutils container">
@@ -1120,7 +1101,7 @@ We have lottery drawings from few weeks:</p>
 <p>Also, we can asses our model on its performance using one of the metrics:</p>
 </section>
 <section id="now-let-s-do-a-bit-more-complex-model-for-multiple-linear-regression">
-<h3>Now let’s do a bit more complex model for multiple linear regression<a class="headerlink" href="#now-let-s-do-a-bit-more-complex-model-for-multiple-linear-regression" title="Permalink to this heading">#</a></h3>
+<h3>Now let’s do a bit more complex model for multiple linear regression<a class="headerlink" href="#now-let-s-do-a-bit-more-complex-model-for-multiple-linear-regression" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sample dataset</span>
@@ -1142,7 +1123,7 @@ We have lottery drawings from few weeks:</p>
 <p>Using that data we can now evaluate our model better</p>
 </section>
 <section id="let-s-do-even-more-complex-example-with-a-larger-dataset-of-california-house-market-prices">
-<h3>Let’s do even more complex example with a larger dataset of California House Market Prices<a class="headerlink" href="#let-s-do-even-more-complex-example-with-a-larger-dataset-of-california-house-market-prices" title="Permalink to this heading">#</a></h3>
+<h3>Let’s do even more complex example with a larger dataset of California House Market Prices<a class="headerlink" href="#let-s-do-even-more-complex-example-with-a-larger-dataset-of-california-house-market-prices" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1170,7 +1151,7 @@ We have lottery drawings from few weeks:</p>
 </section>
 </section>
 <section id="can-i-use-machine-learning-without-knowing-python">
-<h2>Can I use machine learning without knowing Python?<a class="headerlink" href="#can-i-use-machine-learning-without-knowing-python" title="Permalink to this heading">#</a></h2>
+<h2>Can I use machine learning without knowing Python?<a class="headerlink" href="#can-i-use-machine-learning-without-knowing-python" title="Link to this heading">#</a></h2>
 <p><b> Yes! </b> Altough less flexible, there ae many <em>no-code</em> platform where you can use ML algorithms without the knowledge of any programming language.</p>
 <p>These include:</p>
 <p>AutoML Platforms</p>
@@ -1220,8 +1201,8 @@ We have lottery drawings from few weeks:</p>
               
               
               
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="prev-next-footer d-print-none">
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="4.%20AI%204.html"
@@ -1232,6 +1213,15 @@ We have lottery drawings from few weeks:</p>
         <p class="prev-next-title">Lecture 4: Advanced regression models</p>
       </div>
     </a>
+    <a class="right-next"
+       href="AI_Exercise_6.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercise 6: Implementation (Probability)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -1240,6 +1230,7 @@ We have lottery drawings from few weeks:</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1280,9 +1271,10 @@ By Kamil Smolak, Saeid Haji-Aghajany
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1306,8 +1298,8 @@ By Kamil Smolak, Saeid Haji-Aghajany
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
