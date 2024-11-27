@@ -60,6 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_6';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Exercise 7: Implementation (Linear regression)" href="AI_Exercise_7.html" />
     <link rel="prev" title="Lecture 5: Pracitcal approach to using machine learning with Python" href="5.%20AI%205.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -197,6 +198,7 @@
 <li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5.%20AI%205.html">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise 6: Implementation (Probability)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
 </ul>
 
     </div>
@@ -430,14 +432,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 4  7  8  9  6 10 14 11  6  6 13 10 14 11  3  1  1  7  8  8 13  5  6  6
-  9  9  4 14 14 10  1  8  6  4  8 14  5  1 10  5 14  1 12  4  2  2 12 11
-  7  8  7  5 10 14  9  9  1  9 11  5  8  8  9 11 10 11  8  1  6 12  2  8
-  6  7 13 10  7  9  5 10 14 12  1  5  4  2  1  6  6  8 14  6  7  7  2  3
- 11  8 12 14]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 2  5  4  3 10  8  8  1  2 14 12 12  2 14  1  1  9  2  6 10  1 13  6  2
+  9  1 12  7  9 14  1 12  3  5 11 11  2 13  6  2  4 11  7 14  3 13  3  5
+  9 14  3 11  3  7  7  2  2  4  9  9 14  3  7 14  1  9  6 13  7  9  1  5
+  2 13 13 11  7  7 11  8 12  7  6 14  5  5  3 10  8 14 12 13  7  8  3 12
+  6  4  1 10]
 Total Numbers Drawn: 100
-count: 8
-Probability of drawing 10: 0.08
+count: 4
+Probability of drawing 10: 0.04
 </pre></div>
 </div>
 </div>
@@ -456,8 +458,8 @@ Probability of drawing 10: 0.08
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 0 1 0 0 1 0 0]
-Probability of Crop Disease: 20.00%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 0 0 0 1 1 0 1 0 0]
+Probability of Crop Disease: 40.00%
 </pre></div>
 </div>
 </div>
@@ -480,7 +482,7 @@ Probability of Crop Disease: 20.00%
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilities: {3: 0.16, 5: 0.08, 7: 0.12}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilities: {3: 0.06, 5: 0.06, 7: 0.12}
 </pre></div>
 </div>
 </div>
@@ -528,20 +530,20 @@ Probability of Crop Disease: 20.00%
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Ball_1  Ball_2  Ball_3  Ball_4  Ball_5  Ball_6
-0        16      20      32      22      20      13
-1        28      12      19      29      23      39
-2        39       9       2      29      27       5
-3        32      25      28       2       7      12
-4        17      17      33      34       2       3
+0        28       2      30       6      16       3
+1        23      13      14      12       8      36
+2        28      13       1      20      13      39
+3        15      31      32      18      21      34
+4         9      39      13       9      23      10
 ..      ...     ...     ...     ...     ...     ...
-145      38      10      30      38      38      37
-146      13      14      31       9      32      21
-147      36      38      12       3      16      32
-148      10      17      13      17      21      36
-149      30      36       9      19       1       1
+145      27      19      21      28       8      22
+146      20      26       5       1       6      25
+147      33      12      25      17      27      11
+148      35      35      14       8      32      14
+149      25      11      18      26      30      15
 
 [150 rows x 6 columns]
-Probability of drawing 25: 0.028
+Probability of drawing 25: 0.029
 </pre></div>
 </div>
 </div>
@@ -594,7 +596,7 @@ Probability of drawing 25: 0.028
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/27b008adc643aa72dfba2a84e440181abf9a4dae1062a94098db0e4c562d3c7b.png" src="_images/27b008adc643aa72dfba2a84e440181abf9a4dae1062a94098db0e4c562d3c7b.png" />
+<img alt="_images/6f761e49766c1fda1749105966ce31db51cb093530482def83819d779266948c.png" src="_images/6f761e49766c1fda1749105966ce31db51cb093530482def83819d779266948c.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -655,11 +657,11 @@ Probability of drawing 25: 0.028
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toss Counts: {&#39;Heads&#39;: 97, &#39;Tails&#39;: 103}
-Probability of Heads: 0.48
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toss Counts: {&#39;Heads&#39;: 105, &#39;Tails&#39;: 95}
+Probability of Heads: 0.53
 </pre></div>
 </div>
-<img alt="_images/d5e58d8452c03ce0c17cc1b3a94002198e6632ce1b935acd1d6aa2f58808dc2d.png" src="_images/d5e58d8452c03ce0c17cc1b3a94002198e6632ce1b935acd1d6aa2f58808dc2d.png" />
+<img alt="_images/45ca87beafb12e8e1c028d07f91647c8c4a286c5f9df03f4a70edbd35d3eaba5.png" src="_images/45ca87beafb12e8e1c028d07f91647c8c4a286c5f9df03f4a70edbd35d3eaba5.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -735,6 +737,15 @@ Probability of Heads: 0.48
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Lecture 5: Pracitcal approach to using machine learning with Python</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="AI_Exercise_7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercise 7: Implementation (Linear regression)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
