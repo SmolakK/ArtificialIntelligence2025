@@ -186,6 +186,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_6.html">Exercise 6: Implementation (Probability)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.%20AI%206.html">Lecture 6: Advanced regression in Python and Ethics in Machine Learning</a></li>
+
+
+
 </ul>
 
     </div>
@@ -443,7 +447,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
 </div>
 </div>
@@ -455,7 +459,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.11
 </pre></div>
 </div>
 </div>
@@ -477,7 +481,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.07
 </pre></div>
 </div>
 </div>
@@ -491,7 +495,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
 </div>
 </div>
@@ -513,7 +517,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.11
 </pre></div>
 </div>
 </div>
@@ -526,11 +530,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 2, 4, 4, 1, 5, 9, 7, 3, 1, 5, 5, 9, 3, 3, 5, 5, 9, 2, 4, 7, 2,
-       5, 3, 5, 5, 9, 2, 2, 9, 2, 9, 1, 5, 1, 4, 5, 4, 7, 7, 4, 3, 5, 8,
-       9, 6, 7, 1, 7, 1, 8, 5, 6, 2, 6, 2, 6, 8, 3, 7, 1, 7, 6, 2, 4, 1,
-       9, 5, 3, 8, 5, 8, 3, 8, 7, 8, 3, 6, 1, 5, 3, 2, 1, 9, 2, 2, 4, 9,
-       2, 9, 3, 5, 2, 3, 9, 8, 7, 1, 1, 6])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([6, 4, 5, 5, 2, 3, 6, 9, 9, 1, 2, 6, 5, 9, 7, 6, 3, 3, 8, 9, 4, 5,
+       2, 5, 5, 5, 4, 4, 5, 6, 2, 2, 2, 2, 4, 5, 5, 8, 7, 9, 7, 7, 4, 1,
+       5, 2, 4, 6, 7, 2, 8, 7, 6, 3, 6, 1, 9, 1, 9, 8, 5, 7, 2, 5, 4, 8,
+       5, 8, 1, 1, 3, 4, 8, 4, 2, 7, 8, 7, 9, 6, 5, 6, 3, 5, 9, 6, 1, 2,
+       2, 8, 2, 5, 7, 6, 6, 9, 6, 1, 9, 3])
 </pre></div>
 </div>
 </div>
@@ -553,7 +557,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
 </div>
 </div>
@@ -577,7 +581,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.11
 </pre></div>
 </div>
 </div>
@@ -635,48 +639,48 @@ We have lottery drawings from few weeks:</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>5</td>
-      <td>12</td>
-      <td>20</td>
-      <td>26</td>
-      <td>30</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>22</td>
-      <td>24</td>
-      <td>31</td>
-      <td>44</td>
+      <td>27</td>
+      <td>28</td>
+      <td>36</td>
+      <td>42</td>
+      <td>48</td>
       <td>49</td>
     </tr>
     <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>28</td>
+      <td>32</td>
+      <td>35</td>
+      <td>40</td>
+      <td>48</td>
+    </tr>
+    <tr>
       <th>2</th>
-      <td>5</td>
-      <td>9</td>
-      <td>22</td>
-      <td>26</td>
-      <td>36</td>
+      <td>1</td>
+      <td>17</td>
+      <td>18</td>
+      <td>27</td>
+      <td>32</td>
       <td>40</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>9</td>
-      <td>15</td>
-      <td>16</td>
-      <td>31</td>
-      <td>36</td>
-      <td>43</td>
+      <td>11</td>
+      <td>18</td>
+      <td>21</td>
+      <td>27</td>
+      <td>44</td>
+      <td>49</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>20</td>
-      <td>27</td>
-      <td>28</td>
-      <td>31</td>
-      <td>38</td>
-      <td>46</td>
+      <td>5</td>
+      <td>6</td>
+      <td>16</td>
+      <td>17</td>
+      <td>33</td>
+      <td>43</td>
     </tr>
     <tr>
       <th>...</th>
@@ -690,47 +694,47 @@ We have lottery drawings from few weeks:</p>
     <tr>
       <th>95</th>
       <td>7</td>
-      <td>21</td>
+      <td>12</td>
+      <td>14</td>
       <td>22</td>
-      <td>27</td>
       <td>30</td>
-      <td>33</td>
+      <td>42</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>8</td>
-      <td>11</td>
-      <td>31</td>
-      <td>32</td>
-      <td>38</td>
-      <td>49</td>
+      <td>16</td>
+      <td>20</td>
+      <td>30</td>
+      <td>37</td>
+      <td>42</td>
+      <td>47</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>13</td>
-      <td>19</td>
-      <td>25</td>
-      <td>35</td>
+      <td>10</td>
+      <td>23</td>
+      <td>28</td>
+      <td>34</td>
       <td>41</td>
-      <td>43</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>7</td>
+      <td>4</td>
+      <td>18</td>
       <td>20</td>
-      <td>22</td>
-      <td>27</td>
-      <td>41</td>
-      <td>46</td>
+      <td>29</td>
+      <td>34</td>
+      <td>35</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>9</td>
-      <td>18</td>
-      <td>20</td>
-      <td>30</td>
-      <td>33</td>
-      <td>39</td>
+      <td>5</td>
+      <td>12</td>
+      <td>14</td>
+      <td>28</td>
+      <td>31</td>
+      <td>48</td>
     </tr>
   </tbody>
 </table>
@@ -780,103 +784,112 @@ We have lottery drawings from few weeks:</p>
   </thead>
   <tbody>
     <tr>
-      <th>2</th>
-      <td>5</td>
+      <th>7</th>
+      <td>2</td>
+      <td>3</td>
       <td>9</td>
-      <td>22</td>
-      <td>26</td>
-      <td>36</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>9</td>
-      <td>15</td>
       <td>16</td>
-      <td>31</td>
-      <td>36</td>
-      <td>43</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>9</td>
-      <td>11</td>
-      <td>12</td>
-      <td>25</td>
-      <td>48</td>
-      <td>49</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>9</td>
-      <td>25</td>
       <td>28</td>
-      <td>30</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>9</td>
+      <td>13</td>
+      <td>33</td>
+      <td>44</td>
       <td>46</td>
       <td>47</td>
     </tr>
     <tr>
-      <th>39</th>
-      <td>1</td>
+      <th>24</th>
       <td>9</td>
-      <td>10</td>
-      <td>17</td>
-      <td>32</td>
-      <td>35</td>
+      <td>18</td>
+      <td>27</td>
+      <td>37</td>
+      <td>39</td>
+      <td>41</td>
     </tr>
     <tr>
-      <th>47</th>
+      <th>36</th>
+      <td>9</td>
+      <td>18</td>
+      <td>19</td>
+      <td>22</td>
+      <td>34</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th>41</th>
       <td>9</td>
       <td>14</td>
-      <td>20</td>
-      <td>29</td>
-      <td>35</td>
+      <td>27</td>
+      <td>30</td>
+      <td>36</td>
       <td>42</td>
     </tr>
     <tr>
-      <th>49</th>
-      <td>1</td>
+      <th>42</th>
+      <td>3</td>
       <td>9</td>
-      <td>17</td>
+      <td>14</td>
       <td>26</td>
       <td>29</td>
-      <td>30</td>
+      <td>36</td>
     </tr>
     <tr>
-      <th>57</th>
-      <td>7</td>
+      <th>63</th>
       <td>9</td>
-      <td>15</td>
-      <td>25</td>
-      <td>27</td>
-      <td>48</td>
+      <td>28</td>
+      <td>34</td>
+      <td>43</td>
+      <td>44</td>
+      <td>49</td>
     </tr>
     <tr>
-      <th>64</th>
+      <th>71</th>
       <td>1</td>
+      <td>9</td>
+      <td>27</td>
+      <td>28</td>
+      <td>41</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>78</th>
       <td>3</td>
       <td>8</td>
       <td>9</td>
-      <td>22</td>
-      <td>38</td>
+      <td>39</td>
+      <td>40</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>9</td>
+      <td>15</td>
+      <td>37</td>
+      <td>40</td>
+      <td>46</td>
+      <td>47</td>
     </tr>
     <tr>
       <th>86</th>
       <td>3</td>
       <td>9</td>
-      <td>15</td>
-      <td>26</td>
-      <td>27</td>
-      <td>47</td>
+      <td>18</td>
+      <td>24</td>
+      <td>43</td>
+      <td>49</td>
     </tr>
     <tr>
-      <th>99</th>
+      <th>91</th>
       <td>9</td>
-      <td>18</td>
-      <td>20</td>
-      <td>30</td>
-      <td>33</td>
-      <td>39</td>
+      <td>13</td>
+      <td>23</td>
+      <td>28</td>
+      <td>37</td>
+      <td>45</td>
     </tr>
   </tbody>
 </table>
@@ -889,7 +902,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.11
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12
 </pre></div>
 </div>
 </div>
@@ -937,7 +950,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([0.12, 0.13, 0.07, 0.08, 0.16, 0.09, 0.09, 0.12, 0.11, 0.13, 0.12, 0.08, 0.11, 0.17, 0.12, 0.14, 0.17, 0.12, 0.12, 0.15, 0.11, 0.15, 0.09, 0.07, 0.16, 0.15, 0.14, 0.13, 0.14, 0.18, 0.14, 0.08, 0.08, 0.14, 0.1, 0.12, 0.08, 0.16, 0.15, 0.1, 0.08, 0.12, 0.11, 0.15, 0.12, 0.17, 0.12, 0.16, 0.1])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([0.1, 0.15, 0.12, 0.07, 0.12, 0.1, 0.12, 0.11, 0.12, 0.08, 0.1, 0.12, 0.18, 0.2, 0.09, 0.16, 0.1, 0.11, 0.13, 0.17, 0.13, 0.11, 0.08, 0.11, 0.1, 0.07, 0.16, 0.16, 0.15, 0.1, 0.08, 0.13, 0.12, 0.13, 0.11, 0.11, 0.11, 0.12, 0.12, 0.13, 0.13, 0.16, 0.16, 0.14, 0.09, 0.17, 0.1, 0.14, 0.13])
 </pre></div>
 </div>
 </div>
@@ -952,7 +965,7 @@ We have lottery drawings from few weeks:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 49 artists&gt;
 </pre></div>
 </div>
-<img alt="_images/56861bc96761ecfb8b900ff43492bd016b40ae3730d2251fd61d4dce5f50b656.png" src="_images/56861bc96761ecfb8b900ff43492bd016b40ae3730d2251fd61d4dce5f50b656.png" />
+<img alt="_images/ad0dcd20f1fb65492414863a3525cc42f80991dfdea98a62f6485e4e668269b0.png" src="_images/ad0dcd20f1fb65492414863a3525cc42f80991dfdea98a62f6485e4e668269b0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -975,7 +988,7 @@ We have lottery drawings from few weeks:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 49 artists&gt;
 </pre></div>
 </div>
-<img alt="_images/c0330e5011f221deac16955f9ba50b71df9e90386ab909006e9b7611d6464e77.png" src="_images/c0330e5011f221deac16955f9ba50b71df9e90386ab909006e9b7611d6464e77.png" />
+<img alt="_images/27beb5704cf393d1d574998ab71aa1f109cc3d54451da0305df1bdaa3ea2397a.png" src="_images/27beb5704cf393d1d574998ab71aa1f109cc3d54451da0305df1bdaa3ea2397a.png" />
 </div>
 </div>
 </section>
@@ -993,7 +1006,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.44
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.49
 </pre></div>
 </div>
 </div>
@@ -1011,10 +1024,10 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x209c74dfd30&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1d8a757a6d0&gt;]
 </pre></div>
 </div>
-<img alt="_images/7e8634e306b94b9923573e68da30206cb4a4673973c56dd385d76cfbf239cb8e.png" src="_images/7e8634e306b94b9923573e68da30206cb4a4673973c56dd385d76cfbf239cb8e.png" />
+<img alt="_images/6df6e60d16f7ce94af0067b2980541b689908fe531f0461b6df8fc52ca8a27af.png" src="_images/6df6e60d16f7ce94af0067b2980541b689908fe531f0461b6df8fc52ca8a27af.png" />
 </div>
 </div>
 <p>Now, let’s calculate probability of winning in roulette while always betting on black.</p>
@@ -1053,7 +1066,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/9a218f11c623dddbaa5481dc72719885b4b65b541dbb06764e8ca59befd44915.png" src="_images/9a218f11c623dddbaa5481dc72719885b4b65b541dbb06764e8ca59befd44915.png" />
+<img alt="_images/2484b9ba331a67aaa526a0f80b116681d33dc6fe4aee4dd6ee1694245fb29938.png" src="_images/2484b9ba331a67aaa526a0f80b116681d33dc6fe4aee4dd6ee1694245fb29938.png" />
 </div>
 </div>
 </section>
