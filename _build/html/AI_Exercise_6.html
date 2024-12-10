@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Exercise 6: Implementation (Probability) &#8212; Artificial Intelligence</title>
   
@@ -14,49 +15,53 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_6';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -71,23 +76,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,20 +119,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -137,13 +139,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="1.%20AI%201.html">
-  
   
   
   
@@ -153,23 +151,12 @@
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Artificial Intelligence - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Artificial Intelligence - Home"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -204,6 +191,10 @@
 
 
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7.%20AI%207.html">Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning</a></li>
+
+
+
 </ul>
 
     </div>
@@ -219,7 +210,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -228,14 +219,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -357,28 +348,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -414,12 +403,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-6-implementation-probability">
-<h1>Exercise 6: Implementation (Probability)<a class="headerlink" href="#exercise-6-implementation-probability" title="Link to this heading">#</a></h1>
+<h1>Exercise 6: Implementation (Probability)<a class="headerlink" href="#exercise-6-implementation-probability" title="Permalink to this heading">#</a></h1>
 <section id="calculating-probability">
-<h2>Calculating Probability<a class="headerlink" href="#calculating-probability" title="Link to this heading">#</a></h2>
+<h2>Calculating Probability<a class="headerlink" href="#calculating-probability" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -437,14 +426,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 2  1  7  1  2 14 10 10  6  6  6 10  4  8 14  3 13  1  1 12 12  3  1  3
- 13 14  6  9 10 14  5 13 13 13  3  7  4 12  3 13 12 11  9  8  2  4  8  7
-  2 13  5  2  4  9  9  4  2  8 13  7  1  2 10  9  8  2  2 14  3  7  8  3
-  2 12 13 12  9  2 14 13  4  3  6  7  9  2  1 13  7 10  6  6 10 10 12 14
-  5 12  6 11]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 5  9  8  1  6  8 11  3  2  6 10  1 11 10  3  6  5  8 11  3  5  6 12  2
+  3  2  5  6 12 10  9 12 10 10  2  9  5 14 14  7  5  8 10  7  1  3  9 11
+ 14 12 13 11  9  8 14  6  8  8 11  2  8  9  5  1 13  6  7 10 13  8 10  5
+  5  4  8  3  2  8  9 14  7  6 10  8  2  8  2 10  1 10 11  8  3 11  6  4
+  4  1  2  2]
 Total Numbers Drawn: 100
-count: 8
-Probability of drawing 10: 0.08
+count: 11
+Probability of drawing 10: 0.11
 </pre></div>
 </div>
 </div>
@@ -463,15 +452,15 @@ Probability of drawing 10: 0.08
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 1 0 0 0 0 0 0 0 0]
-Probability of Crop Disease: 20.00%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 0 0 0 0 0 0 0 0 0]
+Probability of Crop Disease: 10.00%
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="using-functions-for-reusability">
-<h2>Using Functions for Reusability<a class="headerlink" href="#using-functions-for-reusability" title="Link to this heading">#</a></h2>
+<h2>Using Functions for Reusability<a class="headerlink" href="#using-functions-for-reusability" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_probability_range</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">targets</span><span class="p">):</span>
@@ -487,7 +476,7 @@ Probability of Crop Disease: 20.00%
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilities: {3: 0.08, 5: 0.16, 7: 0.08}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilities: {3: 0.04, 5: 0.12, 7: 0.1}
 </pre></div>
 </div>
 </div>
@@ -512,7 +501,7 @@ Probability of Crop Disease: 20.00%
 </div>
 </section>
 <section id="advanced-tools-using-pandas">
-<h2>Advanced Tools: Using Pandas<a class="headerlink" href="#advanced-tools-using-pandas" title="Link to this heading">#</a></h2>
+<h2>Advanced Tools: Using Pandas<a class="headerlink" href="#advanced-tools-using-pandas" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -535,20 +524,20 @@ Probability of Crop Disease: 20.00%
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Ball_1  Ball_2  Ball_3  Ball_4  Ball_5  Ball_6
-0        33       4      21      14      31      22
-1         1      11      34      12      14      22
-2        11       9       6      28       1      12
-3        28      38      39      35      11      35
-4        28       3      21       7       1      12
+0         8      34       9       1      10      32
+1        30      14       3       6      34      32
+2        24      19      10      27      21      19
+3        28      23      38      12       9      18
+4        32      17       1       3       9      18
 ..      ...     ...     ...     ...     ...     ...
-145      25       2      13      12      39      17
-146      13      28       9       8      15       9
-147       8       1       3      22       2       3
-148      37      31      32      37      36      18
-149      18       4       9      36      34      24
+145       2      36      21      20       2      18
+146      12      28       1      20      32      30
+147      38      11      36      31      37      37
+148      11      13      12      19       7      23
+149      13      26      24       9      36      36
 
 [150 rows x 6 columns]
-Probability of drawing 25: 0.026
+Probability of drawing 25: 0.020
 </pre></div>
 </div>
 </div>
@@ -578,7 +567,7 @@ Probability of drawing 25: 0.026
 </div>
 </section>
 <section id="visualization-of-probabilities">
-<h2>Visualization of Probabilities<a class="headerlink" href="#visualization-of-probabilities" title="Link to this heading">#</a></h2>
+<h2>Visualization of Probabilities<a class="headerlink" href="#visualization-of-probabilities" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -601,7 +590,7 @@ Probability of drawing 25: 0.026
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/eeee68085006197e9b525ebe1ac608bfd5d6d67698fb647744507dc1cbeeb0cf.png" src="_images/eeee68085006197e9b525ebe1ac608bfd5d6d67698fb647744507dc1cbeeb0cf.png" />
+<img alt="_images/4355e336b0331635f10d4816cd8323cbe4cc68e0733e83abb433906b6efbe23e.png" src="_images/4355e336b0331635f10d4816cd8323cbe4cc68e0733e83abb433906b6efbe23e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -627,12 +616,12 @@ Probability of drawing 25: 0.026
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/48196712442ef9b5778b559362e32228f4481dfb7f321527c5ffd1dad2ae4682.png" src="_images/48196712442ef9b5778b559362e32228f4481dfb7f321527c5ffd1dad2ae4682.png" />
+<img alt="_images/d92fa3ab46ec98ebc0170dec51b79c76bd4b9ef7273ad4e106210f114dbd8e02.png" src="_images/d92fa3ab46ec98ebc0170dec51b79c76bd4b9ef7273ad4e106210f114dbd8e02.png" />
 </div>
 </div>
 </section>
 <section id="simulating-real-life-scenarios">
-<h2>Simulating Real-Life Scenarios<a class="headerlink" href="#simulating-real-life-scenarios" title="Link to this heading">#</a></h2>
+<h2>Simulating Real-Life Scenarios<a class="headerlink" href="#simulating-real-life-scenarios" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -662,11 +651,11 @@ Probability of drawing 25: 0.026
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toss Counts: {&#39;Heads&#39;: 102, &#39;Tails&#39;: 98}
-Probability of Heads: 0.51
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toss Counts: {&#39;Heads&#39;: 103, &#39;Tails&#39;: 97}
+Probability of Heads: 0.52
 </pre></div>
 </div>
-<img alt="_images/b9099c1acd00d31adf807c5dcbb3f1285be470fbaad0d7f4b2f31567266533ca.png" src="_images/b9099c1acd00d31adf807c5dcbb3f1285be470fbaad0d7f4b2f31567266533ca.png" />
+<img alt="_images/d513d2d22cc2f99ccd7e11533d33feca3cf7ab491867da449ea43dfb96af3279.png" src="_images/d513d2d22cc2f99ccd7e11533d33feca3cf7ab491867da449ea43dfb96af3279.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -693,14 +682,14 @@ Probability of Heads: 0.51
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overall Probability of Pest Infestation: 20.00%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overall Probability of Pest Infestation: 24.00%
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="id1">
-<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h2><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 
@@ -731,8 +720,8 @@ Probability of Heads: 0.51
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="5.%20AI%205.html"
@@ -760,7 +749,6 @@ Probability of Heads: 0.51
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -795,10 +783,9 @@ By Kamil Smolak, Saeid Haji-Aghajany
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -822,8 +809,8 @@ By Kamil Smolak, Saeid Haji-Aghajany
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
