@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Exercise 7: Implementation (Linear regression) &#8212; Artificial Intelligence</title>
   
@@ -14,49 +15,53 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_7';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -71,23 +76,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,20 +119,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -137,13 +139,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="1.%20AI%201.html">
-  
   
   
   
@@ -153,23 +151,12 @@
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Artificial Intelligence - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Artificial Intelligence - Home"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -229,7 +216,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -238,14 +225,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -367,28 +354,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -422,12 +407,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-7-implementation-linear-regression">
-<h1>Exercise 7: Implementation (Linear regression)<a class="headerlink" href="#exercise-7-implementation-linear-regression" title="Link to this heading">#</a></h1>
+<h1>Exercise 7: Implementation (Linear regression)<a class="headerlink" href="#exercise-7-implementation-linear-regression" title="Permalink to this heading">#</a></h1>
 <section id="loading-predefined-data-and-visualizing-them">
-<h2>1- Loading Predefined Data and Visualizing Them<a class="headerlink" href="#loading-predefined-data-and-visualizing-them" title="Link to this heading">#</a></h2>
+<h2>1- Loading Predefined Data and Visualizing Them<a class="headerlink" href="#loading-predefined-data-and-visualizing-them" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -456,22 +441,22 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            X           Y
-0   -2.237422   29.226594
-1   -0.455206   -9.645026
-2    0.763926  100.845042
-3   -0.949468  187.446847
-4   -0.377514   69.359526
+0    0.369529   -6.778402
+1   -0.523469  -24.393592
+2   -2.056763 -119.361848
+3   -0.053778  -42.268487
+4    1.392144  160.976250
 ..        ...         ...
-995 -0.471574  -10.134856
-996 -1.044940  -20.520130
-997 -1.273910  -88.114673
-998 -1.437325 -375.978876
-999 -1.197546  -43.165728
+995  0.623476   98.743900
+996 -0.037772  -23.874758
+997  0.449830   19.200945
+998  0.325410   74.912224
+999 -1.532973 -237.907045
 
 [1000 rows x 2 columns]
 </pre></div>
 </div>
-<img alt="_images/0ea329b5058ed75d71c73bf3aef9fc9481f295f33590a1abe3a6c37eed04c1b9.png" src="_images/0ea329b5058ed75d71c73bf3aef9fc9481f295f33590a1abe3a6c37eed04c1b9.png" />
+<img alt="_images/8b8870036cca0a42dd932bc2afc12e88520ca9298f19fd0c2be666bb1fa6d95a.png" src="_images/8b8870036cca0a42dd932bc2afc12e88520ca9298f19fd0c2be666bb1fa6d95a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -528,12 +513,12 @@ document.write(`
 [442 rows x 11 columns]
 </pre></div>
 </div>
-<img alt="_images/385d8d8569794ea7e809c25cc9b9a03e5df8d91e764a9a83ca7a76dc0ff0a80f.png" src="_images/385d8d8569794ea7e809c25cc9b9a03e5df8d91e764a9a83ca7a76dc0ff0a80f.png" />
+<img alt="_images/37aa22c52ca85860f54eab84f7a14b46605dbb0253a71690ffea441c57dbaf45.png" src="_images/37aa22c52ca85860f54eab84f7a14b46605dbb0253a71690ffea441c57dbaf45.png" />
 </div>
 </div>
 </section>
 <section id="splitting-the-data-into-training-validation-and-testing-sets">
-<h2>2- Splitting the Data into Training, Validation, and Testing Sets<a class="headerlink" href="#splitting-the-data-into-training-validation-and-testing-sets" title="Link to this heading">#</a></h2>
+<h2>2- Splitting the Data into Training, Validation, and Testing Sets<a class="headerlink" href="#splitting-the-data-into-training-validation-and-testing-sets" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
@@ -581,7 +566,7 @@ Validation set size: 200
 Testing set size: 200
 </pre></div>
 </div>
-<img alt="_images/d51b5cfb6d4b17d1f5358b4f504d20360e15734f698ae6a030ed5ec6d723cee0.png" src="_images/d51b5cfb6d4b17d1f5358b4f504d20360e15734f698ae6a030ed5ec6d723cee0.png" />
+<img alt="_images/562d9ae019ff0dfd04af01022a651660d686cbf4aad0cd512ec129c71163ed1a.png" src="_images/562d9ae019ff0dfd04af01022a651660d686cbf4aad0cd512ec129c71163ed1a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -628,12 +613,12 @@ Validation set size: 88
 Testing set size: 89
 </pre></div>
 </div>
-<img alt="_images/6b118e00ee4cfe16187608ff87edc1e39ed25ff985c11c7fd2d1f67ef411d77c.png" src="_images/6b118e00ee4cfe16187608ff87edc1e39ed25ff985c11c7fd2d1f67ef411d77c.png" />
+<img alt="_images/3c179fe7e3d845bf19764789444c3a0f5de78b2c52200aed484394eb2c03e5b8.png" src="_images/3c179fe7e3d845bf19764789444c3a0f5de78b2c52200aed484394eb2c03e5b8.png" />
 </div>
 </div>
 </section>
 <section id="statistical-measures-mse-mae-r2">
-<h2>3- Statistical Measures (MSE, MAE, R²)<a class="headerlink" href="#statistical-measures-mse-mae-r2" title="Link to this heading">#</a></h2>
+<h2>3- Statistical Measures (MSE, MAE, R²)<a class="headerlink" href="#statistical-measures-mse-mae-r2" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -667,12 +652,12 @@ Testing set size: 89
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error (MSE): 4.645143195122197
-Mean Absolute Error (MAE): 1.707345016633572
-R² Score: 0.9451111090964328
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error (MSE): 3.726903189408377
+Mean Absolute Error (MAE): 1.4971375069968793
+R² Score: 0.9640340278808913
 </pre></div>
 </div>
-<img alt="_images/a8ee444268fb17ded371e460c803fe832bf2cabef214abe4435a2ccc753bd5d2.png" src="_images/a8ee444268fb17ded371e460c803fe832bf2cabef214abe4435a2ccc753bd5d2.png" />
+<img alt="_images/6d8830a49724cf7640cc3429ffc826a955a606410ec91647046518cc7aee089d.png" src="_images/6d8830a49724cf7640cc3429ffc826a955a606410ec91647046518cc7aee089d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -713,17 +698,17 @@ R² Score: 0.9451111090964328
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metrics for Diabetes dataset with random predictions:
-Mean Squared Error (MSE): 819.6942856177
-Mean Absolute Error (MAE): 22.441177472964373
-R² Score: 0.8617689382057346
+Mean Squared Error (MSE): 871.0052516076007
+Mean Absolute Error (MAE): 23.485906185463268
+R² Score: 0.8531159935226709
 </pre></div>
 </div>
-<img alt="_images/8c6ccba631f712161b1dec834907d7f2273f5e09ac84bb6763430492db4b57f6.png" src="_images/8c6ccba631f712161b1dec834907d7f2273f5e09ac84bb6763430492db4b57f6.png" />
+<img alt="_images/128b219cdecc9a4e220eb0081d497aed85cce7f6601a01b2a16a73237f27fdc3.png" src="_images/128b219cdecc9a4e220eb0081d497aed85cce7f6601a01b2a16a73237f27fdc3.png" />
 </div>
 </div>
 </section>
 <section id="training-and-evaluating-the-model">
-<h2>4- Training and Evaluating the Model<a class="headerlink" href="#training-and-evaluating-the-model" title="Link to this heading">#</a></h2>
+<h2>4- Training and Evaluating the Model<a class="headerlink" href="#training-and-evaluating-the-model" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
@@ -783,17 +768,17 @@ R² Score: 0.8617689382057346
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Validation Metrics:
-MSE: 2113.49323251193
-MAE: 37.13755747124517
-R²: 0.9192341027552431
+MSE: 2316.151402632429
+MAE: 39.07031286209662
+R²: 0.9433506306260072
 
 Test Metrics:
-MSE: 2673.680705933651
-MAE: 41.92949772991513
-R²: 0.8937560752117439
+MSE: 2253.098576147476
+MAE: 37.805900966924966
+R²: 0.9396214075418827
 </pre></div>
 </div>
-<img alt="_images/8fe73a8eddba5d3450c1f7d039dc6a79373b10c946939cea4e61bafb56f944fa.png" src="_images/8fe73a8eddba5d3450c1f7d039dc6a79373b10c946939cea4e61bafb56f944fa.png" />
+<img alt="_images/744be170e32299a5d7c74542e0a2d6e48ef20cf2d88260276d1838cec85974ee.png" src="_images/744be170e32299a5d7c74542e0a2d6e48ef20cf2d88260276d1838cec85974ee.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -857,17 +842,17 @@ R²: 0.8937560752117439
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Validation Metrics:
-MSE: 3425.3110638313333
-MAE: 49.23393864493102
-R²: 0.4605756319084532
+MSE: 2723.452266253354
+MAE: 42.1611511320415
+R²: 0.4946805445520882
 
 Test Metrics:
-MSE: 2308.8829968536647
-MAE: 37.84507299630222
-R²: 0.5251019069562053
+MSE: 2462.407899267909
+MAE: 39.82905251655077
+R²: 0.550355541826584
 </pre></div>
 </div>
-<img alt="_images/9ca076c32fd1851229ee8e5139d0a92bf4972b11c2fe1ff84552cbc5cb983936.png" src="_images/9ca076c32fd1851229ee8e5139d0a92bf4972b11c2fe1ff84552cbc5cb983936.png" />
+<img alt="_images/534ddea76b0a8bbb0f18ba5a44a5d64d80fee1a37fdb5bcacd37a47f10b82f03.png" src="_images/534ddea76b0a8bbb0f18ba5a44a5d64d80fee1a37fdb5bcacd37a47f10b82f03.png" />
 </div>
 </div>
 </section>
@@ -900,8 +885,8 @@ R²: 0.5251019069562053
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="AI_Exercise_6.html"
@@ -929,7 +914,6 @@ R²: 0.5251019069562053
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -962,10 +946,9 @@ By Kamil Smolak, Saeid Haji-Aghajany
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -989,8 +972,8 @@ By Kamil Smolak, Saeid Haji-Aghajany
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
