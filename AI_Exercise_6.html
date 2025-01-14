@@ -203,6 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.%20AI%2010.html">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
 </ul>
 
     </div>
@@ -434,14 +435,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[12 11 14  6  8 13  8  6  4 14  5  9  3  7 14 12 12 14  4  2  1  5  7  1
-  2  3  3  1  3 10  7  8  1  5 12 10  1  4 11 10  8  3 13 14  9 11  3  1
-  8  1 10  8  8  3  4  4  6  9  3  9 11  5  8  3  5  2  1  1  3 10 11  9
-  2  2  3  9 14  8  2  7 11  6 11 14  1  5  3 10  4 14 13  9  3 13 13  6
-  6  2 13  7]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 6  9 11  8 12  4 14  3  8 12  8  6 14  6  7 11  4  5  9 11 14 10 10 13
+ 11 10  1 11  8  8 14  9  5 12 11  1 11  7 12  9  2  5  8  3  3 10 10  8
+  6 11  9  2  9  3  8  4  7 13 13 10  1  8  4  2  6  8 14 11  1  1  9  8
+ 14  8  2  1 14 10  8  4  2 13  8  6  3  8 12  8  8 14  5  4  3  2  3 13
+ 14  9 10  1]
 Total Numbers Drawn: 100
-count: 6
-Probability of drawing 10: 0.06
+count: 8
+Probability of drawing 10: 0.08
 </pre></div>
 </div>
 </div>
@@ -460,7 +461,7 @@ Probability of drawing 10: 0.06
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 0 0 0 0 0 1 0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 1 0 0 0 0 0 0]
 Probability of Crop Disease: 10.00%
 </pre></div>
 </div>
@@ -484,7 +485,7 @@ Probability of Crop Disease: 10.00%
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilities: {3: 0.12, 5: 0.12, 7: 0.06}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilities: {3: 0.08, 5: 0.04, 7: 0.16}
 </pre></div>
 </div>
 </div>
@@ -532,20 +533,20 @@ Probability of Crop Disease: 10.00%
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Ball_1  Ball_2  Ball_3  Ball_4  Ball_5  Ball_6
-0        22      32      38       7      33      23
-1        17       2       6      33      38      20
-2         1       2      19      10      22      16
-3        38      35      16      31      30      16
-4         6       9      26       1      39      12
+0         3       8       3       2      18      18
+1        35      35       4      34       3      25
+2        15      38       2      13      28       6
+3        29      16      38       6      19      14
+4        16      24       8       2      25      27
 ..      ...     ...     ...     ...     ...     ...
-145      25      31      18      37      39       4
-146      14      31      22       2      23      24
-147      17      12      12      36      21      16
-148       6      22      22      25      34      37
-149      26       3      33       4      10      18
+145      22       2       4       2      25      36
+146      30      21      35      32       1      26
+147      30      18      27      12      11      26
+148       8      12      11      14      30      35
+149      13      32      39       5       8      28
 
 [150 rows x 6 columns]
-Probability of drawing 25: 0.029
+Probability of drawing 25: 0.037
 </pre></div>
 </div>
 </div>
@@ -598,7 +599,7 @@ Probability of drawing 25: 0.029
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5481dd78d05513d713eb533da23236a453d35d0f80e2eaa1c72223318bd58562.png" src="_images/5481dd78d05513d713eb533da23236a453d35d0f80e2eaa1c72223318bd58562.png" />
+<img alt="_images/920037fdf55a0a22e5411619ebfa2aa26834239b0312c169e68a0e9d84a6c715.png" src="_images/920037fdf55a0a22e5411619ebfa2aa26834239b0312c169e68a0e9d84a6c715.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -659,11 +660,11 @@ Probability of drawing 25: 0.029
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toss Counts: {&#39;Heads&#39;: 91, &#39;Tails&#39;: 109}
-Probability of Heads: 0.46
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toss Counts: {&#39;Heads&#39;: 102, &#39;Tails&#39;: 98}
+Probability of Heads: 0.51
 </pre></div>
 </div>
-<img alt="_images/daec7159fb96cf77ef332b4f583a324430d47bb567f54ffecdb574f6541da8be.png" src="_images/daec7159fb96cf77ef332b4f583a324430d47bb567f54ffecdb574f6541da8be.png" />
+<img alt="_images/5521ffad9af58d138f583bb28c53ebbb14c0f79c0bb8dc4bc6eddde6a8eead46.png" src="_images/5521ffad9af58d138f583bb28c53ebbb14c0f79c0bb8dc4bc6eddde6a8eead46.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -690,7 +691,7 @@ Probability of Heads: 0.46
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overall Probability of Pest Infestation: 18.00%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overall Probability of Pest Infestation: 20.00%
 </pre></div>
 </div>
 </div>
