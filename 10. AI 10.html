@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Lecture 10: Examples of use of AI in Bioeconomy &#8212; Artificial Intelligence</title>
   
@@ -14,54 +15,56 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '10. AI 10';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Exercise 10: Classification (Evaluation metrics)" href="AI_Exercise_10.html" />
-    <link rel="prev" title="Exercise 9: Classification" href="AI_Exercise_9.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -71,23 +74,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,20 +117,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -137,13 +137,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="1.%20AI%201.html">
-  
   
   
   
@@ -153,75 +149,22 @@
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Artificial Intelligence - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Artificial Intelligence - Home"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="1.%20AI%201.html">
-                    Lecture 1: Artificial Intelligence (winter 2024/2025)
+                    Lecture 1: Artificial Intelligence (winter 2025/2026)
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_2.html">Exercise 2: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_3.html">Exercise 3: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.%20AI%203.html">Lecture 3: Linear Regression</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_4.html">Exercise 4: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_5.html">Exercise 5: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.%20AI%205.html">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_6.html">Exercise 6: Implementation (Probability)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.%20AI%206.html">Lecture 6: Advanced regression in Python and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7.%20AI%207.html">Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_10.html">Exercise 10: Classification (Evaluation metrics)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_11.html">Exercise 11: Clustering</a></li>
-</ul>
-
+        
     </div>
 </nav></div>
     </div>
@@ -235,7 +178,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -244,14 +187,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -373,28 +316,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -461,19 +402,19 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lecture-10-examples-of-use-of-ai-in-bioeconomy">
-<h1>Lecture 10: Examples of use of AI in Bioeconomy<a class="headerlink" href="#lecture-10-examples-of-use-of-ai-in-bioeconomy" title="Link to this heading">#</a></h1>
+<h1>Lecture 10: Examples of use of AI in Bioeconomy<a class="headerlink" href="#lecture-10-examples-of-use-of-ai-in-bioeconomy" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>The <strong>bioeconomy</strong> is an economic system that leverages biological resources and processes to create sustainable solutions for global challenges. Artificial Intelligence (AI) has emerged as a critical tool in the bioeconomy, driving efficiency, innovation, and sustainability across various sectors.</p>
 </section>
 <hr class="docutils" />
 <section id="agriculture">
-<h2>1. Agriculture<a class="headerlink" href="#agriculture" title="Link to this heading">#</a></h2>
+<h2>1. Agriculture<a class="headerlink" href="#agriculture" title="Permalink to this heading">#</a></h2>
 <section id="precision-farming">
-<h3>Precision Farming<a class="headerlink" href="#precision-farming" title="Link to this heading">#</a></h3>
+<h3>Precision Farming<a class="headerlink" href="#precision-farming" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>AI-Driven Monitoring</strong>: Uses machine learning to analyze drone and satellite data for:</p>
 <ul>
@@ -487,7 +428,7 @@ document.write(`
 </ul>
 </section>
 <section id="practical-examples">
-<h3>Practical Examples<a class="headerlink" href="#practical-examples" title="Link to this heading">#</a></h3>
+<h3>Practical Examples<a class="headerlink" href="#practical-examples" title="Permalink to this heading">#</a></h3>
 <p>Drone Imagery for Crop Monitoring</p>
 <p>Use drones equipped with multispectral cameras to capture images of a field. These images are processed with AI algorithms to assess plant health, detect diseases, and measure water stress.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Input: Multispectral images (visible and near-infrared wavelengths).
@@ -521,7 +462,7 @@ Outcome: Farmers receive maps highlighting areas that need attention.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/719ab4257912e3c049ebf654338c18cf78712a2b95ae8be0cd00c808d4164403.png" src="_images/719ab4257912e3c049ebf654338c18cf78712a2b95ae8be0cd00c808d4164403.png" />
+<img alt="_images/a681e34156995f4de96a66e5eb6e8c8894ccb02ba6f36bd0028b0abab5dd0471.png" src="_images/a681e34156995f4de96a66e5eb6e8c8894ccb02ba6f36bd0028b0abab5dd0471.png" />
 </div>
 </div>
 <p>NDVI Map example: <a class="reference external" href="https://www.drought.gov/data-maps-tools/ndvi-greenness-maps">https://www.drought.gov/data-maps-tools/ndvi-greenness-maps</a>
@@ -576,7 +517,7 @@ Outcome: Reduces water wastage and prevents over-irrigation
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c7cf1ef3b22052e48551402f03776eaac85f09cc580079f9aba6e6a2f72e4989.png" src="_images/c7cf1ef3b22052e48551402f03776eaac85f09cc580079f9aba6e6a2f72e4989.png" />
+<img alt="_images/d7bbed25306b1bf60dfad0bf07d1172bdc48f1cafd3d491818bfd9bcefddd280.png" src="_images/d7bbed25306b1bf60dfad0bf07d1172bdc48f1cafd3d491818bfd9bcefddd280.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Day  Soil Moisture (%)  Rain Prediction (1=Rain)  Irrigation (1=Yes)
    1          31.899949                         1                   0
    2          15.535360                         0                   1
@@ -614,29 +555,29 @@ Outcome: Reduces water wastage and prevents over-irrigation
 </div>
 </section>
 <section id="food-systems">
-<h3>2. Food Systems<a class="headerlink" href="#food-systems" title="Link to this heading">#</a></h3>
+<h3>2. Food Systems<a class="headerlink" href="#food-systems" title="Permalink to this heading">#</a></h3>
 <section id="supply-chain-optimization">
-<h4>Supply Chain Optimization<a class="headerlink" href="#supply-chain-optimization" title="Link to this heading">#</a></h4>
+<h4>Supply Chain Optimization<a class="headerlink" href="#supply-chain-optimization" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Demand Forecasting</strong>: Reduces food waste by predicting consumption patterns.</p></li>
 <li><p><strong>Smart Logistics</strong>: Optimizes transportation routes to lower energy use and emissions.</p></li>
 </ul>
 </section>
 <section id="food-safety">
-<h4>Food Safety<a class="headerlink" href="#food-safety" title="Link to this heading">#</a></h4>
+<h4>Food Safety<a class="headerlink" href="#food-safety" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>AI detects contaminants and defects in food production lines.</p></li>
 <li><p>Models identify contamination sources in supply chains.</p></li>
 </ul>
 </section>
 <section id="alternative-proteins">
-<h4>Alternative Proteins<a class="headerlink" href="#alternative-proteins" title="Link to this heading">#</a></h4>
+<h4>Alternative Proteins<a class="headerlink" href="#alternative-proteins" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Accelerates development of lab-grown meat and plant-based proteins by simulating cellular growth and optimizing production.</p></li>
 </ul>
 </section>
 <section id="id1">
-<h4>Practical Examples<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<h4>Practical Examples<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p><strong>Demand Forecasting</strong> - a time series problem where the goal is to predict the future demand for a particular product.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Input: past demand and exogenous variables
 AI Application: time series prediction
@@ -683,7 +624,7 @@ Outcome: predicted demand to guide decision-making process
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/64420eb310b84d310fb86c3b1b572048de80734a4828b45446a56f75defc90d5.png" src="_images/64420eb310b84d310fb86c3b1b572048de80734a4828b45446a56f75defc90d5.png" />
+<img alt="_images/25e57a85d629e49afd06aa5de3151106ab849d8e79c3bc40030a7314fe5f5058.png" src="_images/25e57a85d629e49afd06aa5de3151106ab849d8e79c3bc40030a7314fe5f5058.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Date  Actual Demand  Predicted Demand
 2025-01-01            101         76.608942
 2025-01-02            142        148.034412
@@ -777,7 +718,7 @@ AI task: optimization
         <span class="p">[</span><span class="n">locations</span><span class="p">[</span><span class="n">optimized_route</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">locations</span><span class="p">[</span><span class="n">optimized_route</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]],</span>
         <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
         <span class="n">weight</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-        <span class="n">tooltip</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Optimized: </span><span class="si">{</span><span class="n">optimized_route</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">optimized_route</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Optimized: </span><span class="si">{</span><span class="n">optimized_route</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">optimized_route</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
     <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">supply_chain_map</span><span class="p">)</span>
 
 <span class="c1"># Display the map</span>
@@ -787,36 +728,352 @@ AI task: optimization
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">folium</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Define locations with their latitude and longitude</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">locations</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="s2">&quot;Factory&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">37.7749</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.4194</span><span class="p">),</span>  <span class="c1"># San Francisco</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="s2">&quot;Warehouse 1&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">37.8044</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.2711</span><span class="p">),</span>  <span class="c1"># Oakland</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="s2">&quot;Retailer 2&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mf">37.7328</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.5054</span><span class="p">)</span>   <span class="c1"># South San Francisco</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="p">}</span>
+<div class="output text_html"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_4faa285dac6c3e4d8e8142d33c7fbdbf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_4faa285dac6c3e4d8e8142d33c7fbdbf&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_4faa285dac6c3e4d8e8142d33c7fbdbf = L.map(
+                &quot;map_4faa285dac6c3e4d8e8142d33c7fbdbf&quot;,
+                {
+                    center: [37.7749, -122.4194],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;folium&#39;
-</pre></div>
-</div>
-</div>
+            
+
+        
+    
+            var tile_layer_b1c118c7479afa7376c5c35c07bf9f95 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_b1c118c7479afa7376c5c35c07bf9f95.addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+            var marker_7fe035539ebb4e1b2247dbe9dfd70ad9 = L.marker(
+                [37.7749, -122.4194],
+                {}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+        var popup_eebab51a515d4e49f7110151b7d46b5d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_d5c191d21d866a6eba9eb904325b57b0 = $(`&lt;div id=&quot;html_d5c191d21d866a6eba9eb904325b57b0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Factory&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_eebab51a515d4e49f7110151b7d46b5d.setContent(html_d5c191d21d866a6eba9eb904325b57b0);
+            
+        
+
+        marker_7fe035539ebb4e1b2247dbe9dfd70ad9.bindPopup(popup_eebab51a515d4e49f7110151b7d46b5d)
+        ;
+
+        
+    
+    
+            marker_7fe035539ebb4e1b2247dbe9dfd70ad9.bindTooltip(
+                `&lt;div&gt;
+                     Factory
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_01080eca61d9cfc732f1b41c34f65a76 = L.marker(
+                [37.8044, -122.2711],
+                {}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+        var popup_eceb1003f4c869043cc5ebb182f4c745 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_8f8e96f4b95ae72d8ca535a156f8a871 = $(`&lt;div id=&quot;html_8f8e96f4b95ae72d8ca535a156f8a871&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Warehouse 1&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_eceb1003f4c869043cc5ebb182f4c745.setContent(html_8f8e96f4b95ae72d8ca535a156f8a871);
+            
+        
+
+        marker_01080eca61d9cfc732f1b41c34f65a76.bindPopup(popup_eceb1003f4c869043cc5ebb182f4c745)
+        ;
+
+        
+    
+    
+            marker_01080eca61d9cfc732f1b41c34f65a76.bindTooltip(
+                `&lt;div&gt;
+                     Warehouse 1
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_d78a716459995c850d568a881437a792 = L.marker(
+                [37.6879, -122.4702],
+                {}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+        var popup_bb6a454a8a81325486543a761aee0213 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_3a7bc259209b74ad5a7a154cb963543f = $(`&lt;div id=&quot;html_3a7bc259209b74ad5a7a154cb963543f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Warehouse 2&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_bb6a454a8a81325486543a761aee0213.setContent(html_3a7bc259209b74ad5a7a154cb963543f);
+            
+        
+
+        marker_d78a716459995c850d568a881437a792.bindPopup(popup_bb6a454a8a81325486543a761aee0213)
+        ;
+
+        
+    
+    
+            marker_d78a716459995c850d568a881437a792.bindTooltip(
+                `&lt;div&gt;
+                     Warehouse 2
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_db7e49c3e2d3bbaa59f0beebde3e7c0d = L.marker(
+                [37.7749, -122.4892],
+                {}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+        var popup_b103b30ab14fcc2f3a88633efa1eff55 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_ac4c45f53fe4e978e861b3ce6e1d10bd = $(`&lt;div id=&quot;html_ac4c45f53fe4e978e861b3ce6e1d10bd&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Retailer 1&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_b103b30ab14fcc2f3a88633efa1eff55.setContent(html_ac4c45f53fe4e978e861b3ce6e1d10bd);
+            
+        
+
+        marker_db7e49c3e2d3bbaa59f0beebde3e7c0d.bindPopup(popup_b103b30ab14fcc2f3a88633efa1eff55)
+        ;
+
+        
+    
+    
+            marker_db7e49c3e2d3bbaa59f0beebde3e7c0d.bindTooltip(
+                `&lt;div&gt;
+                     Retailer 1
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var marker_709ad65f69366d366f9a44f974e39081 = L.marker(
+                [37.7328, -122.5054],
+                {}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+        var popup_91d1a8e1e2d8d57ab013ea037a7735ca = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f2b6e79e9e1e074b0f333cdf5c5b8396 = $(`&lt;div id=&quot;html_f2b6e79e9e1e074b0f333cdf5c5b8396&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Retailer 2&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_91d1a8e1e2d8d57ab013ea037a7735ca.setContent(html_f2b6e79e9e1e074b0f333cdf5c5b8396);
+            
+        
+
+        marker_709ad65f69366d366f9a44f974e39081.bindPopup(popup_91d1a8e1e2d8d57ab013ea037a7735ca)
+        ;
+
+        
+    
+    
+            marker_709ad65f69366d366f9a44f974e39081.bindTooltip(
+                `&lt;div&gt;
+                     Retailer 2
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var poly_line_eae51ea89a37abee7db3241452fd984e = L.polyline(
+                [[37.7749, -122.4194], [37.8044, -122.2711]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+            poly_line_eae51ea89a37abee7db3241452fd984e.bindTooltip(
+                `&lt;div&gt;
+                     Factory to Warehouse 1: 10 km
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var poly_line_9e001424ecea17c99d73b5943b1d4b2d = L.polyline(
+                [[37.7749, -122.4194], [37.6879, -122.4702]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+            poly_line_9e001424ecea17c99d73b5943b1d4b2d.bindTooltip(
+                `&lt;div&gt;
+                     Factory to Warehouse 2: 15 km
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var poly_line_fac68cebf803a24bde1c1a9e9c4b5625 = L.polyline(
+                [[37.8044, -122.2711], [37.7749, -122.4892]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+            poly_line_fac68cebf803a24bde1c1a9e9c4b5625.bindTooltip(
+                `&lt;div&gt;
+                     Warehouse 1 to Retailer 1: 8 km
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var poly_line_a0e3c92a4126e082b1c3950416d94f63 = L.polyline(
+                [[37.8044, -122.2711], [37.7328, -122.5054]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+            poly_line_a0e3c92a4126e082b1c3950416d94f63.bindTooltip(
+                `&lt;div&gt;
+                     Warehouse 1 to Retailer 2: 12 km
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var poly_line_4667b4e69da3a12a79782a87e41d6669 = L.polyline(
+                [[37.6879, -122.4702], [37.7749, -122.4892]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+            poly_line_4667b4e69da3a12a79782a87e41d6669.bindTooltip(
+                `&lt;div&gt;
+                     Warehouse 2 to Retailer 1: 10 km
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var poly_line_5eb9b6e8c50079d9a4b4d092ebefad4f = L.polyline(
+                [[37.6879, -122.4702], [37.7328, -122.5054]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+            poly_line_5eb9b6e8c50079d9a4b4d092ebefad4f.bindTooltip(
+                `&lt;div&gt;
+                     Warehouse 2 to Retailer 2: 5 km
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var poly_line_d8c7b2f278e675e5370712e0f6145f77 = L.polyline(
+                [[37.7749, -122.4194], [37.6879, -122.4702]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 4}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+            poly_line_d8c7b2f278e675e5370712e0f6145f77.bindTooltip(
+                `&lt;div&gt;
+                     Optimized: Factory to Warehouse 2
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            var poly_line_601353b4e5129a1038239c28d6fb3520 = L.polyline(
+                [[37.6879, -122.4702], [37.7328, -122.5054]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 4}
+            ).addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+    
+            poly_line_601353b4e5129a1038239c28d6fb3520.bindTooltip(
+                `&lt;div&gt;
+                     Optimized: Warehouse 2 to Retailer 2
+                 &lt;/div&gt;`,
+                {&quot;sticky&quot;: true}
+            );
+        
+    
+            tile_layer_b1c118c7479afa7376c5c35c07bf9f95.addTo(map_4faa285dac6c3e4d8e8142d33c7fbdbf);
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
 </div>
 </section>
 </section>
 <section id="forestry">
-<h3>3. Forestry<a class="headerlink" href="#forestry" title="Link to this heading">#</a></h3>
+<h3>3. Forestry<a class="headerlink" href="#forestry" title="Permalink to this heading">#</a></h3>
 <section id="sustainable-forest-management">
-<h4>Sustainable Forest Management<a class="headerlink" href="#sustainable-forest-management" title="Link to this heading">#</a></h4>
+<h4>Sustainable Forest Management<a class="headerlink" href="#sustainable-forest-management" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>AI predicts forest growth and monitors illegal logging using satellite data.</p></li>
 <li><p>Optimizes timber harvesting while maintaining biodiversity.</p></li>
 </ul>
 </section>
 <section id="id2">
-<h4>Practical examples<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<h4>Practical examples<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <p>For example, the task might be to predict:</p>
 <ol class="arabic simple">
 <li><p>Forest growth for harvesting optimization</p></li>
@@ -882,7 +1139,7 @@ AI task: optimization
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_6388\4157862255.py:30: UserWarning: color argument of Icon should be one of: {&#39;darkpurple&#39;, &#39;lightgreen&#39;, &#39;green&#39;, &#39;lightblue&#39;, &#39;darkblue&#39;, &#39;pink&#39;, &#39;gray&#39;, &#39;orange&#39;, &#39;black&#39;, &#39;purple&#39;, &#39;cadetblue&#39;, &#39;blue&#39;, &#39;darkgreen&#39;, &#39;lightred&#39;, &#39;darkred&#39;, &#39;white&#39;, &#39;lightgray&#39;, &#39;red&#39;, &#39;beige&#39;}.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_22748\4157862255.py:30: UserWarning: color argument of Icon should be one of: {&#39;cadetblue&#39;, &#39;lightred&#39;, &#39;lightgreen&#39;, &#39;black&#39;, &#39;lightblue&#39;, &#39;pink&#39;, &#39;lightgray&#39;, &#39;gray&#39;, &#39;darkpurple&#39;, &#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;darkblue&#39;, &#39;beige&#39;, &#39;orange&#39;, &#39;white&#39;, &#39;darkred&#39;, &#39;purple&#39;, &#39;darkgreen&#39;}.
   icon=folium.Icon(color=color, icon=&quot;tree&quot;)
 </pre></div>
 </div>
@@ -913,7 +1170,7 @@ AI task: optimization
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_166f141cca5bb0cc31ffe26bd5d62e84 {
+                #map_6e714bc2cbaee41a974e725e32bd539b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -928,14 +1185,14 @@ AI task: optimization
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_166f141cca5bb0cc31ffe26bd5d62e84&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_6e714bc2cbaee41a974e725e32bd539b&quot; &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_166f141cca5bb0cc31ffe26bd5d62e84 = L.map(
-                &quot;map_166f141cca5bb0cc31ffe26bd5d62e84&quot;,
+            var map_6e714bc2cbaee41a974e725e32bd539b = L.map(
+                &quot;map_6e714bc2cbaee41a974e725e32bd539b&quot;,
                 {
                     center: [-3.4653, -62.2159],
                     crs: L.CRS.EPSG3857,
@@ -949,167 +1206,167 @@ AI task: optimization
 
         
     
-            var tile_layer_4c7e23d1253af4936e425017aa5e3f58 = L.tileLayer(
+            var tile_layer_8fe63c92ce64636c77666b347ed0b0a1 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
         
     
-            tile_layer_4c7e23d1253af4936e425017aa5e3f58.addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            tile_layer_8fe63c92ce64636c77666b347ed0b0a1.addTo(map_6e714bc2cbaee41a974e725e32bd539b);
         
     
-            var heat_map_20b45b666a5c78ea668548a5a1580eb9 = L.heatLayer(
+            var heat_map_66f18a3a61bd48d0826cdee5e70dd2fd = L.heatLayer(
                 [[-3.073341134206206, -61.97272800414358, 0.6632703844029177], [-3.4295560255946005, -62.17916573997418, 0.9805860121746746], [-3.1554661513218485, -61.95267988986262, 0.7698460661945399], [-3.4132488343361516, -61.734744692735866, 0.8035171238433423], [-3.7240008179774566, -62.403726494295924, 0.5826334695315012], [-3.984363593258806, -62.276598519293636, 0.6974407590877849], [-3.7065118252819618, -62.68592017728492, 0.5994212020444025], [-3.2886580472513502, -61.909824459468794, 0.8029799873905057], [-3.073699121486651, -62.048922974498055, 0.9574798377718904], [-3.149961422210201, -62.2505493258618, 0.5477050582452057], [-3.6291817478017334, -62.0311587473364, 0.8329611783087483], [-3.408702212292273, -62.42527820700994, 0.7806217129238506], [-3.6170731252462103, -61.7282879046109, 0.9244569121330419], [-3.2782704788351267, -62.464015080251045, 0.6280341613806619], [-3.9595664104615684, -61.98933711031422, 0.5554454104059157], [-3.5606634981342298, -62.498280797664606, 0.9478817978367597], [-3.5246297768178882, -62.13672442802362, 0.8477580432130638], [-3.860668545594124, -62.09558262072218, 0.7699205456508366], [-3.7969387752652306, -61.757146429442024, 0.799432733244268], [-3.3052150669602955, -61.81953216098474, 0.8121770240668966], [-3.704366314162286, -62.59450574016973, 0.7282672852414551], [-3.7815595627831664, -62.283490052129636, 0.9416401294594341], [-3.675654978994726, -62.57791204529933, 0.6781489190384875], [-3.093171558454246, -62.42786775061537, 0.8238450602706812], [-3.9994796230046843, -62.34743114366584, 0.6523906290790145], [-3.835344146857058, -62.16591058062456, 0.7424149856794916], [-3.3075639671097297, -62.43058766620148, 0.6220627611238871], [-3.8317089578270696, -62.481235780426935, 0.7790510010086706], [-3.5961638289419593, -62.635107752891024, 0.6269577069671723], [-3.7531239371613987, -62.00369572716021, 0.856135294962221], [-3.8519130700466, -61.70225951495106, 0.6333905071376424], [-3.0233850441673473, -62.288962986681774, 0.5165253664502742], [-3.654928751973317, -62.06564865529864, 0.8403527257773834], [-3.469065416682864, -62.252216835426914, 0.776446544535664], [-3.4073032761206066, -62.61914667366729, 0.6848272280307022], [-3.757840061722574, -61.896860243620104, 0.7351503172230192], [-3.016576859105157, -62.30117555755545, 0.908215936609692], [-3.201654875015449, -62.549282456034575, 0.7540993883703593], [-3.3041871932091182, -61.841641195186284, 0.6629794526009424], [-3.7797589524344515, -61.98885046756199, 0.9047505230698577], [-3.6513340127082707, -62.603823448908585, 0.970261632244802], [-3.602427978912478, -62.18224864947252, 0.918855052953664], [-3.324309882960719, -61.96478388075923, 0.6045358103688568], [-3.458552026172434, -62.00421560065492, 0.6142750108986499], [-3.825045072904064, -61.71783165667057, 0.7583179456355071], [-3.739170825169591, -61.70374630024208, 0.9827096756443968], [-3.4417065463929024, -61.81736365681066, 0.5943535541706897], [-3.7211286474078182, -61.99964217002723, 0.923330571119153], [-3.1436757081219078, -62.29549187287781, 0.9438850493804799], [-3.1490715512324874, -61.764365005779055, 0.8926703255569718], [-3.3310117452857715, -62.11931337856355, 0.6861413832808716], [-3.0598665575422217, -61.72633616324469, 0.6419604873687328], [-3.6946361396556067, -62.214386246413774, 0.7242120714931237], [-3.0055425373891795, -62.52407474732266, 0.5090376818077604], [-3.5061062848165654, -62.521177290778674, 0.6832343922914299], [-3.255829476943438, -61.979060075747874, 0.6540303959261946], [-3.4574597694451006, -62.19118592316124, 0.8181663090929476], [-3.7495381813944157, -62.110129152439455, 0.9894464291375045], [-3.5132578470405447, -61.79390121228145, 0.7171971827552144], [-3.6499215923053243, -62.054896637969435, 0.8344620298315498], [-3.135832434928097, -62.46981473175845, 0.7495966899423762], [-3.427995800790817, -61.93144598569369, 0.5218018858772169], [-3.005449489202659, -62.23005548600906, 0.6397801708983792], [-3.116505977733741, -61.95228122610259, 0.9765359235119766], [-3.669249695329486, -62.14723503316451, 0.7861462345854191], [-3.019668416283954, -62.624653743993875, 0.652848509643591], [-3.809088968849654, -62.431525143109845, 0.7426399371381578], [-3.6273131329059507, -62.305308533190534, 0.9221065703631557], [-3.0699831651891683, -62.62958386915046, 0.6044593588076801], [-3.3288564831759495, -62.34135321870384, 0.6270818245348694], [-3.704709411581061, -62.377449235761404, 0.9243348974623372], [-3.863378668557971, -61.99108900308988, 0.7764099884539539], [-3.7034898563522014, -62.28021914355373, 0.628103471797229], [-3.3884862891343195, -62.618405819599765, 0.5025924313869934], [-3.372105585051364, -62.50572604648796, 0.5354704584999639], [-3.6032161727861114, -62.64923146896061, 0.94330857447533], [-3.9723832281262954, -62.121135104492446, 0.7192370615090435], [-3.3279738647048007, -62.37184733252527, 0.5775208083638721], [-3.018159111689469, -61.861066497930636, 0.9302023091558376], [-3.749748639484136, -62.66116526557058, 0.6516327573366114], [-3.4629175728033443, -62.37334875820396, 0.9139345018937943], [-3.728457084180258, -61.73474816960923, 0.7286325808068643], [-3.1579769249880187, -62.50561996600513, 0.7056769525283393], [-3.300487789232806, -62.5616469075822, 0.5663727111214849], [-3.030463132885841, -61.985404895820054, 0.5205337583839379], [-3.6011790985552055, -62.26647926241926, 0.8720213214995577], [-3.7491394726533387, -62.51566632566863, 0.5404364833085988], [-3.571685525059892, -62.01150009923464, 0.5290967977542218], [-3.0847862723735195, -62.257647770268896, 0.6198936795787016], [-3.9061267099187083, -62.517134002892696, 0.9673069986698548], [-3.3617294061566496, -62.183303742573436, 0.8285556642500834], [-3.564327101322109, -61.96996068343818, 0.5238580638458243], [-3.433962789505924, -62.54135355235751, 0.5600823239028211], [-3.6581203332835983, -62.60820093418656, 0.5470784941342801], [-3.6885866906087057, -61.72048947137849, 0.5876651349446693], [-3.9828388981682497, -61.93663557699609, 0.9034564885253897], [-3.653695678910599, -62.235326187060394, 0.8248868413213817], [-3.9519410758029663, -61.75085426840862, 0.9433401936490238], [-3.739106376658286, -62.684695459709616, 0.9667181540397415], [-3.498960116084741, -62.16062255159994, 0.8419818846990705]],
                 {&quot;blur&quot;: 10, &quot;maxZoom&quot;: 8, &quot;minOpacity&quot;: 0.5, &quot;radius&quot;: 15}
             );
         
     
-            heat_map_20b45b666a5c78ea668548a5a1580eb9.addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            heat_map_66f18a3a61bd48d0826cdee5e70dd2fd.addTo(map_6e714bc2cbaee41a974e725e32bd539b);
         
     
-            var marker_6953afac286e5936d0dcdf2a155a1dbb = L.marker(
+            var marker_879a43bb8d1fa48ffa783ab957137a40 = L.marker(
                 [-3.2, -62.1],
                 {}
-            ).addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            ).addTo(map_6e714bc2cbaee41a974e725e32bd539b);
         
     
-            var icon_538869e0457b1ed5c1c8cb7d804ed367 = L.AwesomeMarkers.icon(
+            var icon_9ebda7f114d6317cd7a837867ada78e0 = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;tree&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
             );
-            marker_6953afac286e5936d0dcdf2a155a1dbb.setIcon(icon_538869e0457b1ed5c1c8cb7d804ed367);
+            marker_879a43bb8d1fa48ffa783ab957137a40.setIcon(icon_9ebda7f114d6317cd7a837867ada78e0);
         
     
-        var popup_49b8ef9304f5a6092b1745d877f6177d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_b8ed34b787f7f3655f0b62776e438d30 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_4918030284e259aa63b0d8496ecd8bbc = $(`&lt;div id=&quot;html_4918030284e259aa63b0d8496ecd8bbc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: High Severity&lt;/div&gt;`)[0];
-                popup_49b8ef9304f5a6092b1745d877f6177d.setContent(html_4918030284e259aa63b0d8496ecd8bbc);
+                var html_88e1e39135890862f3023b1433e90770 = $(`&lt;div id=&quot;html_88e1e39135890862f3023b1433e90770&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: High Severity&lt;/div&gt;`)[0];
+                popup_b8ed34b787f7f3655f0b62776e438d30.setContent(html_88e1e39135890862f3023b1433e90770);
             
         
 
-        marker_6953afac286e5936d0dcdf2a155a1dbb.bindPopup(popup_49b8ef9304f5a6092b1745d877f6177d)
+        marker_879a43bb8d1fa48ffa783ab957137a40.bindPopup(popup_b8ed34b787f7f3655f0b62776e438d30)
         ;
 
         
     
     
-            var marker_d1d2b522ec3419e88bae36f3ab7acf02 = L.marker(
+            var marker_0f82e19bdc61c606c0890ebf13ab9e31 = L.marker(
                 [-3.6, -62.4],
                 {}
-            ).addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            ).addTo(map_6e714bc2cbaee41a974e725e32bd539b);
         
     
-            var icon_04cb146180e7c00695efc34c2b92a060 = L.AwesomeMarkers.icon(
+            var icon_b942b9a2c587ca035e21d729435011b1 = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;tree&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;orange&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
             );
-            marker_d1d2b522ec3419e88bae36f3ab7acf02.setIcon(icon_04cb146180e7c00695efc34c2b92a060);
+            marker_0f82e19bdc61c606c0890ebf13ab9e31.setIcon(icon_b942b9a2c587ca035e21d729435011b1);
         
     
-        var popup_092b4916868e3ea016bd4413504b8c5b = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_3e9854e02f3f2b00c9e892e576fb9a9e = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_11d2bd1430eacb108d7e817361e8d833 = $(`&lt;div id=&quot;html_11d2bd1430eacb108d7e817361e8d833&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: Medium Severity&lt;/div&gt;`)[0];
-                popup_092b4916868e3ea016bd4413504b8c5b.setContent(html_11d2bd1430eacb108d7e817361e8d833);
+                var html_489e99d8a33eccb2c31ea480d5cd7383 = $(`&lt;div id=&quot;html_489e99d8a33eccb2c31ea480d5cd7383&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: Medium Severity&lt;/div&gt;`)[0];
+                popup_3e9854e02f3f2b00c9e892e576fb9a9e.setContent(html_489e99d8a33eccb2c31ea480d5cd7383);
             
         
 
-        marker_d1d2b522ec3419e88bae36f3ab7acf02.bindPopup(popup_092b4916868e3ea016bd4413504b8c5b)
+        marker_0f82e19bdc61c606c0890ebf13ab9e31.bindPopup(popup_3e9854e02f3f2b00c9e892e576fb9a9e)
         ;
 
         
     
     
-            var marker_cef8b24f8712d1d475519f8573d49ebe = L.marker(
+            var marker_6432eefdd89dcb819bac0fd4e66946db = L.marker(
                 [-3.4, -62.3],
                 {}
-            ).addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            ).addTo(map_6e714bc2cbaee41a974e725e32bd539b);
         
     
-            var icon_5eb890910e7fb4240cc21ccc020cd5e3 = L.AwesomeMarkers.icon(
+            var icon_f9829db9f0e9f59a5e4caa71994783e4 = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;tree&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;yellow&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
             );
-            marker_cef8b24f8712d1d475519f8573d49ebe.setIcon(icon_5eb890910e7fb4240cc21ccc020cd5e3);
+            marker_6432eefdd89dcb819bac0fd4e66946db.setIcon(icon_f9829db9f0e9f59a5e4caa71994783e4);
         
     
-        var popup_f25e6ebc52b9ff410266023aefefe1a2 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_a1cba023b0df0c056592f7e7146c6680 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_590dd8bdedee0eee5daf2aba63eb4d9a = $(`&lt;div id=&quot;html_590dd8bdedee0eee5daf2aba63eb4d9a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: Low Severity&lt;/div&gt;`)[0];
-                popup_f25e6ebc52b9ff410266023aefefe1a2.setContent(html_590dd8bdedee0eee5daf2aba63eb4d9a);
+                var html_582143ec0ebd37ce92310247a15226c6 = $(`&lt;div id=&quot;html_582143ec0ebd37ce92310247a15226c6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: Low Severity&lt;/div&gt;`)[0];
+                popup_a1cba023b0df0c056592f7e7146c6680.setContent(html_582143ec0ebd37ce92310247a15226c6);
             
         
 
-        marker_cef8b24f8712d1d475519f8573d49ebe.bindPopup(popup_f25e6ebc52b9ff410266023aefefe1a2)
+        marker_6432eefdd89dcb819bac0fd4e66946db.bindPopup(popup_a1cba023b0df0c056592f7e7146c6680)
         ;
 
         
     
     
-            var polygon_ea9ef3bf57480f2ee125e5bca676c0c8 = L.polygon(
+            var polygon_ba485418e4cb319439f37390e38c4b39 = L.polygon(
                 [[-3.3, -62.5], [-3.3, -62.3], [-3.5, -62.3], [-3.5, -62.5]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;green&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.3, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            ).addTo(map_6e714bc2cbaee41a974e725e32bd539b);
         
     
-        var popup_2749fe7c639206c113e4fbdcbab005f8 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_8b393951dfcc33271246921fc7dadc87 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_9c5016b24e783ce13bb7777268707ebe = $(`&lt;div id=&quot;html_9c5016b24e783ce13bb7777268707ebe&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Optimized Harvest Zone&lt;/div&gt;`)[0];
-                popup_2749fe7c639206c113e4fbdcbab005f8.setContent(html_9c5016b24e783ce13bb7777268707ebe);
+                var html_01e184f31f65eea3f21e46fbe5dcaee6 = $(`&lt;div id=&quot;html_01e184f31f65eea3f21e46fbe5dcaee6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Optimized Harvest Zone&lt;/div&gt;`)[0];
+                popup_8b393951dfcc33271246921fc7dadc87.setContent(html_01e184f31f65eea3f21e46fbe5dcaee6);
             
         
 
-        polygon_ea9ef3bf57480f2ee125e5bca676c0c8.bindPopup(popup_2749fe7c639206c113e4fbdcbab005f8)
+        polygon_ba485418e4cb319439f37390e38c4b39.bindPopup(popup_8b393951dfcc33271246921fc7dadc87)
         ;
 
         
     
     
-            var polygon_a89127ba556e69463a54186fad108ffa = L.polygon(
+            var polygon_f54ae127e944fb631c5904e1c2acff3b = L.polygon(
                 [[-3.6, -62.2], [-3.6, -62.0], [-3.8, -62.0], [-3.8, -62.2]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;green&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.3, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            ).addTo(map_6e714bc2cbaee41a974e725e32bd539b);
         
     
-        var popup_b39ad7b6940a3777ba61966ce45d4eea = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_5400ae7e42350913726724bd445fe117 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_90ef9c2bcfa30099f64ada7c58267cff = $(`&lt;div id=&quot;html_90ef9c2bcfa30099f64ada7c58267cff&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Optimized Harvest Zone&lt;/div&gt;`)[0];
-                popup_b39ad7b6940a3777ba61966ce45d4eea.setContent(html_90ef9c2bcfa30099f64ada7c58267cff);
+                var html_1412fc928f801c7f00dd4ad9871632ff = $(`&lt;div id=&quot;html_1412fc928f801c7f00dd4ad9871632ff&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Optimized Harvest Zone&lt;/div&gt;`)[0];
+                popup_5400ae7e42350913726724bd445fe117.setContent(html_1412fc928f801c7f00dd4ad9871632ff);
             
         
 
-        polygon_a89127ba556e69463a54186fad108ffa.bindPopup(popup_b39ad7b6940a3777ba61966ce45d4eea)
+        polygon_f54ae127e944fb631c5904e1c2acff3b.bindPopup(popup_5400ae7e42350913726724bd445fe117)
         ;
 
         
     
     
-            var layer_control_1db77e4d58b7082e5552e0673450218f_layers = {
+            var layer_control_73dcdf9afc4230710381e35575fe1c29_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_4c7e23d1253af4936e425017aa5e3f58,
+                    &quot;openstreetmap&quot; : tile_layer_8fe63c92ce64636c77666b347ed0b0a1,
                 },
                 overlays :  {
-                    &quot;Forest Growth Prediction&quot; : heat_map_20b45b666a5c78ea668548a5a1580eb9,
+                    &quot;Forest Growth Prediction&quot; : heat_map_66f18a3a61bd48d0826cdee5e70dd2fd,
                 },
             };
-            let layer_control_1db77e4d58b7082e5552e0673450218f = L.control.layers(
-                layer_control_1db77e4d58b7082e5552e0673450218f_layers.base_layers,
-                layer_control_1db77e4d58b7082e5552e0673450218f_layers.overlays,
+            let layer_control_73dcdf9afc4230710381e35575fe1c29 = L.control.layers(
+                layer_control_73dcdf9afc4230710381e35575fe1c29_layers.base_layers,
+                layer_control_73dcdf9afc4230710381e35575fe1c29_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            ).addTo(map_6e714bc2cbaee41a974e725e32bd539b);
 
         
     
-            tile_layer_4c7e23d1253af4936e425017aa5e3f58.addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            tile_layer_8fe63c92ce64636c77666b347ed0b0a1.addTo(map_6e714bc2cbaee41a974e725e32bd539b);
         
     
-            heat_map_20b45b666a5c78ea668548a5a1580eb9.addTo(map_166f141cca5bb0cc31ffe26bd5d62e84);
+            heat_map_66f18a3a61bd48d0826cdee5e70dd2fd.addTo(map_6e714bc2cbaee41a974e725e32bd539b);
         
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
@@ -1117,16 +1374,16 @@ AI task: optimization
 </section>
 </section>
 <section id="energy-and-biofuels">
-<h3>4. Energy and Biofuels<a class="headerlink" href="#energy-and-biofuels" title="Link to this heading">#</a></h3>
+<h3>4. Energy and Biofuels<a class="headerlink" href="#energy-and-biofuels" title="Permalink to this heading">#</a></h3>
 <section id="biofuel-production-optimization">
-<h4>Biofuel Production Optimization<a class="headerlink" href="#biofuel-production-optimization" title="Link to this heading">#</a></h4>
+<h4>Biofuel Production Optimization<a class="headerlink" href="#biofuel-production-optimization" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>AI improves microbial fermentation for higher biofuel yields.</p></li>
 <li><p>Predictive models reduce experimentation time for biofuel performance testing.</p></li>
 </ul>
 </section>
 <section id="energy-efficiency">
-<h4>Energy Efficiency<a class="headerlink" href="#energy-efficiency" title="Link to this heading">#</a></h4>
+<h4>Energy Efficiency<a class="headerlink" href="#energy-efficiency" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>AI forecasts energy demands and integrates bioenergy production with grid systems.</p></li>
 </ul>
@@ -1168,7 +1425,7 @@ AI task: optimization
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/432ff665c1bf6bcfb2fb19da11287aabcc656ab34ef97ce056d4918dac425366.png" src="_images/432ff665c1bf6bcfb2fb19da11287aabcc656ab34ef97ce056d4918dac425366.png" />
+<img alt="_images/682693e61d77c69194d2fbb6c6d995b156af794e54d0f1c9b0ecfdd6043ce783.png" src="_images/682693e61d77c69194d2fbb6c6d995b156af794e54d0f1c9b0ecfdd6043ce783.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Experiment  Temperature (°C)       pH  Biofuel Yield (%)
           1         33.745401 6.223706          79.335697
           2         39.507143 5.278988          80.034178
@@ -1230,7 +1487,7 @@ AI task: optimization
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/9bec7d75bd09307772d566cb64ff0c3d768cc6c10eafab801c0446e97eb13437.png" src="_images/9bec7d75bd09307772d566cb64ff0c3d768cc6c10eafab801c0446e97eb13437.png" />
+<img alt="_images/58bcdbc1354bb0a1e7ad489b46161ba54b333986ed0df826f2bf0308fa23c6a5.png" src="_images/58bcdbc1354bb0a1e7ad489b46161ba54b333986ed0df826f2bf0308fa23c6a5.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Time  Energy Demand (kWh)  Bioenergy Production (kWh)  Grid Energy (kWh)
 2025-01-01 00:00:00            48.646156                   25.000000          23.646156
 2025-01-01 01:00:00            52.556222                   24.955387          27.600835
@@ -1244,9 +1501,9 @@ AI task: optimization
 </section>
 </section>
 <section id="fisheries-and-aquaculture">
-<h3>5. Fisheries and Aquaculture<a class="headerlink" href="#fisheries-and-aquaculture" title="Link to this heading">#</a></h3>
+<h3>5. Fisheries and Aquaculture<a class="headerlink" href="#fisheries-and-aquaculture" title="Permalink to this heading">#</a></h3>
 <section id="smart-aquaculture">
-<h4>Smart Aquaculture<a class="headerlink" href="#smart-aquaculture" title="Link to this heading">#</a></h4>
+<h4>Smart Aquaculture<a class="headerlink" href="#smart-aquaculture" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>AI monitors water quality, fish health, and feeding schedules.</p></li>
 <li><p>Detects early signs of disease in fish populations using image recognition.</p></li>
@@ -1299,7 +1556,7 @@ AI task: optimization
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/8d94ebfae9505f6ddcd39220f5a0f0e2a34f4fa40f997cb6625ef3b81ca2d87e.png" src="_images/8d94ebfae9505f6ddcd39220f5a0f0e2a34f4fa40f997cb6625ef3b81ca2d87e.png" />
+<img alt="_images/6a95c11f480957889f381a2f5935bed534ba004a29c94c9d25b7eacf4d575886.png" src="_images/6a95c11f480957889f381a2f5935bed534ba004a29c94c9d25b7eacf4d575886.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Time  Temperature (°C)       pH  Oxygen Levels (mg/L)  Feeding Event
 2025-01-01 00:00:00         24.174110 8.373460              9.865053           True
 2025-01-01 01:00:00         22.221078 6.775042              6.965489          False
@@ -1351,11 +1608,7 @@ AI task: optimization
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\utils\__init__.py:16: UserWarning: A NumPy version &gt;=1.22.4 and &lt;2.3.0 is required for this version of SciPy (detected version 1.21.5)
-  from scipy.sparse import issparse
-</pre></div>
-</div>
-<img alt="_images/75597b0df4cdbd4bf63672c620664d64d09a993c594b2fb811ad0afe83a0df06.png" src="_images/75597b0df4cdbd4bf63672c620664d64d09a993c594b2fb811ad0afe83a0df06.png" />
+<img alt="_images/ecc1102670afb7e23993ee1064cd7d9bbd729090e5438e248916ed3f46c583b1.png" src="_images/ecc1102670afb7e23993ee1064cd7d9bbd729090e5438e248916ed3f46c583b1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Classification Report:
                precision    recall  f1-score   support
 
@@ -1372,16 +1625,16 @@ weighted avg       0.70      0.70      0.70       100
 </section>
 </section>
 <section id="biomaterials-and-biomanufacturing">
-<h3>6. Biomaterials and Biomanufacturing<a class="headerlink" href="#biomaterials-and-biomanufacturing" title="Link to this heading">#</a></h3>
+<h3>6. Biomaterials and Biomanufacturing<a class="headerlink" href="#biomaterials-and-biomanufacturing" title="Permalink to this heading">#</a></h3>
 <section id="material-discovery">
-<h4>Material Discovery<a class="headerlink" href="#material-discovery" title="Link to this heading">#</a></h4>
+<h4>Material Discovery<a class="headerlink" href="#material-discovery" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Accelerates discovery of sustainable biomaterials like bioplastics.</p></li>
 <li><p>Simulates and predicts the performance of bio-based composites.</p></li>
 </ul>
 </section>
 <section id="process-optimization">
-<h4>Process Optimization<a class="headerlink" href="#process-optimization" title="Link to this heading">#</a></h4>
+<h4>Process Optimization<a class="headerlink" href="#process-optimization" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>AI enhances efficiency in biomanufacturing processes, such as optimizing enzymes and microbial pathways.</p></li>
 </ul>
@@ -1470,8 +1723,8 @@ weighted avg       0.70      0.70      0.70       100
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5106b52086d82be3fe2a3e6cdb1e2861e6ba4a3f0c94d0ecf74a69c89a11463a.png" src="_images/5106b52086d82be3fe2a3e6cdb1e2861e6ba4a3f0c94d0ecf74a69c89a11463a.png" />
-<img alt="_images/66abdddce99c0b703476c21ea7236e50894a38d2c2fe72963f7bf17e44b4aac2.png" src="_images/66abdddce99c0b703476c21ea7236e50894a38d2c2fe72963f7bf17e44b4aac2.png" />
+<img alt="_images/5291f023d6891797aa0ad71a290d25e9f4407aad3c753f7b5cf6182c3ee29974.png" src="_images/5291f023d6891797aa0ad71a290d25e9f4407aad3c753f7b5cf6182c3ee29974.png" />
+<img alt="_images/ce5fb6ece39bc69a151ca174af71928f60b35e4278511abb38f5e56637860c87.png" src="_images/ce5fb6ece39bc69a151ca174af71928f60b35e4278511abb38f5e56637860c87.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1517,19 +1770,19 @@ weighted avg       0.70      0.70      0.70       100
 R-squared Score: 0.9987
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_6388\1379572060.py:28: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_22748\1379572060.py:28: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
   plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], &quot;k--&quot;, lw=2, color=&quot;red&quot;)
 </pre></div>
 </div>
-<img alt="_images/57c6672bcd6eb5ec6bcf8664dea493030d61c50997cbb8d280922996b6fad0cd.png" src="_images/57c6672bcd6eb5ec6bcf8664dea493030d61c50997cbb8d280922996b6fad0cd.png" />
+<img alt="_images/940b0749c4b086a094218d0651fef34791414f1008bfa1c42ff78508ddf60d82.png" src="_images/940b0749c4b086a094218d0651fef34791414f1008bfa1c42ff78508ddf60d82.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="circular-bioeconomy">
-<h3>7. Circular Bioeconomy<a class="headerlink" href="#circular-bioeconomy" title="Link to this heading">#</a></h3>
+<h3>7. Circular Bioeconomy<a class="headerlink" href="#circular-bioeconomy" title="Permalink to this heading">#</a></h3>
 <section id="waste-valorization">
-<h4>Waste Valorization<a class="headerlink" href="#waste-valorization" title="Link to this heading">#</a></h4>
+<h4>Waste Valorization<a class="headerlink" href="#waste-valorization" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p>AI optimizes the conversion of agricultural and organic waste into bioenergy, biochemicals, and fertilizers.</p></li>
 <li><p>Predicts the best reuse and recycling strategies for bio-based products.</p></li>
@@ -1613,23 +1866,23 @@ R-squared Score: 0.9987
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_6388\984286448.py:6: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_22748\984286448.py:6: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(data=waste_data, x=&quot;Waste Type&quot;, palette=&quot;coolwarm&quot;)
 </pre></div>
 </div>
-<img alt="_images/be67c0760e2b253b1d2fb0faaeae190a18cafabefab399d1340cbbde0fc6367b.png" src="_images/be67c0760e2b253b1d2fb0faaeae190a18cafabefab399d1340cbbde0fc6367b.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_6388\984286448.py:12: FutureWarning: 
+<img alt="_images/42a89ed76f0be1dde84dc528fb5338fbd7cfccbc50ba219c3e132f927fbe520a.png" src="_images/42a89ed76f0be1dde84dc528fb5338fbd7cfccbc50ba219c3e132f927fbe520a.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_22748\984286448.py:12: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.boxplot(data=waste_data, x=&quot;Valorization Strategy&quot;, y=&quot;Energy Potential (MJ/kg)&quot;, palette=&quot;Set2&quot;)
 </pre></div>
 </div>
-<img alt="_images/67d0638cb5c3790edfaf0241815ad14c5f227bd7588346940ceaacb52eeb9937.png" src="_images/67d0638cb5c3790edfaf0241815ad14c5f227bd7588346940ceaacb52eeb9937.png" />
-<img alt="_images/812bf3181da4d4f57667759dd3964c5a0402a672d8643a4d0e0ac9196169a03e.png" src="_images/812bf3181da4d4f57667759dd3964c5a0402a672d8643a4d0e0ac9196169a03e.png" />
+<img alt="_images/ca204849ad9aec3c3efecd51f7fa644848639dde07fa10de0d48f5adbe788ce4.png" src="_images/ca204849ad9aec3c3efecd51f7fa644848639dde07fa10de0d48f5adbe788ce4.png" />
+<img alt="_images/9287acdc80d1387e095d363f39da1c4201ecab477f4e2014fed909271aab6fea.png" src="_images/9287acdc80d1387e095d363f39da1c4201ecab477f4e2014fed909271aab6fea.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1680,7 +1933,7 @@ Biochemicals       0.29      0.33      0.31         6
 weighted avg       0.40      0.30      0.31        20
 </pre></div>
 </div>
-<img alt="_images/8302a7e2aec8e66fef326df16af3abda2b6cd30b9f697b031736b995bfc72a7f.png" src="_images/8302a7e2aec8e66fef326df16af3abda2b6cd30b9f697b031736b995bfc72a7f.png" />
+<img alt="_images/693362d5906e03a9e2bca219883aa199aa2c39f348db59d838ec294e26148376.png" src="_images/693362d5906e03a9e2bca219883aa199aa2c39f348db59d838ec294e26148376.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1701,14 +1954,14 @@ weighted avg       0.40      0.30      0.31        20
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/e27e2d25d43f7dbc2e8db6766b662603b2bb6329bea0e5dfc4c07259d065ef79.png" src="_images/e27e2d25d43f7dbc2e8db6766b662603b2bb6329bea0e5dfc4c07259d065ef79.png" />
+<img alt="_images/fa2947c013a97dbcd419e290aea1e6f27347c487a7fc565c369b4358166c5920.png" src="_images/fa2947c013a97dbcd419e290aea1e6f27347c487a7fc565c369b4358166c5920.png" />
 </div>
 </div>
 </section>
 </section>
 </section>
 <section id="real-life-example-on-actual-data">
-<h2>Real-life example on actual data<a class="headerlink" href="#real-life-example-on-actual-data" title="Link to this heading">#</a></h2>
+<h2>Real-life example on actual data<a class="headerlink" href="#real-life-example-on-actual-data" title="Permalink to this heading">#</a></h2>
 <p>Let’s do some real application using real-life data.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>UCI Machine Learning Repository: Contains water quality datasets for rivers, lakes, and oceans.
 </pre></div>
@@ -1747,7 +2000,7 @@ weighted avg       0.40      0.30      0.31        20
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0ca16c0464a75ce727a555a9df88b0aac98f388d2b3198537b1dd4d3832a125c.png" src="_images/0ca16c0464a75ce727a555a9df88b0aac98f388d2b3198537b1dd4d3832a125c.png" />
+<img alt="_images/ec5212a28159989018ebd4e0c52891f2fa1368c1bc47b9e9f8dc23f697c12490.png" src="_images/ec5212a28159989018ebd4e0c52891f2fa1368c1bc47b9e9f8dc23f697c12490.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1830,8 +2083,8 @@ D-14/3/90 42857.0 1.5 7.7 238.0 319.0 292.0 33.8 3.5 1261 7.6 170.0 268 31.3 4.2
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/9736a8f6e478d2a6bb39b459af630826e21c51c2cd90bde95576aedbffa62dbb.png" src="_images/9736a8f6e478d2a6bb39b459af630826e21c51c2cd90bde95576aedbffa62dbb.png" />
-<img alt="_images/db6f4ada58e0cae4820fbc053a0527962a31d75d601b41b107f480e3e51dee61.png" src="_images/db6f4ada58e0cae4820fbc053a0527962a31d75d601b41b107f480e3e51dee61.png" />
+<img alt="_images/2bce5803c63003acaa12afef9f8f8723a35983ce36030b2dc860930de13755bb.png" src="_images/2bce5803c63003acaa12afef9f8f8723a35983ce36030b2dc860930de13755bb.png" />
+<img alt="_images/c72ea0a816783b8c8d6f73200ae0ad8af384edb2afffa02436f8f5e65a3f26f2.png" src="_images/c72ea0a816783b8c8d6f73200ae0ad8af384edb2afffa02436f8f5e65a3f26f2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1884,11 +2137,11 @@ R-squared Score: -0.01
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_6388\3845146598.py:4: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_22748\3845146598.py:4: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
   plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], &quot;k--&quot;, lw=2, color=&quot;red&quot;)
 </pre></div>
 </div>
-<img alt="_images/1dddc976ddca314bb822df3a025e7e6669b913f6ded88a5833065641f393b73a.png" src="_images/1dddc976ddca314bb822df3a025e7e6669b913f6ded88a5833065641f393b73a.png" />
+<img alt="_images/3908057446600633e981c516d9d1bc35904faa1a8723138a51e7717069c784e2.png" src="_images/3908057446600633e981c516d9d1bc35904faa1a8723138a51e7717069c784e2.png" />
 </div>
 </div>
 <p><strong>Abnormal Oxygen levels in the water</strong></p>
@@ -1986,15 +2239,15 @@ D-14/3/90 42857.0 1.5 7.7 238.0 319.0 292.0 33.8 3.5 1261 7.6 170.0 268 31.3 4.2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_6388\2200278684.py:6: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_22748\2200278684.py:6: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
   sns.countplot(data=water_data, x=&quot;Oxygen_Status&quot;, palette=&quot;coolwarm&quot;)
 </pre></div>
 </div>
-<img alt="_images/5073cb1afb1c73e1cbbe27c2f82e9cde37771cdedd147fc7444e911f45588436.png" src="_images/5073cb1afb1c73e1cbbe27c2f82e9cde37771cdedd147fc7444e911f45588436.png" />
-<img alt="_images/c5ae9b3e6bb7856aff7672ef57545725dac3107f32c919e880ac6f7e3c0ef274.png" src="_images/c5ae9b3e6bb7856aff7672ef57545725dac3107f32c919e880ac6f7e3c0ef274.png" />
+<img alt="_images/4ec050633b006cc0da56da5f6ac1d75170640c5bd916d62400525e39a836011c.png" src="_images/4ec050633b006cc0da56da5f6ac1d75170640c5bd916d62400525e39a836011c.png" />
+<img alt="_images/c661c4b634aad223e6b37d2a9a7ddeaba736d6d9ccef752e34781cf0ea1933a2.png" src="_images/c661c4b634aad223e6b37d2a9a7ddeaba736d6d9ccef752e34781cf0ea1933a2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2046,15 +2299,15 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 weighted avg       0.96      0.98      0.97        88
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
-C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_classification.py:1509: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_classification.py:1565: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
   _warn_prf(average, modifier, f&quot;{metric.capitalize()} is&quot;, len(result))
 </pre></div>
 </div>
-<img alt="_images/c83b4d516fd5cabf3283ccf1f11080a42c82f59b0332f4dd8a44caae817dbb52.png" src="_images/c83b4d516fd5cabf3283ccf1f11080a42c82f59b0332f4dd8a44caae817dbb52.png" />
+<img alt="_images/c3fe3af38a46e8637be8ebb5ce0b5216a7bb76aa8061305b9cc33e1863deb60e.png" src="_images/c3fe3af38a46e8637be8ebb5ce0b5216a7bb76aa8061305b9cc33e1863deb60e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2091,7 +2344,7 @@ C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_cl
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/28f248f9d4b162c94fa1a48c568480719abe475bbf4b584f3ab75f52fe7eec99.png" src="_images/28f248f9d4b162c94fa1a48c568480719abe475bbf4b584f3ab75f52fe7eec99.png" />
+<img alt="_images/b1ece708726821b14fb97fc540636c411689ddcc6228c3e42a593495d9674af0.png" src="_images/b1ece708726821b14fb97fc540636c411689ddcc6228c3e42a593495d9674af0.png" />
 </div>
 </div>
 </section>
@@ -2124,27 +2377,9 @@ C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_cl
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="AI_Exercise_9.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercise 9: Classification</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="AI_Exercise_10.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercise 10: Classification (Evaluation metrics)</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -2153,7 +2388,6 @@ C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_cl
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -2219,10 +2453,9 @@ By Kamil Smolak, Saeid Haji-Aghajany
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -2246,8 +2479,8 @@ By Kamil Smolak, Saeid Haji-Aghajany
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
