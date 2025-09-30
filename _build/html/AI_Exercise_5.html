@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Exercise 5: Python Knowledge Repetition &#8212; Artificial Intelligence</title>
   
@@ -14,54 +15,56 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_5';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 4: Advanced regression models" href="4.%20AI%204.html" />
-    <link rel="prev" title="Exercise 4: Python Knowledge Repetition" href="AI_Exercise_4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -71,23 +74,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,20 +117,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -137,13 +137,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="1.%20AI%201.html">
-  
   
   
   
@@ -153,75 +149,22 @@
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Artificial Intelligence - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Artificial Intelligence - Home"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="1.%20AI%201.html">
-                    Lecture 1: Artificial Intelligence (winter 2024/2025)
+                    Lecture 1: Artificial Intelligence (winter 2025/2026)
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_2.html">Exercise 2: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_3.html">Exercise 3: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.%20AI%203.html">Lecture 3: Linear Regression</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_4.html">Exercise 4: Python Knowledge Repetition</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise 5: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.%20AI%205.html">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_6.html">Exercise 6: Implementation (Probability)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.%20AI%206.html">Lecture 6: Advanced regression in Python and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7.%20AI%207.html">Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10.%20AI%2010.html">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_10.html">Exercise 10: Classification (Evaluation metrics)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_11.html">Exercise 11: Clustering</a></li>
-</ul>
-
+        
     </div>
 </nav></div>
     </div>
@@ -235,7 +178,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -244,14 +187,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -373,28 +316,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -452,17 +393,17 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-5-python-knowledge-repetition">
-<h1>Exercise 5: Python Knowledge Repetition<a class="headerlink" href="#exercise-5-python-knowledge-repetition" title="Link to this heading">#</a></h1>
+<h1>Exercise 5: Python Knowledge Repetition<a class="headerlink" href="#exercise-5-python-knowledge-repetition" title="Permalink to this heading">#</a></h1>
 <section id="machine-learning-packages">
-<h2>Machine learning packages<a class="headerlink" href="#machine-learning-packages" title="Link to this heading">#</a></h2>
+<h2>Machine learning packages<a class="headerlink" href="#machine-learning-packages" title="Permalink to this heading">#</a></h2>
 <img src="img/ML.png" width="450" style="display: block; margin: 0 auto;" />
 <img src="img/ML2.png" width="700" style="display: block; margin: 0 auto;" /><section id="data-manipulation">
-<h3>Data Manipulation<a class="headerlink" href="#data-manipulation" title="Link to this heading">#</a></h3>
+<h3>Data Manipulation<a class="headerlink" href="#data-manipulation" title="Permalink to this heading">#</a></h3>
 <section id="pandas">
-<h4>Pandas<a class="headerlink" href="#pandas" title="Link to this heading">#</a></h4>
+<h4>Pandas<a class="headerlink" href="#pandas" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">Pandas offers efficient and flexible data structures that enable users to work with data in an easy and intuitive manner. This high-level framework, built on Python, is one of the most widely used tools for data analysis and manipulation. Its core objects include Series and DataFrame, and it supports a variety of useful operations such as label-based slicing, merging and joining, hierarchical indexing, as well as reshaping and pivoting of data.</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -557,7 +498,7 @@ Average Salary by Department:
 </div>
 </section>
 <section id="numpy">
-<h4>Numpy<a class="headerlink" href="#numpy" title="Link to this heading">#</a></h4>
+<h4>Numpy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">NumPy offers robust N-dimensional array objects along with a variety of advanced mathematical functions to manipulate these arrays. NumPy arrays are particularly beneficial when handling large datasets, as they provide a reduced memory footprint and faster execution times compared to standard Python lists.</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -639,8 +580,8 @@ Predictions for X_new: [5.8 6.4]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimated Weights (Theta): [ 0.24526309  1.03023611 -0.14387194  0.05230562]
-Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Estimated Weights (Theta): [ 0.00273959  0.9832458  -0.26703796  0.21017128]
+Predictions: [1.0824233  2.00880242 2.87831485 4.07173193 4.99811105]
 </pre></div>
 </div>
 </div>
@@ -648,9 +589,9 @@ Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
 </section>
 </section>
 <section id="data-visualization">
-<h3>Data Visualization<a class="headerlink" href="#data-visualization" title="Link to this heading">#</a></h3>
+<h3>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this heading">#</a></h3>
 <section id="matplotlib">
-<h4>Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h4>
+<h4>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">Matplotlib is the leading library for data visualization in Python. It is constructed on top of NumPy arrays and integrates seamlessly with the SciPy ecosystem. This library enables users to create a variety of visual representations of their datasets, including figures and plots. One of its notable advantages is its compatibility with various operating systems and graphical output formats. Additionally, many modern libraries, such as Seaborn and HoloViews, leverage the capabilities of Matplotlib to enhance their visualization features.</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -679,7 +620,7 @@ Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/468761243a12fc7fdd2059910d404ae4a5a9037c3084e29f5aba418d68d74808.png" src="_images/468761243a12fc7fdd2059910d404ae4a5a9037c3084e29f5aba418d68d74808.png" />
+<img alt="_images/a2b8f49364866a80ec33de7d32ffcbcb3de79cec17e945b29d51091248268647.png" src="_images/a2b8f49364866a80ec33de7d32ffcbcb3de79cec17e945b29d51091248268647.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -714,15 +655,15 @@ Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/634e979537fe19a383ff41cd929db15f3b269c6abc7b5ec6747b9d480a77ebd7.png" src="_images/634e979537fe19a383ff41cd929db15f3b269c6abc7b5ec6747b9d480a77ebd7.png" />
+<img alt="_images/d6ecee2d40b01800007425d6767339c5121337080e645174cb16dde789669cba.png" src="_images/d6ecee2d40b01800007425d6767339c5121337080e645174cb16dde789669cba.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="scientific-computing">
-<h3>Scientific Computing<a class="headerlink" href="#scientific-computing" title="Link to this heading">#</a></h3>
+<h3>Scientific Computing<a class="headerlink" href="#scientific-computing" title="Permalink to this heading">#</a></h3>
 <section id="scipy">
-<h4>SciPy<a class="headerlink" href="#scipy" title="Link to this heading">#</a></h4>
+<h4>SciPy<a class="headerlink" href="#scipy" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">This library is a compilation of mathematical algorithms and utility functions that are built upon the NumPy library, utilizing its array structures. It includes a variety of advanced modules designed for tasks such as linear algebra, optimization, interpolation, fast Fourier transforms (FFT), image processing, and ordinary differential equation (ODE) solvers, among others.</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -763,7 +704,7 @@ Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a8236eeab39326211fe1e8bc394e81e1e7b47bc6c233186eb503042e662afd05.png" src="_images/a8236eeab39326211fe1e8bc394e81e1e7b47bc6c233186eb503042e662afd05.png" />
+<img alt="_images/59b54d3d78ff55187b78beefcae149c93f96a195b9447aa4699840f9afdee6f8.png" src="_images/59b54d3d78ff55187b78beefcae149c93f96a195b9447aa4699840f9afdee6f8.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Slope: 2.7701133864384846, Intercept: 4.215096157546746
 </pre></div>
 </div>
@@ -809,7 +750,7 @@ Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cbf099f8a544225b5862ddcb353ca8e2b68788c7271512eba0241a15acf34969.png" src="_images/cbf099f8a544225b5862ddcb353ca8e2b68788c7271512eba0241a15acf34969.png" />
+<img alt="_images/91da29fe9ae6f759b97aa1d5323e7305f210d808d55859ff8b7829de9c4c6043.png" src="_images/91da29fe9ae6f759b97aa1d5323e7305f210d808d55859ff8b7829de9c4c6043.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimal x: 1.9999999746237656, Function value: 1.0000000000000007
 </pre></div>
 </div>
@@ -818,9 +759,9 @@ Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
 </section>
 </section>
 <section id="machine-learning">
-<h3>Machine Learning<a class="headerlink" href="#machine-learning" title="Link to this heading">#</a></h3>
+<h3>Machine Learning<a class="headerlink" href="#machine-learning" title="Permalink to this heading">#</a></h3>
 <section id="scikit-learn">
-<h4>Scikit-learn<a class="headerlink" href="#scikit-learn" title="Link to this heading">#</a></h4>
+<h4>Scikit-learn<a class="headerlink" href="#scikit-learn" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">Scikit-learn is a widely-used library in Python for machine learning, offering an extensive range of both supervised and unsupervised learning models. It features a user-friendly and efficient API with a consistent syntax, making it simple to switch between various algorithms and models. Additionally, Scikit-learn provides numerous auxiliary functions for tasks such as data preprocessing, resampling, evaluation of model performance, and tuning of hyperparameters.</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -864,7 +805,7 @@ Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy: 1.0
 </pre></div>
 </div>
-<img alt="_images/b70790a307e232f0fbdc28cb11c45ba33f8d011c2db161da409bc90cae07c9ba.png" src="_images/b70790a307e232f0fbdc28cb11c45ba33f8d011c2db161da409bc90cae07c9ba.png" />
+<img alt="_images/28e87465441292ff42fbd1eda0af837c66844f6c51aae1a0d799e32aa1164dd0.png" src="_images/28e87465441292ff42fbd1eda0af837c66844f6c51aae1a0d799e32aa1164dd0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -902,12 +843,12 @@ Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/802b9d296292aec7debea291eaf71edb328ed0f048f6cf546a2aaf0218efdf92.png" src="_images/802b9d296292aec7debea291eaf71edb328ed0f048f6cf546a2aaf0218efdf92.png" />
+<img alt="_images/04391fc187e21236d7a7726cecc701addbedaa103408743adb0b36ac91329983.png" src="_images/04391fc187e21236d7a7726cecc701addbedaa103408743adb0b36ac91329983.png" />
 </div>
 </div>
 </section>
 <section id="tensorflow">
-<h4>TensorFlow<a class="headerlink" href="#tensorflow" title="Link to this heading">#</a></h4>
+<h4>TensorFlow<a class="headerlink" href="#tensorflow" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">TensorFlow, created by Google, is one of the leading libraries used for large-scale machine learning and deep learning applications. It functions as a framework for numerical computations involving data flow graphs, where the nodes represent various mathematical operations, and the edges signify tensors, which are essentially multidimensional arrays. TensorFlow offers both high-level APIs, like tf.Keras, for ease of use, as well as low-level APIs for those requiring more detailed control over their models. Additionally, it supports training on distributed servers and enables deployment on a wide range of platforms, including desktops, servers, embedded IoT devices, and mobile devices.</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -962,14 +903,14 @@ Predictions: [1.14467217 2.08334195 2.93044541 4.01298713 4.95165692]
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">16</span>
+<span class="nn">Input In [11],</span> in <span class="ni">&lt;cell line: 16&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">y</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="c1"># One-hot encode the target variable</span>
 <span class="ne">---&gt; </span><span class="mi">16</span> <span class="n">encoder</span> <span class="o">=</span> <span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">y_onehot</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="c1"># Split the data into training and testing sets</span>
 
-<span class="ne">TypeError</span>: OneHotEncoder.__init__() got an unexpected keyword argument &#39;sparse&#39;
+<span class="ne">TypeError</span>: __init__() got an unexpected keyword argument &#39;sparse&#39;
 </pre></div>
 </div>
 </div>
@@ -1063,7 +1004,7 @@ Test Accuracy: 0.98
 </div>
 </section>
 <section id="keras">
-<h4>Keras<a class="headerlink" href="#keras" title="Link to this heading">#</a></h4>
+<h4>Keras<a class="headerlink" href="#keras" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">Keras is a high-level API for neural networks that can operate on top of frameworks like TensorFlow. It was designed to facilitate quick experimentation and prototyping of machine learning models. Keras supports a variety of deep learning architectures, including convolutional and recurrent neural networks. Developed by François Chollet, Keras was created with several key principles in mind: modularity, ease of use, simple extensibility, and compatibility with Python.</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1119,7 +1060,7 @@ Test Accuracy: 0.98
 </div>
 </section>
 <section id="pytorch">
-<h4>PyTorch<a class="headerlink" href="#pytorch" title="Link to this heading">#</a></h4>
+<h4>PyTorch<a class="headerlink" href="#pytorch" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">PyTorch is a machine learning library that is built on the Torch framework, which utilizes the Lua programming language. The primary features of PyTorch include tensor computations and automatic differentiation, making it ideal for constructing and training neural networks. In recent years, PyTorch has gained significant popularity, partly due to its capability to define computational graphs dynamically. This flexibility contrasts with most other deep learning libraries that necessitate the definition of the computational graph before executing the model.</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1174,9 +1115,9 @@ Test Accuracy: 0.98
 </section>
 </section>
 <section id="computer-vision">
-<h3>Computer Vision<a class="headerlink" href="#computer-vision" title="Link to this heading">#</a></h3>
+<h3>Computer Vision<a class="headerlink" href="#computer-vision" title="Permalink to this heading">#</a></h3>
 <section id="opencv">
-<h4>OpenCV<a class="headerlink" href="#opencv" title="Link to this heading">#</a></h4>
+<h4>OpenCV<a class="headerlink" href="#opencv" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">OpenCV is a  library designed for computer vision and machine learning applications. It aims to deliver a unified platform for various computer vision tasks. The library boasts over 2,500 algorithms that facilitate face detection and recognition, object identification, human action classification in videos, tracking of moving objects, and the extraction of 3D object models, among other functionalities. OpenCV is utilized in numerous sectors, including industry, academia, and government organizations. </span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1236,7 +1177,7 @@ Test Accuracy: 0.98
 </div>
 </section>
 <section id="scikit-image">
-<h4>Scikit-image<a class="headerlink" href="#scikit-image" title="Link to this heading">#</a></h4>
+<h4>Scikit-image<a class="headerlink" href="#scikit-image" title="Permalink to this heading">#</a></h4>
 <p><span style="color: orange; font-size: 18px;">scikit-image is a Python library for to image processing. It is using natively NumPy arrays as image objects. Scikit-image includes a wide range of algorithms – for segmentation, geometric transformations, color space manipulation, analysis, filtering, morphology, feature detection, and more. It is designed to be compatible with both NumPy and SciPy libraries. </span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1337,27 +1278,9 @@ Test Accuracy: 0.98
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="AI_Exercise_4.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercise 4: Python Knowledge Repetition</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="4.%20AI%204.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 4: Advanced regression models</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -1366,7 +1289,6 @@ Test Accuracy: 0.98
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1423,10 +1345,9 @@ By Kamil Smolak, Saeid Haji-Aghajany
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -1450,8 +1371,8 @@ By Kamil Smolak, Saeid Haji-Aghajany
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

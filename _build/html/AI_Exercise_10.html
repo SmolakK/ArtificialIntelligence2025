@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Exercise 10: Classification (Evaluation metrics) &#8212; Artificial Intelligence</title>
   
@@ -14,56 +15,58 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_10';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 11: Introduction to clustering" href="11.%20AI%2011.html" />
-    <link rel="prev" title="Lecture 10: Examples of use of AI in Bioeconomy" href="10.%20AI%2010.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -73,23 +76,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -111,20 +119,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -139,13 +139,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="1.%20AI%201.html">
-  
   
   
   
@@ -155,75 +151,22 @@
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Artificial Intelligence - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Artificial Intelligence - Home"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="1.%20AI%201.html">
-                    Lecture 1: Artificial Intelligence (winter 2024/2025)
+                    Lecture 1: Artificial Intelligence (winter 2025/2026)
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_2.html">Exercise 2: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_3.html">Exercise 3: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.%20AI%203.html">Lecture 3: Linear Regression</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_4.html">Exercise 4: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_5.html">Exercise 5: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.%20AI%205.html">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_6.html">Exercise 6: Implementation (Probability)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.%20AI%206.html">Lecture 6: Advanced regression in Python and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7.%20AI%207.html">Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10.%20AI%2010.html">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise 10: Classification (Evaluation metrics)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_11.html">Exercise 11: Clustering</a></li>
-</ul>
-
+        
     </div>
 </nav></div>
     </div>
@@ -237,7 +180,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -246,14 +189,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -375,28 +318,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -438,12 +379,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-10-classification-evaluation-metrics">
-<h1>Exercise 10: Classification (Evaluation metrics)<a class="headerlink" href="#exercise-10-classification-evaluation-metrics" title="Link to this heading">#</a></h1>
+<h1>Exercise 10: Classification (Evaluation metrics)<a class="headerlink" href="#exercise-10-classification-evaluation-metrics" title="Permalink to this heading">#</a></h1>
 <section id="confusion-matrix">
-<h2>1- Confusion Matrix<a class="headerlink" href="#confusion-matrix" title="Link to this heading">#</a></h2>
+<h2>1- Confusion Matrix<a class="headerlink" href="#confusion-matrix" title="Permalink to this heading">#</a></h2>
 <p>A confusion matrix is a powerful tool used in classification problems to evaluate the performance of a predictive model. It provides a comprehensive view of the model’s predictions by comparing the actual values with the predicted values. In the case of binary classification, the confusion matrix is typically a 2x2 table that contains four key values:</p>
 <p>True Positive (TP):
 These are the instances where the model correctly predicts the positive class. For example, if a model is designed to detect spam emails, a TP would be an email that is correctly classified as spam.</p>
@@ -457,7 +398,7 @@ This happens when the model fails to identify a positive instance, incorrectly p
     <img src="img/Confusionn.jpg" width="700"/>
 </section>
 <section id="accuracy">
-<h2>2- Accuracy<a class="headerlink" href="#accuracy" title="Link to this heading">#</a></h2>
+<h2>2- Accuracy<a class="headerlink" href="#accuracy" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
@@ -465,7 +406,7 @@ This happens when the model fails to identify a positive instance, incorrectly p
 </section>
 <hr class="docutils" />
 <section id="precision">
-<h2>3- Precision<a class="headerlink" href="#precision" title="Link to this heading">#</a></h2>
+<h2>3- Precision<a class="headerlink" href="#precision" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \text{Precision} = \frac{TP}{TP + FP}
@@ -473,7 +414,7 @@ This happens when the model fails to identify a positive instance, incorrectly p
 </section>
 <hr class="docutils" />
 <section id="recall-sensitivity-tpr">
-<h2>4- Recall (Sensitivity, TPR)<a class="headerlink" href="#recall-sensitivity-tpr" title="Link to this heading">#</a></h2>
+<h2>4- Recall (Sensitivity, TPR)<a class="headerlink" href="#recall-sensitivity-tpr" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \text{Recall} = \frac{TP}{TP + FN}
@@ -481,7 +422,7 @@ This happens when the model fails to identify a positive instance, incorrectly p
 </section>
 <hr class="docutils" />
 <section id="f1-score">
-<h2>5- F1-Score<a class="headerlink" href="#f1-score" title="Link to this heading">#</a></h2>
+<h2>5- F1-Score<a class="headerlink" href="#f1-score" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
@@ -489,7 +430,7 @@ This happens when the model fails to identify a positive instance, incorrectly p
 </section>
 <hr class="docutils" />
 <section id="specificity-tnr">
-<h2>6- Specificity (TNR)<a class="headerlink" href="#specificity-tnr" title="Link to this heading">#</a></h2>
+<h2>6- Specificity (TNR)<a class="headerlink" href="#specificity-tnr" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \text{Specificity} = \frac{TN}{TN + FP}
@@ -497,14 +438,14 @@ This happens when the model fails to identify a positive instance, incorrectly p
 </section>
 <hr class="docutils" />
 <section id="npv-negative-predictive-value">
-<h2>7- NPV (Negative Predictive Value)<a class="headerlink" href="#npv-negative-predictive-value" title="Link to this heading">#</a></h2>
+<h2>7- NPV (Negative Predictive Value)<a class="headerlink" href="#npv-negative-predictive-value" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 \text{NPV} = \frac{TN}{TN + FN}
 \]</div>
 </section>
 <section id="binary-classification-using-logistic-regression">
-<h2>8- Binary Classification using Logistic Regression<a class="headerlink" href="#binary-classification-using-logistic-regression" title="Link to this heading">#</a></h2>
+<h2>8- Binary Classification using Logistic Regression<a class="headerlink" href="#binary-classification-using-logistic-regression" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
@@ -597,26 +538,26 @@ This happens when the model fails to identify a positive instance, incorrectly p
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[ 93  19]
- [ 18 120]]
+[[ 97  21]
+ [ 10 122]]
 </pre></div>
 </div>
-<img alt="_images/47398650277b96d87dfc9c16e8abd82b260becea270e0cb261fef695126c8787.png" src="_images/47398650277b96d87dfc9c16e8abd82b260becea270e0cb261fef695126c8787.png" />
+<img alt="_images/4278b1a0116f6089a715f24e1a54c9e69fa3ead918531a500bd5c60a4595c2b1.png" src="_images/4278b1a0116f6089a715f24e1a54c9e69fa3ead918531a500bd5c60a4595c2b1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.85
-Precision: 0.83
-Recall (Sensitivity, TPR): 0.84
-F1-Score: 0.83
-Specificity (TNR): 0.86
-NPV (Negative Predictive Value): 0.87
+Accuracy: 0.88
+Precision: 0.82
+Recall (Sensitivity, TPR): 0.91
+F1-Score: 0.86
+Specificity (TNR): 0.85
+NPV (Negative Predictive Value): 0.92
 </pre></div>
 </div>
-<img alt="_images/1235d804603dd53ce0fcde5afb5b26a584d62245a3747856b41fc04aa116831b.png" src="_images/1235d804603dd53ce0fcde5afb5b26a584d62245a3747856b41fc04aa116831b.png" />
+<img alt="_images/1aa8b369712434b509d1148338a7c83b3712ec047533bf83d98fd39db98c0bf7.png" src="_images/1aa8b369712434b509d1148338a7c83b3712ec047533bf83d98fd39db98c0bf7.png" />
 </div>
 </div>
 </section>
 <section id="binary-classification-using-k-nearest-neighbors-k-nn">
-<h2>9- Binary Classification using k-Nearest Neighbors (k-NN)<a class="headerlink" href="#binary-classification-using-k-nearest-neighbors-k-nn" title="Link to this heading">#</a></h2>
+<h2>9- Binary Classification using k-Nearest Neighbors (k-NN)<a class="headerlink" href="#binary-classification-using-k-nearest-neighbors-k-nn" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
@@ -710,26 +651,26 @@ NPV (Negative Predictive Value): 0.87
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[104  18]
- [ 27 101]]
+[[114  15]
+ [ 14 107]]
 </pre></div>
 </div>
-<img alt="_images/75b62f0ff80d9617249217cc267deb97c1a401287e90dd3263eccafa78cbe1ab.png" src="_images/75b62f0ff80d9617249217cc267deb97c1a401287e90dd3263eccafa78cbe1ab.png" />
+<img alt="_images/a594c683e0d0f94a417b9571a90c094cee18c0a9390d01276336b29968654ab7.png" src="_images/a594c683e0d0f94a417b9571a90c094cee18c0a9390d01276336b29968654ab7.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.82
-Precision: 0.85
-Recall (Sensitivity, TPR): 0.79
-F1-Score: 0.82
-Specificity (TNR): 0.85
-NPV (Negative Predictive Value): 0.79
+Accuracy: 0.88
+Precision: 0.88
+Recall (Sensitivity, TPR): 0.89
+F1-Score: 0.89
+Specificity (TNR): 0.88
+NPV (Negative Predictive Value): 0.88
 </pre></div>
 </div>
-<img alt="_images/58a6d4ae7216502bdb205e7168e5d673efea8e8414c14c905439f697102e36fd.png" src="_images/58a6d4ae7216502bdb205e7168e5d673efea8e8414c14c905439f697102e36fd.png" />
+<img alt="_images/725c0d2f2cf4070b03764b88f2726b9cbd6c3dbe3eadd6996cf696f955ac803d.png" src="_images/725c0d2f2cf4070b03764b88f2726b9cbd6c3dbe3eadd6996cf696f955ac803d.png" />
 </div>
 </div>
 </section>
 <section id="binary-classification-using-decision-tree">
-<h2>10- Binary Classification using decision tree<a class="headerlink" href="#binary-classification-using-decision-tree" title="Link to this heading">#</a></h2>
+<h2>10- Binary Classification using decision tree<a class="headerlink" href="#binary-classification-using-decision-tree" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
@@ -822,26 +763,26 @@ NPV (Negative Predictive Value): 0.79
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[116  12]
- [ 17 105]]
+[[108  12]
+ [  6 124]]
 </pre></div>
 </div>
-<img alt="_images/b0bbaccb1e40093cc1b7e5cd150689316ec8d92d7edea03b3cef666460a8df97.png" src="_images/b0bbaccb1e40093cc1b7e5cd150689316ec8d92d7edea03b3cef666460a8df97.png" />
+<img alt="_images/0b38ca79df5a0f6d0b1df8a1310dd45e826d17e892dc0c9ed5f755fcff472529.png" src="_images/0b38ca79df5a0f6d0b1df8a1310dd45e826d17e892dc0c9ed5f755fcff472529.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.88
-Precision: 0.91
-Recall (Sensitivity, TPR): 0.87
-F1-Score: 0.89
-Specificity (TNR): 0.90
-NPV (Negative Predictive Value): 0.86
+Accuracy: 0.93
+Precision: 0.90
+Recall (Sensitivity, TPR): 0.95
+F1-Score: 0.92
+Specificity (TNR): 0.91
+NPV (Negative Predictive Value): 0.95
 </pre></div>
 </div>
-<img alt="_images/4720f97770694535cbe7c362b216d3f6083fd5c0606a49eec0e6d25dcc8310c3.png" src="_images/4720f97770694535cbe7c362b216d3f6083fd5c0606a49eec0e6d25dcc8310c3.png" />
+<img alt="_images/e1c48738ac209c129c34c86d8b7825b995b5ffac128f24992591c8e77f8f89cc.png" src="_images/e1c48738ac209c129c34c86d8b7825b995b5ffac128f24992591c8e77f8f89cc.png" />
 </div>
 </div>
 </section>
 <section id="binary-classification-using-naive-bayes">
-<h2>11- Binary Classification using Naive Bayes<a class="headerlink" href="#binary-classification-using-naive-bayes" title="Link to this heading">#</a></h2>
+<h2>11- Binary Classification using Naive Bayes<a class="headerlink" href="#binary-classification-using-naive-bayes" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
@@ -934,26 +875,26 @@ NPV (Negative Predictive Value): 0.86
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[122   7]
- [  9 112]]
+[[127   9]
+ [ 13 101]]
 </pre></div>
 </div>
-<img alt="_images/9600c8905ab5f009f3fb90c6d323a05c53a089c5e656482aa6190591dd8dfbd5.png" src="_images/9600c8905ab5f009f3fb90c6d323a05c53a089c5e656482aa6190591dd8dfbd5.png" />
+<img alt="_images/ea95a201c062b27934f5af8d9d711b115ad0e08e51099d2b08e5f33dee91bd90.png" src="_images/ea95a201c062b27934f5af8d9d711b115ad0e08e51099d2b08e5f33dee91bd90.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.94
-Precision: 0.95
-Recall (Sensitivity, TPR): 0.93
-F1-Score: 0.94
-Specificity (TNR): 0.94
-NPV (Negative Predictive Value): 0.93
+Accuracy: 0.91
+Precision: 0.93
+Recall (Sensitivity, TPR): 0.91
+F1-Score: 0.92
+Specificity (TNR): 0.92
+NPV (Negative Predictive Value): 0.89
 </pre></div>
 </div>
-<img alt="_images/2936447111881cada4b656728f47edf3c0cab56003e34a6dbba7bbb47dfdf76d.png" src="_images/2936447111881cada4b656728f47edf3c0cab56003e34a6dbba7bbb47dfdf76d.png" />
+<img alt="_images/df78cd1ce80e0b64de4cc4bdecb9cfc64d78b22b13c8b18377bfe3ca4558a40d.png" src="_images/df78cd1ce80e0b64de4cc4bdecb9cfc64d78b22b13c8b18377bfe3ca4558a40d.png" />
 </div>
 </div>
 </section>
 <section id="binary-classification-using-using-svm">
-<h2>12- Binary Classification using using SVM<a class="headerlink" href="#binary-classification-using-using-svm" title="Link to this heading">#</a></h2>
+<h2>12- Binary Classification using using SVM<a class="headerlink" href="#binary-classification-using-using-svm" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
@@ -1046,21 +987,21 @@ NPV (Negative Predictive Value): 0.93
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[124   6]
- [ 16 104]]
+[[128   2]
+ [ 11 109]]
 </pre></div>
 </div>
-<img alt="_images/6ef51927557c19ca928d172185fa3e028e3ff49e509ff154c89c6e4d8f5752a4.png" src="_images/6ef51927557c19ca928d172185fa3e028e3ff49e509ff154c89c6e4d8f5752a4.png" />
+<img alt="_images/76187948ff19ce35bc9be6cefdac7a7d2807e816f0ad4fc850f9d6f0315de1ed.png" src="_images/76187948ff19ce35bc9be6cefdac7a7d2807e816f0ad4fc850f9d6f0315de1ed.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.91
-Precision: 0.95
-Recall (Sensitivity, TPR): 0.89
-F1-Score: 0.92
-Specificity (TNR): 0.95
-NPV (Negative Predictive Value): 0.87
+Accuracy: 0.95
+Precision: 0.98
+Recall (Sensitivity, TPR): 0.92
+F1-Score: 0.95
+Specificity (TNR): 0.98
+NPV (Negative Predictive Value): 0.91
 </pre></div>
 </div>
-<img alt="_images/8e69c4ef62d52b9b5f914f8d1a97576405cf07608178359bf51d46f28e90a54d.png" src="_images/8e69c4ef62d52b9b5f914f8d1a97576405cf07608178359bf51d46f28e90a54d.png" />
+<img alt="_images/19c075ad086fda195472d9a01dbb12e463769c164f1ff484a900154441b7d243.png" src="_images/19c075ad086fda195472d9a01dbb12e463769c164f1ff484a900154441b7d243.png" />
 </div>
 </div>
 </section>
@@ -1093,27 +1034,9 @@ NPV (Negative Predictive Value): 0.87
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="10.%20AI%2010.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 10: Examples of use of AI in Bioeconomy</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="11.%20AI%2011.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 11: Introduction to clustering</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -1122,7 +1045,6 @@ NPV (Negative Predictive Value): 0.87
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1163,10 +1085,9 @@ By Kamil Smolak, Saeid Haji-Aghajany
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -1190,8 +1111,8 @@ By Kamil Smolak, Saeid Haji-Aghajany
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Exercise 8: Implementation (Advanced regression) &#8212; Artificial Intelligence</title>
   
@@ -14,54 +15,56 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_8';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning" href="7.%20AI%207.html" />
-    <link rel="prev" title="Lecture 6: Advanced regression in Python and Ethics in Machine Learning" href="6.%20AI%206.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -71,23 +74,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,20 +117,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -137,13 +137,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="1.%20AI%201.html">
-  
   
   
   
@@ -153,75 +149,22 @@
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Artificial Intelligence - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Artificial Intelligence - Home"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="1.%20AI%201.html">
-                    Lecture 1: Artificial Intelligence (winter 2024/2025)
+                    Lecture 1: Artificial Intelligence (winter 2025/2026)
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_2.html">Exercise 2: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_3.html">Exercise 3: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.%20AI%203.html">Lecture 3: Linear Regression</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_4.html">Exercise 4: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_5.html">Exercise 5: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.%20AI%205.html">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_6.html">Exercise 6: Implementation (Probability)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.%20AI%206.html">Lecture 6: Advanced regression in Python and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise 8: Implementation (Advanced regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7.%20AI%207.html">Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10.%20AI%2010.html">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_10.html">Exercise 10: Classification (Evaluation metrics)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_11.html">Exercise 11: Clustering</a></li>
-</ul>
-
+        
     </div>
 </nav></div>
     </div>
@@ -235,7 +178,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -244,14 +187,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -373,28 +316,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -428,12 +369,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-8-implementation-advanced-regression">
-<h1>Exercise 8: Implementation (Advanced regression)<a class="headerlink" href="#exercise-8-implementation-advanced-regression" title="Link to this heading">#</a></h1>
+<h1>Exercise 8: Implementation (Advanced regression)<a class="headerlink" href="#exercise-8-implementation-advanced-regression" title="Permalink to this heading">#</a></h1>
 <section id="polynomial-regression">
-<h2>1- Polynomial regression<a class="headerlink" href="#polynomial-regression" title="Link to this heading">#</a></h2>
+<h2>1- Polynomial regression<a class="headerlink" href="#polynomial-regression" title="Permalink to this heading">#</a></h2>
 <p>Linear regression assumes a linear relationship, attempting to fit a straight line that minimizes the error between predictions and actual values. It is computationally simple, easy to interpret, and works well when the relationship is truly linear.
 Polynomial regression, on the other hand, is an extension of linear regression that transforms input features into polynomial terms, enabling the model to capture non-linear patterns. By introducing flexibility, polynomial regression can effectively model relationships that linear regression cannot.</p>
 <div class="cell docutils container">
@@ -556,17 +497,17 @@ Polynomial regression, on the other hand, is an extension of linear regression t
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Linear Regression Test Metrics:
-MSE: 3236.952705034545
-MAE: 49.46747040836757
-R²: -0.03623690111332167
+MSE: 3570.7893959056423
+MAE: 53.761573493177266
+R²: -0.057401530166842685
 
 Polynomial Regression Test Metrics:
-MSE: 60.00082781582409
-MAE: 6.340385544012675
-R²: 0.9807920975232661
+MSE: 52.33608764664731
+MAE: 5.743494453279449
+R²: 0.9845019537629507
 </pre></div>
 </div>
-<img alt="_images/d7aeb8b8058debfc240cbbd5f879cd5f90f0a6a5ae934831cc464638082657aa.png" src="_images/d7aeb8b8058debfc240cbbd5f879cd5f90f0a6a5ae934831cc464638082657aa.png" />
+<img alt="_images/85ae225f72c24fea6a7a689e5db7c3e5e8a96ce9f490485a17dc9a33af325f9b.png" src="_images/85ae225f72c24fea6a7a689e5db7c3e5e8a96ce9f490485a17dc9a33af325f9b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -685,22 +626,22 @@ R²: 0.9807920975232661
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Linear Regression Test Metrics:
-MSE: 18531.27403434935
-MAE: 109.93068607277263
-R²: 0.6132767293855417
+MSE: 10480.012247358383
+MAE: 86.06514565145994
+R²: 0.6551570987716671
 
 Polynomial Regression Test Metrics:
-MSE: 794.457495474826
-MAE: 21.1461902746236
-R²: 0.9834207189184776
+MSE: 967.7803476481027
+MAE: 25.069447430921493
+R²: 0.968155363280338
 </pre></div>
 </div>
-<img alt="_images/fda2289a5aa3cc40aee398101b9ff78daeead996804956d56531726985973bee.png" src="_images/fda2289a5aa3cc40aee398101b9ff78daeead996804956d56531726985973bee.png" />
+<img alt="_images/cbe33e6970676abf08aeb4f7be911b8a6c456cbe10a4f1d65c2365f15fa7e603.png" src="_images/cbe33e6970676abf08aeb4f7be911b8a6c456cbe10a4f1d65c2365f15fa7e603.png" />
 </div>
 </div>
 </section>
 <section id="support-vector-regression-svr">
-<h2>2- Support Vector Regression (SVR)<a class="headerlink" href="#support-vector-regression-svr" title="Link to this heading">#</a></h2>
+<h2>2- Support Vector Regression (SVR)<a class="headerlink" href="#support-vector-regression-svr" title="Permalink to this heading">#</a></h2>
 <p>SVR is a regression technique based on Support Vector Machines (SVM). It works by finding a line, curve, or surface that best fits the data while allowing for a certain margin of error (epsilon). SVR focuses on minimizing the deviation from the data within this margin and uses support vectors to determine the model. It can handle both linear and non-linear data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -758,17 +699,17 @@ R²: 0.9834207189184776
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SVR Test Metrics:
-MSE: 8738.209692979928
-MAE: 75.74954108047014
-R²: 0.9858542341293756
+MSE: 7917.112350434316
+MAE: 71.57348387000563
+R²: 0.9855598175941022
 </pre></div>
 </div>
-<img alt="_images/dbaa557b6119714b276bf4fd63b62239396d779ef00317bf56dbc9d0378cd241.png" src="_images/dbaa557b6119714b276bf4fd63b62239396d779ef00317bf56dbc9d0378cd241.png" />
+<img alt="_images/c1b536a140cad9306788e632dd8fd56ef6a322587437862fd66a7189b425b79e.png" src="_images/c1b536a140cad9306788e632dd8fd56ef6a322587437862fd66a7189b425b79e.png" />
 </div>
 </div>
 </section>
 <section id="k-nearest-neighbors-regression-k-nn">
-<h2>3- k-Nearest Neighbors Regression (k-NN)<a class="headerlink" href="#k-nearest-neighbors-regression-k-nn" title="Link to this heading">#</a></h2>
+<h2>3- k-Nearest Neighbors Regression (k-NN)<a class="headerlink" href="#k-nearest-neighbors-regression-k-nn" title="Permalink to this heading">#</a></h2>
 <p>k-NN is a non-parametric algorithm that makes predictions based on the average (or weighted average) of the target values of the k nearest data points to a new sample. It doesn’t assume a specific form for the relationship between features and target values, making it flexible for non-linear data. The choice of ‘k’ (number of neighbors) and distance metric (e.g., Euclidean) influences its performance.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -829,17 +770,17 @@ R²: 0.9858542341293756
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNN Test Metrics:
-MSE: 11282.4009369147
-MAE: 85.81517388549315
-R²: 0.9839383170727787
+MSE: 10442.033178229587
+MAE: 87.175364477709
+R²: 0.9826016941674708
 </pre></div>
 </div>
-<img alt="_images/e518fa18177a641ed753bbfa30cb893d621ea2c54dced6a664e616503febdd26.png" src="_images/e518fa18177a641ed753bbfa30cb893d621ea2c54dced6a664e616503febdd26.png" />
+<img alt="_images/a52ce1d4a178be3efe93c2d2cc806fb5c4ce4500ab13ebe417dbdc660d8cf70a.png" src="_images/a52ce1d4a178be3efe93c2d2cc806fb5c4ce4500ab13ebe417dbdc660d8cf70a.png" />
 </div>
 </div>
 </section>
 <section id="decision-trees">
-<h2>4- Decision Trees<a class="headerlink" href="#decision-trees" title="Link to this heading">#</a></h2>
+<h2>4- Decision Trees<a class="headerlink" href="#decision-trees" title="Permalink to this heading">#</a></h2>
 <p>Decision Trees are a model that splits data into subsets based on feature values. In regression, they predict continuous target values by recursively dividing the data based on feature conditions that minimize error (e.g., mean squared error). Each leaf node represents the predicted value, and the tree structure is easy to interpret.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -898,12 +839,12 @@ R²: 0.9839383170727787
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Decision Tree Test Metrics:
-MSE: 16693.830721352602
-MAE: 103.39545235786969
-R²: 0.9757700382932062
+MSE: 19212.861239924932
+MAE: 110.73158051479942
+R²: 0.9688177136150281
 </pre></div>
 </div>
-<img alt="_images/d39611acc6e2363f90fead19650ed8a85952f4c70aab5b4cc5cd21f4ec91049f.png" src="_images/d39611acc6e2363f90fead19650ed8a85952f4c70aab5b4cc5cd21f4ec91049f.png" />
+<img alt="_images/f5faaa1a21868a693accc19fdabf9c5576d06ed0bf0d0ccd408ab7cb686ee0be.png" src="_images/f5faaa1a21868a693accc19fdabf9c5576d06ed0bf0d0ccd408ab7cb686ee0be.png" />
 </div>
 </div>
 </section>
@@ -936,27 +877,9 @@ R²: 0.9757700382932062
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="6.%20AI%206.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 6: Advanced regression in Python and Ethics in Machine Learning</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="7.%20AI%207.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -965,7 +888,6 @@ R²: 0.9757700382932062
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -998,10 +920,9 @@ By Kamil Smolak, Saeid Haji-Aghajany
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -1025,8 +946,8 @@ By Kamil Smolak, Saeid Haji-Aghajany
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

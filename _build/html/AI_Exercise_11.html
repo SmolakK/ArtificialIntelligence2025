@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Exercise 11: Clustering &#8212; Artificial Intelligence</title>
   
@@ -14,53 +15,56 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_11';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Lecture 11: Introduction to clustering" href="11.%20AI%2011.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -70,23 +74,28 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -108,20 +117,12 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -136,13 +137,9 @@
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
-  
-    
   
 
 <a class="navbar-brand logo" href="1.%20AI%201.html">
-  
   
   
   
@@ -152,75 +149,22 @@
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Artificial Intelligence - Home"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Artificial Intelligence - Home"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="1.%20AI%201.html">
-                    Lecture 1: Artificial Intelligence (winter 2024/2025)
+                    Lecture 1: Artificial Intelligence (winter 2025/2026)
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_2.html">Exercise 2: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_3.html">Exercise 3: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.%20AI%203.html">Lecture 3: Linear Regression</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_4.html">Exercise 4: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_5.html">Exercise 5: Python Knowledge Repetition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.%20AI%205.html">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_6.html">Exercise 6: Implementation (Probability)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.%20AI%206.html">Lecture 6: Advanced regression in Python and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7.%20AI%207.html">Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10.%20AI%2010.html">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_10.html">Exercise 10: Classification (Evaluation metrics)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise 11: Clustering</a></li>
-</ul>
-
+        
     </div>
 </nav></div>
     </div>
@@ -234,7 +178,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
 
@@ -243,14 +187,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -372,28 +316,26 @@
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -441,12 +383,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercise-11-clustering">
-<h1>Exercise 11: Clustering<a class="headerlink" href="#exercise-11-clustering" title="Link to this heading">#</a></h1>
+<h1>Exercise 11: Clustering<a class="headerlink" href="#exercise-11-clustering" title="Permalink to this heading">#</a></h1>
 <section id="clustering-vs-classification">
-<h2>1- Clustering vs. Classification<a class="headerlink" href="#clustering-vs-classification" title="Link to this heading">#</a></h2>
+<h2>1- Clustering vs. Classification<a class="headerlink" href="#clustering-vs-classification" title="Permalink to this heading">#</a></h2>
 <p>Imagine you already have a set of labeled emails (some marked as spam, and others marked as not spam).<br />
 What Classification Does: The algorithm is trained on these labeled emails, learning the characteristics that make an email spam or not spam (such as certain words, the sender’s email address, etc.).</p>
 <p>Training: The algorithm learns from emails like:</p>
@@ -468,10 +410,10 @@ Classification relies on labeled data for prediction, while clustering identifie
 <img src="img/ClsvsClu.png" width="800"/>
 </section>
 <section id="clustering-methods">
-<h2>2- Clustering Methods<a class="headerlink" href="#clustering-methods" title="Link to this heading">#</a></h2>
+<h2>2- Clustering Methods<a class="headerlink" href="#clustering-methods" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="k-means-clustering">
-<h2>K-Means Clustering<a class="headerlink" href="#k-means-clustering" title="Link to this heading">#</a></h2>
+<h2>K-Means Clustering<a class="headerlink" href="#k-means-clustering" title="Permalink to this heading">#</a></h2>
 <p>K-Means clustering is a simple and efficient method for partitioning data into K clusters, where each cluster is represented by its centroid. The algorithm iteratively assigns points to the nearest centroid and updates the centroids based on the average position of points in each cluster. While K-Means is fast and works well for spherical clusters, it requires specifying the number of clusters in advance and is sensitive to outliers</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -504,12 +446,12 @@ Classification relies on labeled data for prediction, while clustering identifie
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/bec8fe76cc2d1341454182ff44291de012aa9aa43195731d85d8e7197cdcd839.png" src="_images/bec8fe76cc2d1341454182ff44291de012aa9aa43195731d85d8e7197cdcd839.png" />
+<img alt="_images/19dafda965ed35acf175126df8f87348dd6097b2c6a1b7b2c98714964c396193.png" src="_images/19dafda965ed35acf175126df8f87348dd6097b2c6a1b7b2c98714964c396193.png" />
 </div>
 </div>
 </section>
 <section id="hierarchical-clustering">
-<h2>Hierarchical Clustering<a class="headerlink" href="#hierarchical-clustering" title="Link to this heading">#</a></h2>
+<h2>Hierarchical Clustering<a class="headerlink" href="#hierarchical-clustering" title="Permalink to this heading">#</a></h2>
 <p>Hierarchical clustering constructs a tree-like structure, or dendrogram, that represents the hierarchy of clusters. It can be performed using an agglomerative approach, which starts with individual points and merges them into clusters, or a divisive approach, which begins with a single cluster and splits it recursively. Hierarchical clustering is advantageous because it does not require specifying the number of clusters beforehand and provides a clear hierarchy. However, it is computationally expensive for large datasets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -544,12 +486,12 @@ Classification relies on labeled data for prediction, while clustering identifie
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0f26c0e027820a03824a3cd6d360bfb95c4af8a59623f3590f4815197f938369.png" src="_images/0f26c0e027820a03824a3cd6d360bfb95c4af8a59623f3590f4815197f938369.png" />
+<img alt="_images/7c1279e21a4cd1919f6199d8b1809168bef51d6acdb36851f299b6791c87a664.png" src="_images/7c1279e21a4cd1919f6199d8b1809168bef51d6acdb36851f299b6791c87a664.png" />
 </div>
 </div>
 </section>
 <section id="dbscan-density-based-spatial-clustering-of-applications-with-noise">
-<h2>DBSCAN (Density-Based Spatial Clustering of Applications with Noise)<a class="headerlink" href="#dbscan-density-based-spatial-clustering-of-applications-with-noise" title="Link to this heading">#</a></h2>
+<h2>DBSCAN (Density-Based Spatial Clustering of Applications with Noise)<a class="headerlink" href="#dbscan-density-based-spatial-clustering-of-applications-with-noise" title="Permalink to this heading">#</a></h2>
 <p>DBSCAN groups points based on density, identifying regions with high point concentration as clusters and treating points in low-density regions as noise. This method is particularly effective for identifying clusters of arbitrary shapes and is robust to outliers. However, it requires careful tuning of parameters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -598,25 +540,25 @@ Classification relies on labeled data for prediction, while clustering identifie
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5415b81ad6bc8f838925577001e42fd864661a46ee0243483380e17b02ba576f.png" src="_images/5415b81ad6bc8f838925577001e42fd864661a46ee0243483380e17b02ba576f.png" />
+<img alt="_images/61c71c04d20afb74d0e0910b1c8bb7e42e2b1e89fd6941aa482665434918884a.png" src="_images/61c71c04d20afb74d0e0910b1c8bb7e42e2b1e89fd6941aa482665434918884a.png" />
 </div>
 </div>
 </section>
 <section id="evaluation">
-<h2>3- Evaluation<a class="headerlink" href="#evaluation" title="Link to this heading">#</a></h2>
+<h2>3- Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="with-real-world-data">
-<h2>With Real-world data<a class="headerlink" href="#with-real-world-data" title="Link to this heading">#</a></h2>
+<h2>With Real-world data<a class="headerlink" href="#with-real-world-data" title="Permalink to this heading">#</a></h2>
 <section id="adjusted-rand-index-ari">
-<h3>Adjusted Rand Index (ARI)<a class="headerlink" href="#adjusted-rand-index-ari" title="Link to this heading">#</a></h3>
+<h3>Adjusted Rand Index (ARI)<a class="headerlink" href="#adjusted-rand-index-ari" title="Permalink to this heading">#</a></h3>
 <p>ARI measures the similarity between two clusterings, adjusted for chance. It ranges from -1 to 1, where 1 means perfect agreement, 0 indicates random clustering, and negative values show worse-than-random performance.</p>
 </section>
 <section id="normalized-mutual-information-nmi">
-<h3>Normalized Mutual Information (NMI)<a class="headerlink" href="#normalized-mutual-information-nmi" title="Link to this heading">#</a></h3>
+<h3>Normalized Mutual Information (NMI)<a class="headerlink" href="#normalized-mutual-information-nmi" title="Permalink to this heading">#</a></h3>
 <p>NMI quantifies shared information between two clusterings, normalized to account for the number of clusters. It ranges from 0 (no information) to 1 (perfect match).</p>
 </section>
 <section id="homogeneity-completeness-and-v-measure">
-<h3>Homogeneity, Completeness, and V-Measure<a class="headerlink" href="#homogeneity-completeness-and-v-measure" title="Link to this heading">#</a></h3>
+<h3>Homogeneity, Completeness, and V-Measure<a class="headerlink" href="#homogeneity-completeness-and-v-measure" title="Permalink to this heading">#</a></h3>
 <p>Homogeneity checks if clusters contain only data from a single true class. Completeness ensures all data from a class are in the same cluster. V-Measure balances both, combining homogeneity and completeness into a single score.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -685,31 +627,31 @@ Classification relies on labeled data for prediction, while clustering identifie
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Homogeneity: 0.783
-Completeness: 0.783
-V-Measure: 0.783
-Adjusted Rand Index (ARI): 0.725
-Normalized Mutual Information (NMI): 0.783
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Homogeneity: 0.980
+Completeness: 0.981
+V-Measure: 0.980
+Adjusted Rand Index (ARI): 0.987
+Normalized Mutual Information (NMI): 0.980
 </pre></div>
 </div>
-<img alt="_images/e5e318874fb4ae6194a5c0015c447c52b8cb7562f54c29815cbccc75871f1907.png" src="_images/e5e318874fb4ae6194a5c0015c447c52b8cb7562f54c29815cbccc75871f1907.png" />
-<img alt="_images/01d0ff140a4a7d0addbf032cf9787151e4b8c0228fdc7906c03fa9339ea327ea.png" src="_images/01d0ff140a4a7d0addbf032cf9787151e4b8c0228fdc7906c03fa9339ea327ea.png" />
+<img alt="_images/de1ba9b98094e75b9545563cbeb205ab5073addbace73faf980122ca35d0fa68.png" src="_images/de1ba9b98094e75b9545563cbeb205ab5073addbace73faf980122ca35d0fa68.png" />
+<img alt="_images/4bb918497200386697914c3be76762185cd66e37372b6d23328be7076910e691.png" src="_images/4bb918497200386697914c3be76762185cd66e37372b6d23328be7076910e691.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="without-real-world-data">
-<h2>Without Real-world data<a class="headerlink" href="#without-real-world-data" title="Link to this heading">#</a></h2>
+<h2>Without Real-world data<a class="headerlink" href="#without-real-world-data" title="Permalink to this heading">#</a></h2>
 <section id="silhouette-score">
-<h3>Silhouette Score<a class="headerlink" href="#silhouette-score" title="Link to this heading">#</a></h3>
+<h3>Silhouette Score<a class="headerlink" href="#silhouette-score" title="Permalink to this heading">#</a></h3>
 <p>The Silhouette Score evaluates how well each point fits within its cluster compared to other clusters. A score close to +1 indicates good clustering, 0 means points are near boundaries, and negative values suggest misclassifications.</p>
 </section>
 <section id="davies-bouldin-index">
-<h3>Davies-Bouldin Index<a class="headerlink" href="#davies-bouldin-index" title="Link to this heading">#</a></h3>
+<h3>Davies-Bouldin Index<a class="headerlink" href="#davies-bouldin-index" title="Permalink to this heading">#</a></h3>
 <p>The Davies-Bouldin Index measures the average similarity between clusters, considering compactness and separation. Lower values indicate better clustering, with well-separated and compact clusters.</p>
 </section>
 <section id="calinski-harabasz-index">
-<h3>Calinski-Harabasz Index<a class="headerlink" href="#calinski-harabasz-index" title="Link to this heading">#</a></h3>
+<h3>Calinski-Harabasz Index<a class="headerlink" href="#calinski-harabasz-index" title="Permalink to this heading">#</a></h3>
 <p>The Calinski-Harabasz Index compares between-cluster dispersion to within-cluster dispersion. Higher values suggest better clustering with distinct, well-separated clusters and tight internal groupings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -772,13 +714,13 @@ Normalized Mutual Information (NMI): 0.783
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Silhouette Score: 0.669
-Davies-Bouldin Index: 0.482
-Calinski-Harabasz Index: 6333.773
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Silhouette Score: 0.497
+Davies-Bouldin Index: 0.810
+Calinski-Harabasz Index: 3661.146
 </pre></div>
 </div>
-<img alt="_images/2e3939a35e587720e9b2e7040b183917b9b63f7330a56fa08f59d57f00d65fe4.png" src="_images/2e3939a35e587720e9b2e7040b183917b9b63f7330a56fa08f59d57f00d65fe4.png" />
-<img alt="_images/4afc1c31f069eadfc1e1d22cf0a2a813ea2bbc35e7c68a392c54b4e745fd409b.png" src="_images/4afc1c31f069eadfc1e1d22cf0a2a813ea2bbc35e7c68a392c54b4e745fd409b.png" />
+<img alt="_images/772bfe8b3b2df6da05339a8c89d7145ca721a99a35d11ff11a64f0400e11a88b.png" src="_images/772bfe8b3b2df6da05339a8c89d7145ca721a99a35d11ff11a64f0400e11a88b.png" />
+<img alt="_images/b081e6cf755c099133901f358886c953abbdbccc472de0b6300813ec2421709c.png" src="_images/b081e6cf755c099133901f358886c953abbdbccc472de0b6300813ec2421709c.png" />
 </div>
 </div>
 </section>
@@ -794,16 +736,16 @@ Calinski-Harabasz Index: 6333.773
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "getting_started"
+            mode: "python"
         },
         kernelOptions: {
-            name: "getting_started",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'getting_started'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -812,18 +754,9 @@ Calinski-Harabasz Index: 6333.773
               
               
               
-                <footer class="prev-next-footer d-print-none">
-                  
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="11.%20AI%2011.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 11: Introduction to clustering</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -832,7 +765,6 @@ Calinski-Harabasz Index: 6333.773
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -879,10 +811,9 @@ By Kamil Smolak, Saeid Haji-Aghajany
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -906,8 +837,8 @@ By Kamil Smolak, Saeid Haji-Aghajany
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
