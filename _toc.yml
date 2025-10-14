@@ -3,3 +3,5 @@
 
 format: jb-book
 root: 1. AI 1
+chapters:
+- file: AI_Exercise_1
