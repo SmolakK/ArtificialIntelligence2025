@@ -167,6 +167,15 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.%20AI%203.html">Lecture 3: Linear Regression</a></li>
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -458,7 +467,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.14
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.16
 </pre></div>
 </div>
 </div>
@@ -507,11 +516,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([6, 9, 4, 3, 1, 1, 8, 1, 8, 1, 8, 1, 3, 3, 4, 8, 4, 5, 1, 2, 7, 3,
-       1, 4, 7, 6, 7, 4, 5, 5, 9, 5, 4, 4, 4, 1, 6, 9, 5, 1, 7, 3, 1, 2,
-       8, 4, 3, 4, 9, 5, 9, 6, 3, 4, 3, 3, 8, 7, 7, 5, 1, 7, 5, 8, 4, 5,
-       7, 2, 2, 9, 3, 6, 6, 1, 9, 5, 3, 9, 2, 2, 7, 7, 5, 1, 8, 5, 8, 3,
-       2, 7, 5, 9, 3, 8, 4, 9, 9, 3, 4, 9])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([8, 1, 1, 9, 3, 9, 7, 5, 2, 2, 7, 2, 1, 2, 9, 1, 5, 5, 3, 1, 3, 3,
+       6, 5, 2, 8, 1, 4, 5, 8, 4, 7, 7, 7, 1, 9, 3, 4, 2, 3, 1, 1, 6, 9,
+       3, 3, 9, 5, 6, 5, 5, 9, 3, 1, 9, 2, 5, 3, 5, 2, 1, 1, 8, 3, 3, 9,
+       7, 9, 8, 8, 6, 1, 1, 6, 1, 2, 9, 3, 1, 8, 9, 5, 5, 8, 5, 3, 2, 7,
+       4, 3, 5, 8, 1, 3, 8, 1, 5, 1, 6, 2])
 </pre></div>
 </div>
 </div>
@@ -616,48 +625,48 @@ We have lottery drawings from few weeks:</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>8</td>
-      <td>20</td>
-      <td>26</td>
-      <td>34</td>
-      <td>45</td>
-      <td>48</td>
+      <td>16</td>
+      <td>28</td>
+      <td>29</td>
+      <td>31</td>
+      <td>44</td>
+      <td>49</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
-      <td>2</td>
       <td>4</td>
-      <td>5</td>
-      <td>36</td>
-      <td>37</td>
+      <td>7</td>
+      <td>31</td>
+      <td>35</td>
+      <td>42</td>
+      <td>43</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>7</td>
-      <td>26</td>
+      <td>15</td>
+      <td>20</td>
+      <td>23</td>
       <td>34</td>
-      <td>44</td>
-      <td>46</td>
+      <td>36</td>
+      <td>41</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3</td>
-      <td>4</td>
-      <td>7</td>
+      <td>8</td>
+      <td>21</td>
+      <td>22</td>
       <td>40</td>
-      <td>46</td>
-      <td>47</td>
+      <td>42</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>4</th>
       <td>5</td>
-      <td>30</td>
-      <td>31</td>
-      <td>33</td>
-      <td>39</td>
-      <td>46</td>
+      <td>6</td>
+      <td>29</td>
+      <td>41</td>
+      <td>42</td>
+      <td>49</td>
     </tr>
     <tr>
       <th>...</th>
@@ -670,48 +679,48 @@ We have lottery drawings from few weeks:</p>
     </tr>
     <tr>
       <th>95</th>
-      <td>14</td>
-      <td>19</td>
-      <td>29</td>
-      <td>30</td>
-      <td>36</td>
-      <td>38</td>
+      <td>4</td>
+      <td>5</td>
+      <td>9</td>
+      <td>17</td>
+      <td>22</td>
+      <td>23</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>4</td>
-      <td>15</td>
-      <td>21</td>
-      <td>26</td>
-      <td>37</td>
-      <td>42</td>
+      <td>1</td>
+      <td>6</td>
+      <td>7</td>
+      <td>11</td>
+      <td>30</td>
+      <td>34</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>1</td>
-      <td>2</td>
-      <td>17</td>
-      <td>19</td>
-      <td>36</td>
-      <td>45</td>
+      <td>7</td>
+      <td>13</td>
+      <td>14</td>
+      <td>22</td>
+      <td>23</td>
+      <td>24</td>
     </tr>
     <tr>
       <th>98</th>
-      <td>2</td>
-      <td>7</td>
-      <td>14</td>
-      <td>19</td>
-      <td>28</td>
-      <td>47</td>
+      <td>4</td>
+      <td>12</td>
+      <td>16</td>
+      <td>20</td>
+      <td>31</td>
+      <td>40</td>
     </tr>
     <tr>
       <th>99</th>
-      <td>4</td>
-      <td>10</td>
-      <td>15</td>
-      <td>24</td>
-      <td>37</td>
-      <td>47</td>
+      <td>3</td>
+      <td>11</td>
+      <td>13</td>
+      <td>21</td>
+      <td>22</td>
+      <td>26</td>
     </tr>
   </tbody>
 </table>
@@ -761,76 +770,121 @@ We have lottery drawings from few weeks:</p>
   </thead>
   <tbody>
     <tr>
-      <th>27</th>
+      <th>21</th>
+      <td>8</td>
       <td>9</td>
-      <td>11</td>
+      <td>23</td>
+      <td>37</td>
+      <td>42</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>5</td>
+      <td>7</td>
+      <td>9</td>
+      <td>25</td>
+      <td>27</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>3</td>
+      <td>9</td>
       <td>17</td>
-      <td>33</td>
-      <td>34</td>
-      <td>48</td>
+      <td>20</td>
+      <td>31</td>
+      <td>42</td>
     </tr>
     <tr>
-      <th>66</th>
-      <td>6</td>
-      <td>9</td>
-      <td>11</td>
-      <td>19</td>
-      <td>33</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>4</td>
-      <td>6</td>
+      <th>43</th>
+      <td>3</td>
       <td>9</td>
       <td>21</td>
-      <td>23</td>
-      <td>29</td>
+      <td>28</td>
+      <td>36</td>
+      <td>44</td>
     </tr>
     <tr>
-      <th>70</th>
+      <th>44</th>
+      <td>3</td>
       <td>9</td>
-      <td>11</td>
-      <td>16</td>
+      <td>12</td>
+      <td>18</td>
+      <td>26</td>
       <td>41</td>
-      <td>43</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>9</td>
+      <td>15</td>
+      <td>17</td>
+      <td>21</td>
+      <td>22</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>9</td>
+      <td>35</td>
       <td>45</td>
     </tr>
     <tr>
-      <th>71</th>
+      <th>58</th>
+      <td>5</td>
       <td>9</td>
-      <td>11</td>
-      <td>15</td>
-      <td>31</td>
-      <td>36</td>
-      <td>41</td>
+      <td>12</td>
+      <td>13</td>
+      <td>20</td>
+      <td>45</td>
     </tr>
     <tr>
-      <th>74</th>
+      <th>64</th>
+      <td>3</td>
+      <td>7</td>
       <td>9</td>
-      <td>16</td>
-      <td>18</td>
+      <td>19</td>
       <td>21</td>
-      <td>26</td>
-      <td>46</td>
+      <td>45</td>
     </tr>
     <tr>
-      <th>80</th>
-      <td>1</td>
-      <td>8</td>
-      <td>9</td>
-      <td>14</td>
-      <td>16</td>
-      <td>41</td>
-    </tr>
-    <tr>
-      <th>93</th>
+      <th>79</th>
       <td>3</td>
       <td>4</td>
       <td>9</td>
+      <td>20</td>
+      <td>40</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>5</td>
+      <td>9</td>
+      <td>19</td>
+      <td>29</td>
+      <td>46</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>2</td>
+      <td>6</td>
+      <td>8</td>
+      <td>9</td>
+      <td>36</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>4</td>
+      <td>5</td>
+      <td>9</td>
       <td>17</td>
-      <td>38</td>
-      <td>41</td>
+      <td>22</td>
+      <td>23</td>
     </tr>
   </tbody>
 </table>
@@ -843,7 +897,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.08
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13
 </pre></div>
 </div>
 </div>
@@ -891,7 +945,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([0.13, 0.1, 0.1, 0.24, 0.09, 0.1, 0.09, 0.1, 0.08, 0.07, 0.14, 0.11, 0.15, 0.18, 0.13, 0.15, 0.08, 0.11, 0.13, 0.14, 0.09, 0.1, 0.14, 0.15, 0.07, 0.14, 0.07, 0.08, 0.15, 0.16, 0.13, 0.13, 0.17, 0.1, 0.09, 0.14, 0.2, 0.09, 0.11, 0.15, 0.17, 0.11, 0.09, 0.2, 0.09, 0.11, 0.17, 0.1, 0.08])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([0.16, 0.11, 0.1, 0.18, 0.13, 0.12, 0.13, 0.18, 0.13, 0.09, 0.13, 0.16, 0.13, 0.07, 0.11, 0.12, 0.1, 0.14, 0.14, 0.2, 0.12, 0.16, 0.16, 0.07, 0.11, 0.18, 0.08, 0.07, 0.09, 0.08, 0.13, 0.08, 0.13, 0.12, 0.14, 0.2, 0.11, 0.12, 0.06, 0.12, 0.11, 0.2, 0.07, 0.12, 0.14, 0.13, 0.05, 0.09, 0.13])
 </pre></div>
 </div>
 </div>
@@ -906,7 +960,7 @@ We have lottery drawings from few weeks:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 49 artists&gt;
 </pre></div>
 </div>
-<img alt="_images/ec308140c79c24dcadd4a0316973b7c35446ee10c17c68c1d5694368347924c9.png" src="_images/ec308140c79c24dcadd4a0316973b7c35446ee10c17c68c1d5694368347924c9.png" />
+<img alt="_images/5c2ad70c1dd75d5adce4c34a4af64bff7bd8170d22d62368165222ff7f939456.png" src="_images/5c2ad70c1dd75d5adce4c34a4af64bff7bd8170d22d62368165222ff7f939456.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -929,7 +983,7 @@ We have lottery drawings from few weeks:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 49 artists&gt;
 </pre></div>
 </div>
-<img alt="_images/0e8c5010e1d5f644de21b59c03515ded4f21196af571639f07a5f44aeeeb8ddd.png" src="_images/0e8c5010e1d5f644de21b59c03515ded4f21196af571639f07a5f44aeeeb8ddd.png" />
+<img alt="_images/92897753d6cff18b7f9b6f9dee99c23d5c88d11a050865d3ba9218d582548676.png" src="_images/92897753d6cff18b7f9b6f9dee99c23d5c88d11a050865d3ba9218d582548676.png" />
 </div>
 </div>
 </section>
@@ -947,7 +1001,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.51
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.49
 </pre></div>
 </div>
 </div>
@@ -965,10 +1019,10 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x2370c8d1430&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1ff15bd1940&gt;]
 </pre></div>
 </div>
-<img alt="_images/2595d691d82e9316436a2decf587b4ac7e26045cbb0895f0262e66d5b91de770.png" src="_images/2595d691d82e9316436a2decf587b4ac7e26045cbb0895f0262e66d5b91de770.png" />
+<img alt="_images/c4899103bed8a799fd0baacefc5d2a2ebab4ec1928b8923fcbeff41d06c39793.png" src="_images/c4899103bed8a799fd0baacefc5d2a2ebab4ec1928b8923fcbeff41d06c39793.png" />
 </div>
 </div>
 <p>Now, let’s calculate probability of winning in roulette while always betting on black.</p>
@@ -1007,7 +1061,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a098bc95d277bec7cbdd0fcf5dbfc43643b12a00b12d7a2d7eb28dc0e6b5d65e.png" src="_images/a098bc95d277bec7cbdd0fcf5dbfc43643b12a00b12d7a2d7eb28dc0e6b5d65e.png" />
+<img alt="_images/db9c342cd91616a5e15e9a9f1b67e7dd072fad31e3b65f3e41cbaa48071c1b75.png" src="_images/db9c342cd91616a5e15e9a9f1b67e7dd072fad31e3b65f3e41cbaa48071c1b75.png" />
 </div>
 </div>
 </section>
