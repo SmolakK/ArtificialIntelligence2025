@@ -178,6 +178,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_2.html">Exercise 2: Python Knowledge Repetition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_3.html">Exercise 3: Python Knowledge Repetition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_4.html">Exercise 4: Python Knowledge Repetition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5.%20AI%205.html">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
 </ul>
 
     </div>
@@ -418,22 +421,22 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            X           Y
-0   -0.906197  -17.147304
-1    0.339847   21.991444
-2    1.823735   64.683155
-3    1.025918 -101.980277
-4    0.516020  175.902285
+0    0.446693  195.392738
+1   -0.593102  175.268236
+2   -0.305049   -0.315122
+3   -0.385645  -58.466075
+4   -0.328551   31.884098
 ..        ...         ...
-995 -0.230056 -130.914199
-996 -0.506522   51.301234
-997 -2.423885  -68.650626
-998 -1.459702  -73.619883
-999  0.078072  -84.541555
+995 -0.157029  -78.333859
+996 -0.392557 -111.886662
+997 -1.351744 -130.775253
+998  0.729510    6.391110
+999 -0.098674  -13.151382
 
 [1000 rows x 2 columns]
 </pre></div>
 </div>
-<img alt="_images/3153503d406f1aee199d2fefa41bff23701a504038f424941ef0e32e18ddbb00.png" src="_images/3153503d406f1aee199d2fefa41bff23701a504038f424941ef0e32e18ddbb00.png" />
+<img alt="_images/aaf172c11197335b1a927685b8059f42418d7059a648771259c67e6382d58696.png" src="_images/aaf172c11197335b1a927685b8059f42418d7059a648771259c67e6382d58696.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -538,15 +541,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Training set size:
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 600
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Training set size: 600
 Validation set size: 200
 Testing set size: 200
 </pre></div>
 </div>
-<img alt="_images/c38ebcd8e7dd04aea18156792232c1c104989bbd3e640cfe8c070a0982488e99.png" src="_images/c38ebcd8e7dd04aea18156792232c1c104989bbd3e640cfe8c070a0982488e99.png" />
+<img alt="_images/d3033363d9d3acb9b18798919527ed396d7ea1a496be8ea5ae11951c0d1d5543.png" src="_images/d3033363d9d3acb9b18798919527ed396d7ea1a496be8ea5ae11951c0d1d5543.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -593,7 +593,7 @@ Validation set size: 88
 Testing set size: 89
 </pre></div>
 </div>
-<img alt="_images/e91dd2685c754425a5ea7e6499306b682bac59f99ef52f1e0ca9cf4f2a3e1823.png" src="_images/e91dd2685c754425a5ea7e6499306b682bac59f99ef52f1e0ca9cf4f2a3e1823.png" />
+<img alt="_images/a5bcbb96c3d959c81721d58ccd8d98c7301f4e7c03ff693ca9a190d11d3af2b5.png" src="_images/a5bcbb96c3d959c81721d58ccd8d98c7301f4e7c03ff693ca9a190d11d3af2b5.png" />
 </div>
 </div>
 </section>
@@ -632,12 +632,12 @@ Testing set size: 89
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error (MSE): 3.0223661388799634
-Mean Absolute Error (MAE): 1.3418798139302641
-R² Score: 0.9701993442004644
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error (MSE): 4.175257467500036
+Mean Absolute Error (MAE): 1.6575040819738263
+R² Score: 0.9672889741999917
 </pre></div>
 </div>
-<img alt="_images/f1c817af4675650c23130e26db8ebc5ce3d12de4b24615afb0830f849091cc7a.png" src="_images/f1c817af4675650c23130e26db8ebc5ce3d12de4b24615afb0830f849091cc7a.png" />
+<img alt="_images/fb1d5663330a7b6bcf12f9e3ea844e2b7757ad3ccf7445b6a44dfa34d6ad9ce8.png" src="_images/fb1d5663330a7b6bcf12f9e3ea844e2b7757ad3ccf7445b6a44dfa34d6ad9ce8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -678,12 +678,12 @@ R² Score: 0.9701993442004644
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metrics for Diabetes dataset with random predictions:
-Mean Squared Error (MSE): 846.0985315277685
-Mean Absolute Error (MAE): 23.052836799764492
-R² Score: 0.8573161964798665
+Mean Squared Error (MSE): 1032.6241815921385
+Mean Absolute Error (MAE): 25.632753474535647
+R² Score: 0.8258610074994607
 </pre></div>
 </div>
-<img alt="_images/d0f54f4b8ea31740c2ef15d0dc836e3ed0c00b75c845d72c545cdb0c319f3c24.png" src="_images/d0f54f4b8ea31740c2ef15d0dc836e3ed0c00b75c845d72c545cdb0c319f3c24.png" />
+<img alt="_images/44bd999599cd017d824120e9ee40774e16474be5f0555a75f3afd8b6fa4e4730.png" src="_images/44bd999599cd017d824120e9ee40774e16474be5f0555a75f3afd8b6fa4e4730.png" />
 </div>
 </div>
 </section>
@@ -748,17 +748,17 @@ R² Score: 0.8573161964798665
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Validation Metrics:
-MSE: 2522.378721829059
-MAE: 40.69087711224472
-R²: 0.9414137112008402
+MSE: 1908.7056771772152
+MAE: 35.4797036792165
+R²: 0.9370411062703123
 
 Test Metrics:
-MSE: 2313.7569549451664
-MAE: 37.322548508977704
-R²: 0.9371970122449431
+MSE: 2154.931001302104
+MAE: 38.11123510839989
+R²: 0.9353416026758181
 </pre></div>
 </div>
-<img alt="_images/261ec808d3d81a2a587a29d0074a555fef0047ea9375ca12cfb5f7a0d32d2be7.png" src="_images/261ec808d3d81a2a587a29d0074a555fef0047ea9375ca12cfb5f7a0d32d2be7.png" />
+<img alt="_images/4f8e9d1081910fc871eabf97a1809634d0e4f3f497de4219f2766a7aa09e921a.png" src="_images/4f8e9d1081910fc871eabf97a1809634d0e4f3f497de4219f2766a7aa09e921a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -822,19 +822,17 @@ R²: 0.9371970122449431
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Validation Metrics:
-MSE: 3026.23809122808
-MAE: 44.461503379429466
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R²: 0.5157877684989811
+MSE: 2821.488461455401
+MAE: 43.15604026705836
+R²: 0.5589846109719598
 
 Test Metrics:
-MSE: 3306.6541613231834
-MAE: 45.75292956315654
-R²: 0.49524165673428655
+MSE: 3303.0111109704594
+MAE: 46.517647455980786
+R²: 0.4947945407391168
 </pre></div>
 </div>
-<img alt="_images/9215fa2a6fdcffec09c99119b78e7dda3085b78a0245d6be75f6605c288513d7.png" src="_images/9215fa2a6fdcffec09c99119b78e7dda3085b78a0245d6be75f6605c288513d7.png" />
+<img alt="_images/96cea0f7077393946b05faa75c8257f5a2d5be447de46764af56716b5cbc34b8.png" src="_images/96cea0f7077393946b05faa75c8257f5a2d5be447de46764af56716b5cbc34b8.png" />
 </div>
 </div>
 </section>
