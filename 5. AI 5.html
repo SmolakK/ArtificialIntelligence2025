@@ -65,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '5. AI 5';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Exercise 4: Python Knowledge Repetition" href="AI_Exercise_4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -164,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
@@ -178,6 +179,9 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_2.html">Exercise 2: Python Knowledge Repetition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_3.html">Exercise 3: Python Knowledge Repetition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_4.html">Exercise 4: Python Knowledge Repetition</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
 </ul>
 
     </div>
@@ -435,7 +439,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
 </div>
 </div>
@@ -447,7 +451,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.11
 </pre></div>
 </div>
 </div>
@@ -469,7 +473,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.07
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1
 </pre></div>
 </div>
 </div>
@@ -483,7 +487,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
 </div>
 </div>
@@ -505,7 +509,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.11
 </pre></div>
 </div>
 </div>
@@ -518,11 +522,11 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([6, 5, 2, 5, 6, 3, 8, 1, 6, 3, 9, 6, 8, 2, 1, 2, 7, 9, 4, 6, 9, 2,
-       2, 9, 9, 4, 8, 7, 2, 3, 3, 6, 9, 9, 5, 7, 2, 5, 2, 8, 9, 2, 6, 1,
-       7, 9, 2, 1, 5, 4, 6, 7, 3, 6, 5, 8, 4, 9, 7, 3, 1, 4, 8, 2, 6, 4,
-       8, 4, 1, 8, 2, 2, 7, 8, 9, 3, 5, 7, 7, 5, 8, 5, 6, 1, 1, 7, 7, 6,
-       8, 8, 5, 5, 2, 9, 9, 6, 6, 8, 5, 1])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([9, 5, 1, 2, 7, 5, 8, 8, 4, 6, 4, 1, 8, 3, 2, 5, 7, 1, 1, 8, 4, 8,
+       5, 5, 8, 9, 3, 9, 3, 1, 8, 4, 6, 6, 3, 8, 9, 1, 2, 7, 2, 9, 5, 4,
+       3, 3, 6, 8, 3, 5, 8, 3, 8, 9, 4, 5, 9, 7, 8, 2, 1, 9, 2, 7, 3, 7,
+       9, 1, 5, 2, 6, 3, 7, 9, 7, 1, 2, 7, 1, 6, 5, 6, 2, 2, 6, 4, 1, 1,
+       6, 8, 4, 6, 2, 4, 9, 7, 5, 1, 7, 4])
 </pre></div>
 </div>
 </div>
@@ -545,7 +549,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
 </pre></div>
 </div>
 </div>
@@ -569,7 +573,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.11
 </pre></div>
 </div>
 </div>
@@ -627,48 +631,48 @@ We have lottery drawings from few weeks:</p>
   <tbody>
     <tr>
       <th>0</th>
-      <td>3</td>
+      <td>1</td>
       <td>8</td>
-      <td>22</td>
-      <td>32</td>
-      <td>35</td>
-      <td>48</td>
+      <td>12</td>
+      <td>15</td>
+      <td>28</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>7</td>
-      <td>23</td>
-      <td>26</td>
+      <td>11</td>
+      <td>12</td>
+      <td>32</td>
+      <td>40</td>
+      <td>45</td>
+      <td>49</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>7</td>
-      <td>10</td>
-      <td>16</td>
-      <td>22</td>
-      <td>26</td>
+      <td>1</td>
+      <td>15</td>
+      <td>28</td>
+      <td>39</td>
       <td>42</td>
+      <td>44</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1</td>
+      <td>2</td>
       <td>3</td>
-      <td>17</td>
-      <td>21</td>
-      <td>45</td>
-      <td>46</td>
+      <td>4</td>
+      <td>11</td>
+      <td>30</td>
+      <td>34</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3</td>
-      <td>10</td>
-      <td>18</td>
-      <td>19</td>
-      <td>23</td>
-      <td>31</td>
+      <td>22</td>
+      <td>24</td>
+      <td>27</td>
+      <td>38</td>
+      <td>41</td>
+      <td>44</td>
     </tr>
     <tr>
       <th>...</th>
@@ -681,48 +685,48 @@ We have lottery drawings from few weeks:</p>
     </tr>
     <tr>
       <th>95</th>
-      <td>6</td>
-      <td>19</td>
-      <td>32</td>
-      <td>35</td>
-      <td>48</td>
-      <td>49</td>
+      <td>1</td>
+      <td>9</td>
+      <td>11</td>
+      <td>16</td>
+      <td>20</td>
+      <td>34</td>
     </tr>
     <tr>
       <th>96</th>
-      <td>4</td>
-      <td>23</td>
-      <td>28</td>
-      <td>30</td>
-      <td>31</td>
-      <td>35</td>
+      <td>1</td>
+      <td>8</td>
+      <td>22</td>
+      <td>32</td>
+      <td>47</td>
+      <td>49</td>
     </tr>
     <tr>
       <th>97</th>
-      <td>9</td>
-      <td>11</td>
-      <td>15</td>
-      <td>30</td>
-      <td>34</td>
-      <td>47</td>
-    </tr>
-    <tr>
-      <th>98</th>
-      <td>27</td>
+      <td>3</td>
+      <td>6</td>
       <td>33</td>
-      <td>37</td>
-      <td>38</td>
-      <td>39</td>
+      <td>36</td>
+      <td>43</td>
       <td>44</td>
     </tr>
     <tr>
-      <th>99</th>
-      <td>5</td>
-      <td>20</td>
-      <td>24</td>
-      <td>30</td>
-      <td>37</td>
+      <th>98</th>
+      <td>9</td>
+      <td>12</td>
+      <td>26</td>
+      <td>33</td>
+      <td>42</td>
       <td>48</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>3</td>
+      <td>6</td>
+      <td>20</td>
+      <td>25</td>
+      <td>42</td>
+      <td>47</td>
     </tr>
   </tbody>
 </table>
@@ -773,138 +777,120 @@ We have lottery drawings from few weeks:</p>
   <tbody>
     <tr>
       <th>5</th>
-      <td>5</td>
+      <td>3</td>
       <td>9</td>
-      <td>20</td>
+      <td>18</td>
+      <td>41</td>
+      <td>44</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>4</td>
+      <td>9</td>
+      <td>12</td>
+      <td>21</td>
+      <td>26</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>4</td>
+      <td>9</td>
+      <td>15</td>
       <td>27</td>
-      <td>29</td>
-      <td>34</td>
+      <td>36</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>17</th>
+      <td>3</td>
+      <td>7</td>
       <td>9</td>
-      <td>23</td>
-      <td>24</td>
-      <td>35</td>
-      <td>37</td>
+      <td>11</td>
+      <td>27</td>
       <td>47</td>
     </tr>
     <tr>
-      <th>19</th>
+      <th>18</th>
       <td>9</td>
-      <td>27</td>
-      <td>37</td>
-      <td>40</td>
+      <td>11</td>
+      <td>12</td>
+      <td>25</td>
       <td>44</td>
-      <td>46</td>
+      <td>49</td>
     </tr>
     <tr>
-      <th>23</th>
+      <th>24</th>
       <td>9</td>
-      <td>10</td>
-      <td>25</td>
-      <td>29</td>
-      <td>34</td>
-      <td>41</td>
+      <td>17</td>
+      <td>23</td>
+      <td>33</td>
+      <td>37</td>
+      <td>49</td>
     </tr>
     <tr>
       <th>32</th>
+      <td>3</td>
+      <td>6</td>
       <td>9</td>
       <td>11</td>
-      <td>29</td>
-      <td>31</td>
-      <td>34</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>8</td>
-      <td>9</td>
-      <td>21</td>
-      <td>25</td>
-      <td>27</td>
+      <td>33</td>
       <td>38</td>
     </tr>
     <tr>
-      <th>36</th>
-      <td>2</td>
+      <th>40</th>
       <td>9</td>
-      <td>26</td>
-      <td>28</td>
+      <td>24</td>
+      <td>29</td>
       <td>32</td>
       <td>39</td>
+      <td>40</td>
     </tr>
     <tr>
-      <th>43</th>
-      <td>4</td>
-      <td>8</td>
+      <th>66</th>
+      <td>1</td>
       <td>9</td>
-      <td>11</td>
-      <td>16</td>
-      <td>46</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>3</td>
-      <td>9</td>
-      <td>10</td>
-      <td>31</td>
+      <td>13</td>
+      <td>18</td>
+      <td>28</td>
       <td>36</td>
-      <td>47</td>
     </tr>
     <tr>
       <th>73</th>
       <td>9</td>
-      <td>15</td>
-      <td>21</td>
-      <td>23</td>
-      <td>33</td>
-      <td>44</td>
-    </tr>
-    <tr>
-      <th>74</th>
-      <td>9</td>
-      <td>10</td>
-      <td>16</td>
-      <td>27</td>
-      <td>43</td>
-      <td>49</td>
-    </tr>
-    <tr>
-      <th>86</th>
-      <td>3</td>
-      <td>9</td>
-      <td>11</td>
-      <td>28</td>
-      <td>33</td>
-      <td>34</td>
-    </tr>
-    <tr>
-      <th>89</th>
-      <td>6</td>
-      <td>9</td>
-      <td>22</td>
-      <td>28</td>
-      <td>30</td>
-      <td>49</td>
-    </tr>
-    <tr>
-      <th>90</th>
-      <td>3</td>
-      <td>9</td>
-      <td>29</td>
-      <td>31</td>
+      <td>36</td>
       <td>40</td>
+      <td>41</td>
       <td>44</td>
+      <td>48</td>
     </tr>
     <tr>
-      <th>97</th>
+      <th>91</th>
+      <td>4</td>
       <td>9</td>
       <td>11</td>
-      <td>15</td>
-      <td>30</td>
+      <td>13</td>
+      <td>32</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>1</td>
+      <td>9</td>
+      <td>11</td>
+      <td>16</td>
+      <td>20</td>
       <td>34</td>
-      <td>47</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>9</td>
+      <td>12</td>
+      <td>26</td>
+      <td>33</td>
+      <td>42</td>
+      <td>48</td>
     </tr>
   </tbody>
 </table>
@@ -917,7 +903,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.15
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13
 </pre></div>
 </div>
 </div>
@@ -965,7 +951,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([0.1, 0.13, 0.13, 0.11, 0.12, 0.16, 0.1, 0.14, 0.15, 0.12, 0.21, 0.18, 0.09, 0.06, 0.06, 0.1, 0.1, 0.07, 0.1, 0.15, 0.11, 0.1, 0.16, 0.14, 0.07, 0.09, 0.13, 0.11, 0.17, 0.09, 0.1, 0.12, 0.1, 0.13, 0.11, 0.15, 0.16, 0.07, 0.16, 0.16, 0.09, 0.14, 0.12, 0.16, 0.13, 0.13, 0.16, 0.11, 0.15])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_values([0.2, 0.07, 0.13, 0.14, 0.04, 0.14, 0.09, 0.08, 0.13, 0.1, 0.22, 0.22, 0.13, 0.11, 0.11, 0.12, 0.07, 0.11, 0.09, 0.11, 0.06, 0.13, 0.09, 0.16, 0.16, 0.15, 0.15, 0.08, 0.11, 0.12, 0.12, 0.12, 0.12, 0.07, 0.1, 0.12, 0.13, 0.13, 0.11, 0.18, 0.14, 0.09, 0.1, 0.17, 0.11, 0.15, 0.16, 0.14, 0.12])
 </pre></div>
 </div>
 </div>
@@ -980,7 +966,7 @@ We have lottery drawings from few weeks:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 49 artists&gt;
 </pre></div>
 </div>
-<img alt="_images/55a8e523be4673f6faa15dc4e5902291a3be129cac64a41bd796e465bf99d2eb.png" src="_images/55a8e523be4673f6faa15dc4e5902291a3be129cac64a41bd796e465bf99d2eb.png" />
+<img alt="_images/b8a1399f489d62c094bfb003393b453d28fe3874d75273ea4ddee5a1b8d84368.png" src="_images/b8a1399f489d62c094bfb003393b453d28fe3874d75273ea4ddee5a1b8d84368.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1003,7 +989,7 @@ We have lottery drawings from few weeks:</p>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 49 artists&gt;
 </pre></div>
 </div>
-<img alt="_images/13540b3ef7aeb52320dab218f87c5cd5400871bc380ea5f2c14faae8ca028943.png" src="_images/13540b3ef7aeb52320dab218f87c5cd5400871bc380ea5f2c14faae8ca028943.png" />
+<img alt="_images/a8068bba0107b559efba6626500f6653f036b578ed2bcc8edcaf43806a97ecaf.png" src="_images/a8068bba0107b559efba6626500f6653f036b578ed2bcc8edcaf43806a97ecaf.png" />
 </div>
 </div>
 </section>
@@ -1021,7 +1007,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.43
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.58
 </pre></div>
 </div>
 </div>
@@ -1039,10 +1025,10 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1c34aa89e50&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x27caf57aaf0&gt;]
 </pre></div>
 </div>
-<img alt="_images/90ff7724211ad418475166ab7ecc7dc4d6c998178d5974ab7f2f59d435985c56.png" src="_images/90ff7724211ad418475166ab7ecc7dc4d6c998178d5974ab7f2f59d435985c56.png" />
+<img alt="_images/0a1bca51349f2b48526cb5b6e1899dd880742350332e189f1aa02bcb1ddf4ef3.png" src="_images/0a1bca51349f2b48526cb5b6e1899dd880742350332e189f1aa02bcb1ddf4ef3.png" />
 </div>
 </div>
 <p>Now, let’s calculate probability of winning in roulette while always betting on black.</p>
@@ -1081,7 +1067,7 @@ We have lottery drawings from few weeks:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/61e632e5069ce43dccd066d13f97b638935890c35ee47fbafcde2b059211cf8d.png" src="_images/61e632e5069ce43dccd066d13f97b638935890c35ee47fbafcde2b059211cf8d.png" />
+<img alt="_images/485ffe9d122fdea8eb872ba93f340b5d3cba5821066f5294ec5ef31645e048e3.png" src="_images/485ffe9d122fdea8eb872ba93f340b5d3cba5821066f5294ec5ef31645e048e3.png" />
 </div>
 </div>
 </section>
@@ -1209,6 +1195,15 @@ We have lottery drawings from few weeks:</p>
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="AI_Exercise_4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Exercise 4: Python Knowledge Repetition</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
