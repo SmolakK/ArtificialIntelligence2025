@@ -181,6 +181,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="4.%20AI%204.html">Lecture 4: Advanced regression models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_4.html">Exercise 4: Python Knowledge Repetition</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5.%20AI%205.html">Lecture 5: Pracitcal approach to using machine learning with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_5.html">Exercise 5: Python Knowledge Repetition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_6.html">Exercise 6: Implementation (Probability)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6.%20AI%206.html">Lecture 6: Advanced regression in Python and Ethics in Machine Learning</a></li>
+
+
+
 </ul>
 
     </div>
@@ -421,22 +427,22 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            X           Y
-0    0.446693  195.392738
-1   -0.593102  175.268236
-2   -0.305049   -0.315122
-3   -0.385645  -58.466075
-4   -0.328551   31.884098
+0   -1.491597 -351.289044
+1    2.255623  297.300362
+2    0.742345   67.703305
+3   -0.970458  -44.243899
+4    1.427850   43.560507
 ..        ...         ...
-995 -0.157029  -78.333859
-996 -0.392557 -111.886662
-997 -1.351744 -130.775253
-998  0.729510    6.391110
-999 -0.098674  -13.151382
+995 -1.114904  -53.811196
+996  0.427713 -149.784980
+997  0.227955  115.057843
+998  1.089920   93.294140
+999 -0.988359  -69.357792
 
 [1000 rows x 2 columns]
 </pre></div>
 </div>
-<img alt="_images/aaf172c11197335b1a927685b8059f42418d7059a648771259c67e6382d58696.png" src="_images/aaf172c11197335b1a927685b8059f42418d7059a648771259c67e6382d58696.png" />
+<img alt="_images/5e6d7d3138f4c2a954064e5d266aca806a6a471d2e612e1c8f39263f9b34fa60.png" src="_images/5e6d7d3138f4c2a954064e5d266aca806a6a471d2e612e1c8f39263f9b34fa60.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -546,7 +552,7 @@ Validation set size: 200
 Testing set size: 200
 </pre></div>
 </div>
-<img alt="_images/d3033363d9d3acb9b18798919527ed396d7ea1a496be8ea5ae11951c0d1d5543.png" src="_images/d3033363d9d3acb9b18798919527ed396d7ea1a496be8ea5ae11951c0d1d5543.png" />
+<img alt="_images/4beb2dd2df58b6fc3fa6c91f55bf3b17b27de150d0e5a254ada82e7c0dd3df57.png" src="_images/4beb2dd2df58b6fc3fa6c91f55bf3b17b27de150d0e5a254ada82e7c0dd3df57.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -593,7 +599,7 @@ Validation set size: 88
 Testing set size: 89
 </pre></div>
 </div>
-<img alt="_images/a5bcbb96c3d959c81721d58ccd8d98c7301f4e7c03ff693ca9a190d11d3af2b5.png" src="_images/a5bcbb96c3d959c81721d58ccd8d98c7301f4e7c03ff693ca9a190d11d3af2b5.png" />
+<img alt="_images/5834ede2765b8fcbc0c68589f49635e6cb2d93034af2c39534eef7aa35ccbf17.png" src="_images/5834ede2765b8fcbc0c68589f49635e6cb2d93034af2c39534eef7aa35ccbf17.png" />
 </div>
 </div>
 </section>
@@ -632,12 +638,12 @@ Testing set size: 89
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error (MSE): 4.175257467500036
-Mean Absolute Error (MAE): 1.6575040819738263
-R² Score: 0.9672889741999917
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error (MSE): 3.558600581071508
+Mean Absolute Error (MAE): 1.5348340224131285
+R² Score: 0.9618717576909455
 </pre></div>
 </div>
-<img alt="_images/fb1d5663330a7b6bcf12f9e3ea844e2b7757ad3ccf7445b6a44dfa34d6ad9ce8.png" src="_images/fb1d5663330a7b6bcf12f9e3ea844e2b7757ad3ccf7445b6a44dfa34d6ad9ce8.png" />
+<img alt="_images/4e6b65b6e553829f9af427d36382afb54f5abb9f3efaf5409a7d62f3fa67d41b.png" src="_images/4e6b65b6e553829f9af427d36382afb54f5abb9f3efaf5409a7d62f3fa67d41b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -678,12 +684,12 @@ R² Score: 0.9672889741999917
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metrics for Diabetes dataset with random predictions:
-Mean Squared Error (MSE): 1032.6241815921385
-Mean Absolute Error (MAE): 25.632753474535647
-R² Score: 0.8258610074994607
+Mean Squared Error (MSE): 841.8937032371033
+Mean Absolute Error (MAE): 23.371304236651277
+R² Score: 0.8580252875269551
 </pre></div>
 </div>
-<img alt="_images/44bd999599cd017d824120e9ee40774e16474be5f0555a75f3afd8b6fa4e4730.png" src="_images/44bd999599cd017d824120e9ee40774e16474be5f0555a75f3afd8b6fa4e4730.png" />
+<img alt="_images/c33700fc16bf5b98ed34822bb21fe85acf37d7b8f5ed786363abeb533281b283.png" src="_images/c33700fc16bf5b98ed34822bb21fe85acf37d7b8f5ed786363abeb533281b283.png" />
 </div>
 </div>
 </section>
@@ -748,17 +754,17 @@ R² Score: 0.8258610074994607
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Validation Metrics:
-MSE: 1908.7056771772152
-MAE: 35.4797036792165
-R²: 0.9370411062703123
+MSE: 2067.9103460464803
+MAE: 37.800712188712644
+R²: 0.94427538116085
 
 Test Metrics:
-MSE: 2154.931001302104
-MAE: 38.11123510839989
-R²: 0.9353416026758181
+MSE: 2513.4865070785386
+MAE: 40.75313584963929
+R²: 0.9148647397510801
 </pre></div>
 </div>
-<img alt="_images/4f8e9d1081910fc871eabf97a1809634d0e4f3f497de4219f2766a7aa09e921a.png" src="_images/4f8e9d1081910fc871eabf97a1809634d0e4f3f497de4219f2766a7aa09e921a.png" />
+<img alt="_images/956b86b75ca5cb587ca5fb65f931114fb447f17352589503668db8b373f1921b.png" src="_images/956b86b75ca5cb587ca5fb65f931114fb447f17352589503668db8b373f1921b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -822,17 +828,17 @@ R²: 0.9353416026758181
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Validation Metrics:
-MSE: 2821.488461455401
-MAE: 43.15604026705836
-R²: 0.5589846109719598
+MSE: 2835.0855851939273
+MAE: 42.788635264175376
+R²: 0.4618511612641596
 
 Test Metrics:
-MSE: 3303.0111109704594
-MAE: 46.517647455980786
-R²: 0.4947945407391168
+MSE: 3347.646004952003
+MAE: 47.207311815087124
+R²: 0.331938675877112
 </pre></div>
 </div>
-<img alt="_images/96cea0f7077393946b05faa75c8257f5a2d5be447de46764af56716b5cbc34b8.png" src="_images/96cea0f7077393946b05faa75c8257f5a2d5be447de46764af56716b5cbc34b8.png" />
+<img alt="_images/94552dd678b7bbc10c11475340ae8ab594de9df94aee5c942dc49a831e8dd620.png" src="_images/94552dd678b7bbc10c11475340ae8ab594de9df94aee5c942dc49a831e8dd620.png" />
 </div>
 </div>
 </section>
