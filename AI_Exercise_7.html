@@ -65,6 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_7';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture 8: Introduction to classification" href="8.%20AI%208.html" />
+    <link rel="prev" title="Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning" href="7.%20AI%207.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -164,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
@@ -191,15 +193,20 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise 7: Implementation (Linear regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
 
 
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.%20AI%2010.html">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_10.html">Exercise 10: Classification (Evaluation metrics)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_11.html">Exercise 11: Clustering</a></li>
 </ul>
 
     </div>
@@ -439,23 +446,29 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\computation\expressions.py:21: UserWarning: Pandas requires version &#39;2.8.4&#39; or newer of &#39;numexpr&#39; (version &#39;2.8.1&#39; currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\arrays\masked.py:61: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.4&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            X           Y
-0    0.370777    6.639287
-1    0.334187  -82.860139
-2    0.433989   17.580560
-3    1.229948    7.066993
-4    1.310047   70.401991
+0    0.774850 -155.583544
+1    0.066441  -40.658624
+2   -0.925010   46.015088
+3   -0.679132  -75.463065
+4   -0.025331 -131.132910
 ..        ...         ...
-995 -2.104994  -48.118884
-996 -0.526820  -41.050328
-997 -1.679560  -77.564857
-998 -0.673397  -64.013742
-999  1.238192  164.596749
+995  0.640184  -88.764756
+996 -0.348660   26.368237
+997 -0.701909  118.663089
+998 -0.809555   23.253962
+999  1.649116   76.789193
 
 [1000 rows x 2 columns]
 </pre></div>
 </div>
-<img alt="_images/b495f629cbe6b6489b982a458d47818b72bf049c144e0f51dd16077477a25682.png" src="_images/b495f629cbe6b6489b982a458d47818b72bf049c144e0f51dd16077477a25682.png" />
+<img alt="_images/14e68bad1b1a9d87f5846d871af628604caada900a7e5de89777933a9b6fcfb3.png" src="_images/14e68bad1b1a9d87f5846d871af628604caada900a7e5de89777933a9b6fcfb3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -565,7 +578,7 @@ Validation set size: 200
 Testing set size: 200
 </pre></div>
 </div>
-<img alt="_images/9333eb1d24e893672cefea86a64f88393546752abf5e045055b8f5bc2a902e8b.png" src="_images/9333eb1d24e893672cefea86a64f88393546752abf5e045055b8f5bc2a902e8b.png" />
+<img alt="_images/1f1c26c663157a1d68c9048312f42f68ddbeab0a4c91527f27daabf21fb139b2.png" src="_images/1f1c26c663157a1d68c9048312f42f68ddbeab0a4c91527f27daabf21fb139b2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -612,7 +625,7 @@ Validation set size: 88
 Testing set size: 89
 </pre></div>
 </div>
-<img alt="_images/ca618c8104139455b4c84edb6bc568e417adf95bd58eddb1e439d7db58f82f8c.png" src="_images/ca618c8104139455b4c84edb6bc568e417adf95bd58eddb1e439d7db58f82f8c.png" />
+<img alt="_images/689bb8f9c654ada37c1494de38d739100b4b7c9d64bc76bb52dd6baebd029c79.png" src="_images/689bb8f9c654ada37c1494de38d739100b4b7c9d64bc76bb52dd6baebd029c79.png" />
 </div>
 </div>
 </section>
@@ -651,12 +664,12 @@ Testing set size: 89
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error (MSE): 4.770087115013999
-Mean Absolute Error (MAE): 1.7337243412356371
-R² Score: 0.9600213327269829
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error (MSE): 3.9999946845837626
+Mean Absolute Error (MAE): 1.5922541607282343
+R² Score: 0.956033815196626
 </pre></div>
 </div>
-<img alt="_images/258dcde21de2c33582c35fe0acb10f59329e0296e38fcc3cc13eda28e3e1e62b.png" src="_images/258dcde21de2c33582c35fe0acb10f59329e0296e38fcc3cc13eda28e3e1e62b.png" />
+<img alt="_images/bd85d4fd1ece6a8aff05760cfc43d0e9f3e416b04d663b16ec567f3552d4cb29.png" src="_images/bd85d4fd1ece6a8aff05760cfc43d0e9f3e416b04d663b16ec567f3552d4cb29.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -697,12 +710,12 @@ R² Score: 0.9600213327269829
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metrics for Diabetes dataset with random predictions:
-Mean Squared Error (MSE): 850.3954114217892
-Mean Absolute Error (MAE): 23.421846856757675
-R² Score: 0.8565915820954861
+Mean Squared Error (MSE): 884.3913022558681
+Mean Absolute Error (MAE): 24.41276966994743
+R² Score: 0.850858605583279
 </pre></div>
 </div>
-<img alt="_images/11a20b149e851e58dc4d1e7791c68e2f4a629ece3321fe30fd64606dfe7de767.png" src="_images/11a20b149e851e58dc4d1e7791c68e2f4a629ece3321fe30fd64606dfe7de767.png" />
+<img alt="_images/5987aa5b223c2d56fb0f1316e831f69a5fb2af338ccb442b4a69fdb912ae5f02.png" src="_images/5987aa5b223c2d56fb0f1316e831f69a5fb2af338ccb442b4a69fdb912ae5f02.png" />
 </div>
 </div>
 </section>
@@ -767,17 +780,17 @@ R² Score: 0.8565915820954861
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Validation Metrics:
-MSE: 2082.8584527455573
-MAE: 36.813797777954264
-R²: 0.9190284097045234
+MSE: 2888.374486877135
+MAE: 42.949260249588335
+R²: 0.9084940735354415
 
 Test Metrics:
-MSE: 2687.6890647768637
-MAE: 41.12239094048508
-R²: 0.9263292402502162
+MSE: 2276.9319549219854
+MAE: 39.24277623044462
+R²: 0.9259381125824228
 </pre></div>
 </div>
-<img alt="_images/3804b10d9955beeedccec23e4a2a63c34b7cb556a260af960203129fd2d87e22.png" src="_images/3804b10d9955beeedccec23e4a2a63c34b7cb556a260af960203129fd2d87e22.png" />
+<img alt="_images/2dc45e489cf94fe5d31892ddedea57e55e936af13c82447bf9f8a1fb8e126687.png" src="_images/2dc45e489cf94fe5d31892ddedea57e55e936af13c82447bf9f8a1fb8e126687.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -841,17 +854,17 @@ R²: 0.9263292402502162
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Validation Metrics:
-MSE: 2436.161080766023
-MAE: 39.11434766675481
-R²: 0.5540565022592022
+MSE: 3277.568231512822
+MAE: 45.38385665893226
+R²: 0.4135733216688977
 
 Test Metrics:
-MSE: 3166.030089434903
-MAE: 45.547926593672386
-R²: 0.42365600829193784
+MSE: 3414.664470513416
+MAE: 47.85277220059142
+R²: 0.4952416816107488
 </pre></div>
 </div>
-<img alt="_images/6b1857cf44ed6c68048f93689dbf67dc89c0f9a3c3eec60efd8b5c3925c41688.png" src="_images/6b1857cf44ed6c68048f93689dbf67dc89c0f9a3c3eec60efd8b5c3925c41688.png" />
+<img alt="_images/4b7e9e20552896ed3058ba6705d32afd5906091372796cf18c77b47db62a577a.png" src="_images/4b7e9e20552896ed3058ba6705d32afd5906091372796cf18c77b47db62a577a.png" />
 </div>
 </div>
 </section>
@@ -887,6 +900,24 @@ R²: 0.42365600829193784
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="7.%20AI%207.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 7: Cross-validation method and meaning and Ethics in Machine Learning</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="8.%20AI%208.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture 8: Introduction to classification</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               

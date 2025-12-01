@@ -65,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = '10. AI 10';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lecture 11: Introduction to clustering" href="11.%20AI%2011.html" />
-    <link rel="prev" title="Lecture 9: Neural Networks" href="9.%20AI%209.html" />
+    <link rel="next" title="Exercise 10: Classification (Evaluation metrics)" href="AI_Exercise_10.html" />
+    <link rel="prev" title="Exercise 9: Classification" href="AI_Exercise_9.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -193,15 +193,20 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
 
 
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_10.html">Exercise 10: Classification (Evaluation metrics)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_11.html">Exercise 11: Clustering</a></li>
 </ul>
 
     </div>
@@ -556,6 +561,12 @@ Outcome: Reduces water wastage and prevents over-irrigation
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\computation\expressions.py:21: UserWarning: Pandas requires version &#39;2.8.4&#39; or newer of &#39;numexpr&#39; (version &#39;2.8.1&#39; currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\arrays\masked.py:61: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.4&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
 <img alt="_images/d7bbed25306b1bf60dfad0bf07d1172bdc48f1cafd3d491818bfd9bcefddd280.png" src="_images/d7bbed25306b1bf60dfad0bf07d1172bdc48f1cafd3d491818bfd9bcefddd280.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Day  Soil Moisture (%)  Rain Prediction (1=Rain)  Irrigation (1=Yes)
    1          31.899949                         1                   0
@@ -794,7 +805,7 @@ AI task: optimization
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_51d13d3d31bb1c2927c392bcfe4164f7 {
+                #map_c58f64a7f56fdd356d9aa486d971e774 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -808,14 +819,14 @@ AI task: optimization
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_51d13d3d31bb1c2927c392bcfe4164f7&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_c58f64a7f56fdd356d9aa486d971e774&quot; &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_51d13d3d31bb1c2927c392bcfe4164f7 = L.map(
-                &quot;map_51d13d3d31bb1c2927c392bcfe4164f7&quot;,
+            var map_c58f64a7f56fdd356d9aa486d971e774 = L.map(
+                &quot;map_c58f64a7f56fdd356d9aa486d971e774&quot;,
                 {
                     center: [37.7749, -122.4194],
                     crs: L.CRS.EPSG3857,
@@ -829,37 +840,37 @@ AI task: optimization
 
         
     
-            var tile_layer_dbe20b773125d82c8531c42802f035e5 = L.tileLayer(
+            var tile_layer_40ed0d118e3ec5318da25e5425ca85ee = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
         
     
-            tile_layer_dbe20b773125d82c8531c42802f035e5.addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            tile_layer_40ed0d118e3ec5318da25e5425ca85ee.addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-            var marker_9a6830bf802b51f1c96b234ebd026afa = L.marker(
+            var marker_34eed8a997bb16c1275ba089a7361ad9 = L.marker(
                 [37.7749, -122.4194],
                 {}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-        var popup_16a3283ee5417ea1db559acbe3a50348 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_efedcbe3bd11a4ab2b829d21815fe816 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_5354d377cb94d5022cf6f62548d18502 = $(`&lt;div id=&quot;html_5354d377cb94d5022cf6f62548d18502&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Factory&lt;/b&gt;&lt;/div&gt;`)[0];
-                popup_16a3283ee5417ea1db559acbe3a50348.setContent(html_5354d377cb94d5022cf6f62548d18502);
+                var html_107ac448f7922d65615d6cd9d5339658 = $(`&lt;div id=&quot;html_107ac448f7922d65615d6cd9d5339658&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Factory&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_efedcbe3bd11a4ab2b829d21815fe816.setContent(html_107ac448f7922d65615d6cd9d5339658);
             
         
 
-        marker_9a6830bf802b51f1c96b234ebd026afa.bindPopup(popup_16a3283ee5417ea1db559acbe3a50348)
+        marker_34eed8a997bb16c1275ba089a7361ad9.bindPopup(popup_efedcbe3bd11a4ab2b829d21815fe816)
         ;
 
         
     
     
-            marker_9a6830bf802b51f1c96b234ebd026afa.bindTooltip(
+            marker_34eed8a997bb16c1275ba089a7361ad9.bindTooltip(
                 `&lt;div&gt;
                      Factory
                  &lt;/div&gt;`,
@@ -867,28 +878,28 @@ AI task: optimization
             );
         
     
-            var marker_64365a5a7ae97726205a71c84f8a6067 = L.marker(
+            var marker_f0f14afcd780502471813c033cc68c28 = L.marker(
                 [37.8044, -122.2711],
                 {}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-        var popup_4a5cb73638e3485d8adcbd2e6f3e8ac7 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_32621e0235cf8e193553d66e928c35c9 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_2eb24d8adf3640f0fb4bbe3c8511b63d = $(`&lt;div id=&quot;html_2eb24d8adf3640f0fb4bbe3c8511b63d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Warehouse 1&lt;/b&gt;&lt;/div&gt;`)[0];
-                popup_4a5cb73638e3485d8adcbd2e6f3e8ac7.setContent(html_2eb24d8adf3640f0fb4bbe3c8511b63d);
+                var html_56e7dbc608689341e11f5e318bca1b2e = $(`&lt;div id=&quot;html_56e7dbc608689341e11f5e318bca1b2e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Warehouse 1&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_32621e0235cf8e193553d66e928c35c9.setContent(html_56e7dbc608689341e11f5e318bca1b2e);
             
         
 
-        marker_64365a5a7ae97726205a71c84f8a6067.bindPopup(popup_4a5cb73638e3485d8adcbd2e6f3e8ac7)
+        marker_f0f14afcd780502471813c033cc68c28.bindPopup(popup_32621e0235cf8e193553d66e928c35c9)
         ;
 
         
     
     
-            marker_64365a5a7ae97726205a71c84f8a6067.bindTooltip(
+            marker_f0f14afcd780502471813c033cc68c28.bindTooltip(
                 `&lt;div&gt;
                      Warehouse 1
                  &lt;/div&gt;`,
@@ -896,28 +907,28 @@ AI task: optimization
             );
         
     
-            var marker_a4d457d72b546ab1472bf6014f810b95 = L.marker(
+            var marker_c5ee4ea7b716d566c610cd2ef053496b = L.marker(
                 [37.6879, -122.4702],
                 {}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-        var popup_fa3b60327b85fff4ef67da739c179816 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_7938530417da12d54e431cd90284cd4f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_a1744d7439adf331b601cf1d0a0e00a5 = $(`&lt;div id=&quot;html_a1744d7439adf331b601cf1d0a0e00a5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Warehouse 2&lt;/b&gt;&lt;/div&gt;`)[0];
-                popup_fa3b60327b85fff4ef67da739c179816.setContent(html_a1744d7439adf331b601cf1d0a0e00a5);
+                var html_7a98c9a71ea3d29f603e839a626c7e53 = $(`&lt;div id=&quot;html_7a98c9a71ea3d29f603e839a626c7e53&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Warehouse 2&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_7938530417da12d54e431cd90284cd4f.setContent(html_7a98c9a71ea3d29f603e839a626c7e53);
             
         
 
-        marker_a4d457d72b546ab1472bf6014f810b95.bindPopup(popup_fa3b60327b85fff4ef67da739c179816)
+        marker_c5ee4ea7b716d566c610cd2ef053496b.bindPopup(popup_7938530417da12d54e431cd90284cd4f)
         ;
 
         
     
     
-            marker_a4d457d72b546ab1472bf6014f810b95.bindTooltip(
+            marker_c5ee4ea7b716d566c610cd2ef053496b.bindTooltip(
                 `&lt;div&gt;
                      Warehouse 2
                  &lt;/div&gt;`,
@@ -925,28 +936,28 @@ AI task: optimization
             );
         
     
-            var marker_7b37871bf55f6aa1dd315cbb0ea0e0bb = L.marker(
+            var marker_e5cd18d29244b356c5f47a61fd29aa93 = L.marker(
                 [37.7749, -122.4892],
                 {}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-        var popup_4af596a4e3c0f7beae238e21c3b80fa3 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_5354553d105aaeecd3a8a96871cbc739 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_87fde28ebd275c656487498f541b6fdb = $(`&lt;div id=&quot;html_87fde28ebd275c656487498f541b6fdb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Retailer 1&lt;/b&gt;&lt;/div&gt;`)[0];
-                popup_4af596a4e3c0f7beae238e21c3b80fa3.setContent(html_87fde28ebd275c656487498f541b6fdb);
+                var html_3a85062ddcdbd323001910eb894c6f63 = $(`&lt;div id=&quot;html_3a85062ddcdbd323001910eb894c6f63&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Retailer 1&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_5354553d105aaeecd3a8a96871cbc739.setContent(html_3a85062ddcdbd323001910eb894c6f63);
             
         
 
-        marker_7b37871bf55f6aa1dd315cbb0ea0e0bb.bindPopup(popup_4af596a4e3c0f7beae238e21c3b80fa3)
+        marker_e5cd18d29244b356c5f47a61fd29aa93.bindPopup(popup_5354553d105aaeecd3a8a96871cbc739)
         ;
 
         
     
     
-            marker_7b37871bf55f6aa1dd315cbb0ea0e0bb.bindTooltip(
+            marker_e5cd18d29244b356c5f47a61fd29aa93.bindTooltip(
                 `&lt;div&gt;
                      Retailer 1
                  &lt;/div&gt;`,
@@ -954,28 +965,28 @@ AI task: optimization
             );
         
     
-            var marker_d2ce10272bb19aac2e418942b12c8c12 = L.marker(
+            var marker_6d4fdee11444885f25710d0504bf69ca = L.marker(
                 [37.7328, -122.5054],
                 {}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-        var popup_5f122695efd577ef5c4941ffccb756af = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_63e1473be2b146bca6577f86a6a9a9ef = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_12fc488c549d4f0d80c4aa6dfcc745f6 = $(`&lt;div id=&quot;html_12fc488c549d4f0d80c4aa6dfcc745f6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Retailer 2&lt;/b&gt;&lt;/div&gt;`)[0];
-                popup_5f122695efd577ef5c4941ffccb756af.setContent(html_12fc488c549d4f0d80c4aa6dfcc745f6);
+                var html_f4a3a60c000180d59c772d2f972c87fe = $(`&lt;div id=&quot;html_f4a3a60c000180d59c772d2f972c87fe&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;Retailer 2&lt;/b&gt;&lt;/div&gt;`)[0];
+                popup_63e1473be2b146bca6577f86a6a9a9ef.setContent(html_f4a3a60c000180d59c772d2f972c87fe);
             
         
 
-        marker_d2ce10272bb19aac2e418942b12c8c12.bindPopup(popup_5f122695efd577ef5c4941ffccb756af)
+        marker_6d4fdee11444885f25710d0504bf69ca.bindPopup(popup_63e1473be2b146bca6577f86a6a9a9ef)
         ;
 
         
     
     
-            marker_d2ce10272bb19aac2e418942b12c8c12.bindTooltip(
+            marker_6d4fdee11444885f25710d0504bf69ca.bindTooltip(
                 `&lt;div&gt;
                      Retailer 2
                  &lt;/div&gt;`,
@@ -983,13 +994,13 @@ AI task: optimization
             );
         
     
-            var poly_line_42f647bea38946f1b6beef07a5b74d02 = L.polyline(
+            var poly_line_33b7db42385f6bbf5a023ecd95c8beb5 = L.polyline(
                 [[37.7749, -122.4194], [37.8044, -122.2711]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-            poly_line_42f647bea38946f1b6beef07a5b74d02.bindTooltip(
+            poly_line_33b7db42385f6bbf5a023ecd95c8beb5.bindTooltip(
                 `&lt;div&gt;
                      Factory to Warehouse 1: 10 km
                  &lt;/div&gt;`,
@@ -997,13 +1008,13 @@ AI task: optimization
             );
         
     
-            var poly_line_880855c41afcc4e5d1aa935c7bf7cb0e = L.polyline(
+            var poly_line_1a8cf70e29cedd6d851a227e74c893c6 = L.polyline(
                 [[37.7749, -122.4194], [37.6879, -122.4702]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-            poly_line_880855c41afcc4e5d1aa935c7bf7cb0e.bindTooltip(
+            poly_line_1a8cf70e29cedd6d851a227e74c893c6.bindTooltip(
                 `&lt;div&gt;
                      Factory to Warehouse 2: 15 km
                  &lt;/div&gt;`,
@@ -1011,13 +1022,13 @@ AI task: optimization
             );
         
     
-            var poly_line_d206301216f835d00fe0eec2af5dc82d = L.polyline(
+            var poly_line_59cec9a31104a10bd45af88f9050dcdd = L.polyline(
                 [[37.8044, -122.2711], [37.7749, -122.4892]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-            poly_line_d206301216f835d00fe0eec2af5dc82d.bindTooltip(
+            poly_line_59cec9a31104a10bd45af88f9050dcdd.bindTooltip(
                 `&lt;div&gt;
                      Warehouse 1 to Retailer 1: 8 km
                  &lt;/div&gt;`,
@@ -1025,13 +1036,13 @@ AI task: optimization
             );
         
     
-            var poly_line_c55c89e1d3752397aa43a28a9b12a91a = L.polyline(
+            var poly_line_8e15e4097e2e13e271fff10d59f795f7 = L.polyline(
                 [[37.8044, -122.2711], [37.7328, -122.5054]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-            poly_line_c55c89e1d3752397aa43a28a9b12a91a.bindTooltip(
+            poly_line_8e15e4097e2e13e271fff10d59f795f7.bindTooltip(
                 `&lt;div&gt;
                      Warehouse 1 to Retailer 2: 12 km
                  &lt;/div&gt;`,
@@ -1039,13 +1050,13 @@ AI task: optimization
             );
         
     
-            var poly_line_d399e4be6e97cc9c0153737056193ced = L.polyline(
+            var poly_line_2f78b50a28348bc40b81c12739d31c22 = L.polyline(
                 [[37.6879, -122.4702], [37.7749, -122.4892]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-            poly_line_d399e4be6e97cc9c0153737056193ced.bindTooltip(
+            poly_line_2f78b50a28348bc40b81c12739d31c22.bindTooltip(
                 `&lt;div&gt;
                      Warehouse 2 to Retailer 1: 10 km
                  &lt;/div&gt;`,
@@ -1053,13 +1064,13 @@ AI task: optimization
             );
         
     
-            var poly_line_36ce053b79f3b7516f25cedc3426f08c = L.polyline(
+            var poly_line_9d84c2d6c29ebab040cbf538b621ce8d = L.polyline(
                 [[37.6879, -122.4702], [37.7328, -122.5054]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;gray&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;gray&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 2}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-            poly_line_36ce053b79f3b7516f25cedc3426f08c.bindTooltip(
+            poly_line_9d84c2d6c29ebab040cbf538b621ce8d.bindTooltip(
                 `&lt;div&gt;
                      Warehouse 2 to Retailer 2: 5 km
                  &lt;/div&gt;`,
@@ -1067,13 +1078,13 @@ AI task: optimization
             );
         
     
-            var poly_line_f03a55fbfded18808687dc5c84de2409 = L.polyline(
+            var poly_line_3592aa0fda98bf78950c05fb7f7d23d8 = L.polyline(
                 [[37.7749, -122.4194], [37.6879, -122.4702]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 4}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-            poly_line_f03a55fbfded18808687dc5c84de2409.bindTooltip(
+            poly_line_3592aa0fda98bf78950c05fb7f7d23d8.bindTooltip(
                 `&lt;div&gt;
                      Optimized: Factory to Warehouse 2
                  &lt;/div&gt;`,
@@ -1081,13 +1092,13 @@ AI task: optimization
             );
         
     
-            var poly_line_6599a30826246470884818b309f415fe = L.polyline(
+            var poly_line_f36aa058148407fcc0e59a6a4d2ff2ad = L.polyline(
                 [[37.6879, -122.4702], [37.7328, -122.5054]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 4}
-            ).addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            ).addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
     
-            poly_line_6599a30826246470884818b309f415fe.bindTooltip(
+            poly_line_f36aa058148407fcc0e59a6a4d2ff2ad.bindTooltip(
                 `&lt;div&gt;
                      Optimized: Warehouse 2 to Retailer 2
                  &lt;/div&gt;`,
@@ -1095,7 +1106,7 @@ AI task: optimization
             );
         
     
-            tile_layer_dbe20b773125d82c8531c42802f035e5.addTo(map_51d13d3d31bb1c2927c392bcfe4164f7);
+            tile_layer_40ed0d118e3ec5318da25e5425ca85ee.addTo(map_c58f64a7f56fdd356d9aa486d971e774);
         
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
@@ -1178,7 +1189,7 @@ AI task: optimization
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_4760\4157862255.py:30: UserWarning: color argument of Icon should be one of: {&#39;lightblue&#39;, &#39;purple&#39;, &#39;green&#39;, &#39;orange&#39;, &#39;white&#39;, &#39;black&#39;, &#39;cadetblue&#39;, &#39;darkred&#39;, &#39;lightred&#39;, &#39;darkgreen&#39;, &#39;blue&#39;, &#39;gray&#39;, &#39;darkpurple&#39;, &#39;lightgreen&#39;, &#39;pink&#39;, &#39;red&#39;, &#39;beige&#39;, &#39;darkblue&#39;, &#39;lightgray&#39;}.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_5316\4157862255.py:30: UserWarning: color argument of Icon should be one of: {&#39;blue&#39;, &#39;green&#39;, &#39;orange&#39;, &#39;black&#39;, &#39;red&#39;, &#39;white&#39;, &#39;beige&#39;, &#39;lightblue&#39;, &#39;purple&#39;, &#39;lightgreen&#39;, &#39;gray&#39;, &#39;darkblue&#39;, &#39;lightgray&#39;, &#39;lightred&#39;, &#39;pink&#39;, &#39;darkpurple&#39;, &#39;darkgreen&#39;, &#39;cadetblue&#39;, &#39;darkred&#39;}.
   icon=folium.Icon(color=color, icon=&quot;tree&quot;)
 </pre></div>
 </div>
@@ -1209,7 +1220,7 @@ AI task: optimization
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_695f609c340bb5781911f4e664927347 {
+                #map_7e67fb350ba1fd127ceb3c12298cba24 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1224,14 +1235,14 @@ AI task: optimization
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_695f609c340bb5781911f4e664927347&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_7e67fb350ba1fd127ceb3c12298cba24&quot; &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_695f609c340bb5781911f4e664927347 = L.map(
-                &quot;map_695f609c340bb5781911f4e664927347&quot;,
+            var map_7e67fb350ba1fd127ceb3c12298cba24 = L.map(
+                &quot;map_7e67fb350ba1fd127ceb3c12298cba24&quot;,
                 {
                     center: [-3.4653, -62.2159],
                     crs: L.CRS.EPSG3857,
@@ -1245,167 +1256,167 @@ AI task: optimization
 
         
     
-            var tile_layer_a711d84fe31e91400e60169720688da0 = L.tileLayer(
+            var tile_layer_057d863347b58b69ba1a3438c9d18402 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
         
     
-            tile_layer_a711d84fe31e91400e60169720688da0.addTo(map_695f609c340bb5781911f4e664927347);
+            tile_layer_057d863347b58b69ba1a3438c9d18402.addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
         
     
-            var heat_map_f2133332f9cb380bf0d3be34e04bb138 = L.heatLayer(
+            var heat_map_e39efa05df40602a56ee993187e1dee9 = L.heatLayer(
                 [[-3.073341134206206, -61.97272800414358, 0.6632703844029177], [-3.4295560255946005, -62.17916573997418, 0.9805860121746746], [-3.1554661513218485, -61.95267988986262, 0.7698460661945399], [-3.4132488343361516, -61.734744692735866, 0.8035171238433423], [-3.7240008179774566, -62.403726494295924, 0.5826334695315012], [-3.984363593258806, -62.276598519293636, 0.6974407590877849], [-3.7065118252819618, -62.68592017728492, 0.5994212020444025], [-3.2886580472513502, -61.909824459468794, 0.8029799873905057], [-3.073699121486651, -62.048922974498055, 0.9574798377718904], [-3.149961422210201, -62.2505493258618, 0.5477050582452057], [-3.6291817478017334, -62.0311587473364, 0.8329611783087483], [-3.408702212292273, -62.42527820700994, 0.7806217129238506], [-3.6170731252462103, -61.7282879046109, 0.9244569121330419], [-3.2782704788351267, -62.464015080251045, 0.6280341613806619], [-3.9595664104615684, -61.98933711031422, 0.5554454104059157], [-3.5606634981342298, -62.498280797664606, 0.9478817978367597], [-3.5246297768178882, -62.13672442802362, 0.8477580432130638], [-3.860668545594124, -62.09558262072218, 0.7699205456508366], [-3.7969387752652306, -61.757146429442024, 0.799432733244268], [-3.3052150669602955, -61.81953216098474, 0.8121770240668966], [-3.704366314162286, -62.59450574016973, 0.7282672852414551], [-3.7815595627831664, -62.283490052129636, 0.9416401294594341], [-3.675654978994726, -62.57791204529933, 0.6781489190384875], [-3.093171558454246, -62.42786775061537, 0.8238450602706812], [-3.9994796230046843, -62.34743114366584, 0.6523906290790145], [-3.835344146857058, -62.16591058062456, 0.7424149856794916], [-3.3075639671097297, -62.43058766620148, 0.6220627611238871], [-3.8317089578270696, -62.481235780426935, 0.7790510010086706], [-3.5961638289419593, -62.635107752891024, 0.6269577069671723], [-3.7531239371613987, -62.00369572716021, 0.856135294962221], [-3.8519130700466, -61.70225951495106, 0.6333905071376424], [-3.0233850441673473, -62.288962986681774, 0.5165253664502742], [-3.654928751973317, -62.06564865529864, 0.8403527257773834], [-3.469065416682864, -62.252216835426914, 0.776446544535664], [-3.4073032761206066, -62.61914667366729, 0.6848272280307022], [-3.757840061722574, -61.896860243620104, 0.7351503172230192], [-3.016576859105157, -62.30117555755545, 0.908215936609692], [-3.201654875015449, -62.549282456034575, 0.7540993883703593], [-3.3041871932091182, -61.841641195186284, 0.6629794526009424], [-3.7797589524344515, -61.98885046756199, 0.9047505230698577], [-3.6513340127082707, -62.603823448908585, 0.970261632244802], [-3.602427978912478, -62.18224864947252, 0.918855052953664], [-3.324309882960719, -61.96478388075923, 0.6045358103688568], [-3.458552026172434, -62.00421560065492, 0.6142750108986499], [-3.825045072904064, -61.71783165667057, 0.7583179456355071], [-3.739170825169591, -61.70374630024208, 0.9827096756443968], [-3.4417065463929024, -61.81736365681066, 0.5943535541706897], [-3.7211286474078182, -61.99964217002723, 0.923330571119153], [-3.1436757081219078, -62.29549187287781, 0.9438850493804799], [-3.1490715512324874, -61.764365005779055, 0.8926703255569718], [-3.3310117452857715, -62.11931337856355, 0.6861413832808716], [-3.0598665575422217, -61.72633616324469, 0.6419604873687328], [-3.6946361396556067, -62.214386246413774, 0.7242120714931237], [-3.0055425373891795, -62.52407474732266, 0.5090376818077604], [-3.5061062848165654, -62.521177290778674, 0.6832343922914299], [-3.255829476943438, -61.979060075747874, 0.6540303959261946], [-3.4574597694451006, -62.19118592316124, 0.8181663090929476], [-3.7495381813944157, -62.110129152439455, 0.9894464291375045], [-3.5132578470405447, -61.79390121228145, 0.7171971827552144], [-3.6499215923053243, -62.054896637969435, 0.8344620298315498], [-3.135832434928097, -62.46981473175845, 0.7495966899423762], [-3.427995800790817, -61.93144598569369, 0.5218018858772169], [-3.005449489202659, -62.23005548600906, 0.6397801708983792], [-3.116505977733741, -61.95228122610259, 0.9765359235119766], [-3.669249695329486, -62.14723503316451, 0.7861462345854191], [-3.019668416283954, -62.624653743993875, 0.652848509643591], [-3.809088968849654, -62.431525143109845, 0.7426399371381578], [-3.6273131329059507, -62.305308533190534, 0.9221065703631557], [-3.0699831651891683, -62.62958386915046, 0.6044593588076801], [-3.3288564831759495, -62.34135321870384, 0.6270818245348694], [-3.704709411581061, -62.377449235761404, 0.9243348974623372], [-3.863378668557971, -61.99108900308988, 0.7764099884539539], [-3.7034898563522014, -62.28021914355373, 0.628103471797229], [-3.3884862891343195, -62.618405819599765, 0.5025924313869934], [-3.372105585051364, -62.50572604648796, 0.5354704584999639], [-3.6032161727861114, -62.64923146896061, 0.94330857447533], [-3.9723832281262954, -62.121135104492446, 0.7192370615090435], [-3.3279738647048007, -62.37184733252527, 0.5775208083638721], [-3.018159111689469, -61.861066497930636, 0.9302023091558376], [-3.749748639484136, -62.66116526557058, 0.6516327573366114], [-3.4629175728033443, -62.37334875820396, 0.9139345018937943], [-3.728457084180258, -61.73474816960923, 0.7286325808068643], [-3.1579769249880187, -62.50561996600513, 0.7056769525283393], [-3.300487789232806, -62.5616469075822, 0.5663727111214849], [-3.030463132885841, -61.985404895820054, 0.5205337583839379], [-3.6011790985552055, -62.26647926241926, 0.8720213214995577], [-3.7491394726533387, -62.51566632566863, 0.5404364833085988], [-3.571685525059892, -62.01150009923464, 0.5290967977542218], [-3.0847862723735195, -62.257647770268896, 0.6198936795787016], [-3.9061267099187083, -62.517134002892696, 0.9673069986698548], [-3.3617294061566496, -62.183303742573436, 0.8285556642500834], [-3.564327101322109, -61.96996068343818, 0.5238580638458243], [-3.433962789505924, -62.54135355235751, 0.5600823239028211], [-3.6581203332835983, -62.60820093418656, 0.5470784941342801], [-3.6885866906087057, -61.72048947137849, 0.5876651349446693], [-3.9828388981682497, -61.93663557699609, 0.9034564885253897], [-3.653695678910599, -62.235326187060394, 0.8248868413213817], [-3.9519410758029663, -61.75085426840862, 0.9433401936490238], [-3.739106376658286, -62.684695459709616, 0.9667181540397415], [-3.498960116084741, -62.16062255159994, 0.8419818846990705]],
                 {&quot;blur&quot;: 10, &quot;maxZoom&quot;: 8, &quot;minOpacity&quot;: 0.5, &quot;radius&quot;: 15}
             );
         
     
-            heat_map_f2133332f9cb380bf0d3be34e04bb138.addTo(map_695f609c340bb5781911f4e664927347);
+            heat_map_e39efa05df40602a56ee993187e1dee9.addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
         
     
-            var marker_b87eedcc6c3657d1a7348471d29c11ab = L.marker(
+            var marker_dfac60b29bf4efb26c8163cb78e2436c = L.marker(
                 [-3.2, -62.1],
                 {}
-            ).addTo(map_695f609c340bb5781911f4e664927347);
+            ).addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
         
     
-            var icon_4c71a082e381d5f064ef4c3eac06cee8 = L.AwesomeMarkers.icon(
+            var icon_2390998a70d5da36553038286dd0ccfc = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;tree&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
             );
-            marker_b87eedcc6c3657d1a7348471d29c11ab.setIcon(icon_4c71a082e381d5f064ef4c3eac06cee8);
+            marker_dfac60b29bf4efb26c8163cb78e2436c.setIcon(icon_2390998a70d5da36553038286dd0ccfc);
         
     
-        var popup_3437d5a8529284030fbdf76d634ab449 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_c0fe7a447b2590f3c7d9e9c1038d5546 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_6b9abc5bdc7ac22dcbec5462e2071e3d = $(`&lt;div id=&quot;html_6b9abc5bdc7ac22dcbec5462e2071e3d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: High Severity&lt;/div&gt;`)[0];
-                popup_3437d5a8529284030fbdf76d634ab449.setContent(html_6b9abc5bdc7ac22dcbec5462e2071e3d);
+                var html_0e3d197de200f1d8b9f852311102c712 = $(`&lt;div id=&quot;html_0e3d197de200f1d8b9f852311102c712&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: High Severity&lt;/div&gt;`)[0];
+                popup_c0fe7a447b2590f3c7d9e9c1038d5546.setContent(html_0e3d197de200f1d8b9f852311102c712);
             
         
 
-        marker_b87eedcc6c3657d1a7348471d29c11ab.bindPopup(popup_3437d5a8529284030fbdf76d634ab449)
+        marker_dfac60b29bf4efb26c8163cb78e2436c.bindPopup(popup_c0fe7a447b2590f3c7d9e9c1038d5546)
         ;
 
         
     
     
-            var marker_bd9f01e18787d462b194d20d1a3a9e6a = L.marker(
+            var marker_af69325a95d4227f76a397ddbbac18db = L.marker(
                 [-3.6, -62.4],
                 {}
-            ).addTo(map_695f609c340bb5781911f4e664927347);
+            ).addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
         
     
-            var icon_4d301577412a8aea803d8c9583ac27e6 = L.AwesomeMarkers.icon(
+            var icon_458887a9075cbf7a2238c8b53e69984a = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;tree&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;orange&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
             );
-            marker_bd9f01e18787d462b194d20d1a3a9e6a.setIcon(icon_4d301577412a8aea803d8c9583ac27e6);
+            marker_af69325a95d4227f76a397ddbbac18db.setIcon(icon_458887a9075cbf7a2238c8b53e69984a);
         
     
-        var popup_798628f6170813deda0b8b172f782a25 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_091bca993356be859480ad56d8c9c777 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_f1bada026799894d8a092e264c819a5d = $(`&lt;div id=&quot;html_f1bada026799894d8a092e264c819a5d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: Medium Severity&lt;/div&gt;`)[0];
-                popup_798628f6170813deda0b8b172f782a25.setContent(html_f1bada026799894d8a092e264c819a5d);
+                var html_44be76cac2d15f306908a97edef98160 = $(`&lt;div id=&quot;html_44be76cac2d15f306908a97edef98160&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: Medium Severity&lt;/div&gt;`)[0];
+                popup_091bca993356be859480ad56d8c9c777.setContent(html_44be76cac2d15f306908a97edef98160);
             
         
 
-        marker_bd9f01e18787d462b194d20d1a3a9e6a.bindPopup(popup_798628f6170813deda0b8b172f782a25)
+        marker_af69325a95d4227f76a397ddbbac18db.bindPopup(popup_091bca993356be859480ad56d8c9c777)
         ;
 
         
     
     
-            var marker_e3206ca5c70fbfa98c28a29192bf1c54 = L.marker(
+            var marker_676bef833d960f4382726a45161b3a00 = L.marker(
                 [-3.4, -62.3],
                 {}
-            ).addTo(map_695f609c340bb5781911f4e664927347);
+            ).addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
         
     
-            var icon_846226917d6998a36e4bf75c5d4c44ce = L.AwesomeMarkers.icon(
+            var icon_75d632c7e2cc7e71a638daa09266fe5b = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;tree&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;yellow&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
             );
-            marker_e3206ca5c70fbfa98c28a29192bf1c54.setIcon(icon_846226917d6998a36e4bf75c5d4c44ce);
+            marker_676bef833d960f4382726a45161b3a00.setIcon(icon_75d632c7e2cc7e71a638daa09266fe5b);
         
     
-        var popup_790c355b9939b79fbb4bc8106984c773 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_b690ee31f8fbed37abc86480b1d49bc8 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_c569e5659dc2568d233db0c3a49c25e2 = $(`&lt;div id=&quot;html_c569e5659dc2568d233db0c3a49c25e2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: Low Severity&lt;/div&gt;`)[0];
-                popup_790c355b9939b79fbb4bc8106984c773.setContent(html_c569e5659dc2568d233db0c3a49c25e2);
+                var html_0f077a18f291601470d31491a25035d4 = $(`&lt;div id=&quot;html_0f077a18f291601470d31491a25035d4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Illegal Logging: Low Severity&lt;/div&gt;`)[0];
+                popup_b690ee31f8fbed37abc86480b1d49bc8.setContent(html_0f077a18f291601470d31491a25035d4);
             
         
 
-        marker_e3206ca5c70fbfa98c28a29192bf1c54.bindPopup(popup_790c355b9939b79fbb4bc8106984c773)
+        marker_676bef833d960f4382726a45161b3a00.bindPopup(popup_b690ee31f8fbed37abc86480b1d49bc8)
         ;
 
         
     
     
-            var polygon_cf91c8e54439fa93f71713a7ffa3b137 = L.polygon(
+            var polygon_1a6835853e4d4219bb6f64aedb90cd94 = L.polygon(
                 [[-3.3, -62.5], [-3.3, -62.3], [-3.5, -62.3], [-3.5, -62.5]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;green&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.3, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_695f609c340bb5781911f4e664927347);
+            ).addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
         
     
-        var popup_54eca9ab415f3a7fcb5641f7677a6e11 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_332fc4de0e1f20e9ac29e3b7424512a4 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_ae8e22d5c3b090db84b89ec91535f0eb = $(`&lt;div id=&quot;html_ae8e22d5c3b090db84b89ec91535f0eb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Optimized Harvest Zone&lt;/div&gt;`)[0];
-                popup_54eca9ab415f3a7fcb5641f7677a6e11.setContent(html_ae8e22d5c3b090db84b89ec91535f0eb);
+                var html_26926886a0d44ba5f774adfde6715996 = $(`&lt;div id=&quot;html_26926886a0d44ba5f774adfde6715996&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Optimized Harvest Zone&lt;/div&gt;`)[0];
+                popup_332fc4de0e1f20e9ac29e3b7424512a4.setContent(html_26926886a0d44ba5f774adfde6715996);
             
         
 
-        polygon_cf91c8e54439fa93f71713a7ffa3b137.bindPopup(popup_54eca9ab415f3a7fcb5641f7677a6e11)
+        polygon_1a6835853e4d4219bb6f64aedb90cd94.bindPopup(popup_332fc4de0e1f20e9ac29e3b7424512a4)
         ;
 
         
     
     
-            var polygon_154d6d98d1bf872fab242fb57de4ed91 = L.polygon(
+            var polygon_44f3ec3ab00a2d7e9a405e31796002db = L.polygon(
                 [[-3.6, -62.2], [-3.6, -62.0], [-3.8, -62.0], [-3.8, -62.2]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;green&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.3, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_695f609c340bb5781911f4e664927347);
+            ).addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
         
     
-        var popup_19a8e8e99f07fb2d22ae64d8057c1b68 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+        var popup_5337496687d97c7e54ff453dc436383c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
         
             
-                var html_d3f5354e11c3e0616f5ed8ecf506165a = $(`&lt;div id=&quot;html_d3f5354e11c3e0616f5ed8ecf506165a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Optimized Harvest Zone&lt;/div&gt;`)[0];
-                popup_19a8e8e99f07fb2d22ae64d8057c1b68.setContent(html_d3f5354e11c3e0616f5ed8ecf506165a);
+                var html_7e9a4676addd14ef3161f78ffa9afcc1 = $(`&lt;div id=&quot;html_7e9a4676addd14ef3161f78ffa9afcc1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Optimized Harvest Zone&lt;/div&gt;`)[0];
+                popup_5337496687d97c7e54ff453dc436383c.setContent(html_7e9a4676addd14ef3161f78ffa9afcc1);
             
         
 
-        polygon_154d6d98d1bf872fab242fb57de4ed91.bindPopup(popup_19a8e8e99f07fb2d22ae64d8057c1b68)
+        polygon_44f3ec3ab00a2d7e9a405e31796002db.bindPopup(popup_5337496687d97c7e54ff453dc436383c)
         ;
 
         
     
     
-            var layer_control_33990e6e2bb8224de6136c7e7946b4d4_layers = {
+            var layer_control_abae0843d13e75b2f44420c0054825eb_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_a711d84fe31e91400e60169720688da0,
+                    &quot;openstreetmap&quot; : tile_layer_057d863347b58b69ba1a3438c9d18402,
                 },
                 overlays :  {
-                    &quot;Forest Growth Prediction&quot; : heat_map_f2133332f9cb380bf0d3be34e04bb138,
+                    &quot;Forest Growth Prediction&quot; : heat_map_e39efa05df40602a56ee993187e1dee9,
                 },
             };
-            let layer_control_33990e6e2bb8224de6136c7e7946b4d4 = L.control.layers(
-                layer_control_33990e6e2bb8224de6136c7e7946b4d4_layers.base_layers,
-                layer_control_33990e6e2bb8224de6136c7e7946b4d4_layers.overlays,
+            let layer_control_abae0843d13e75b2f44420c0054825eb = L.control.layers(
+                layer_control_abae0843d13e75b2f44420c0054825eb_layers.base_layers,
+                layer_control_abae0843d13e75b2f44420c0054825eb_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_695f609c340bb5781911f4e664927347);
+            ).addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
 
         
     
-            tile_layer_a711d84fe31e91400e60169720688da0.addTo(map_695f609c340bb5781911f4e664927347);
+            tile_layer_057d863347b58b69ba1a3438c9d18402.addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
         
     
-            heat_map_f2133332f9cb380bf0d3be34e04bb138.addTo(map_695f609c340bb5781911f4e664927347);
+            heat_map_e39efa05df40602a56ee993187e1dee9.addTo(map_7e67fb350ba1fd127ceb3c12298cba24);
         
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
@@ -1526,6 +1537,10 @@ AI task: optimization
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_5316\144988103.py:2: FutureWarning: &#39;H&#39; is deprecated and will be removed in a future version, please use &#39;h&#39; instead.
+  time = pd.date_range(start=&quot;2025-01-01&quot;, periods=48, freq=&quot;H&quot;)  # 48 hours of data
+</pre></div>
+</div>
 <img alt="_images/58bcdbc1354bb0a1e7ad489b46161ba54b333986ed0df826f2bf0308fa23c6a5.png" src="_images/58bcdbc1354bb0a1e7ad489b46161ba54b333986ed0df826f2bf0308fa23c6a5.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Time  Energy Demand (kWh)  Bioenergy Production (kWh)  Grid Energy (kWh)
 2025-01-01 00:00:00            48.646156                   25.000000          23.646156
@@ -1595,6 +1610,10 @@ AI task: optimization
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_5316\320740350.py:7: FutureWarning: &#39;H&#39; is deprecated and will be removed in a future version, please use &#39;h&#39; instead.
+  time = pd.date_range(start=&quot;2025-01-01&quot;, periods=48, freq=&quot;H&quot;)
+</pre></div>
+</div>
 <img alt="_images/6a95c11f480957889f381a2f5935bed534ba004a29c94c9d25b7eacf4d575886.png" src="_images/6a95c11f480957889f381a2f5935bed534ba004a29c94c9d25b7eacf4d575886.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Time  Temperature (°C)       pH  Oxygen Levels (mg/L)  Feeding Event
 2025-01-01 00:00:00         24.174110 8.373460              9.865053           True
@@ -1809,7 +1828,7 @@ weighted avg       0.70      0.70      0.70       100
 R-squared Score: 0.9987
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_4760\1379572060.py:28: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_5316\1379572060.py:28: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
   plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], &quot;k--&quot;, lw=2, color=&quot;red&quot;)
 </pre></div>
 </div>
@@ -1905,7 +1924,7 @@ R-squared Score: 0.9987
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_4760\984286448.py:6: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_5316\984286448.py:6: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
@@ -1913,7 +1932,7 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 </pre></div>
 </div>
 <img alt="_images/42a89ed76f0be1dde84dc528fb5338fbd7cfccbc50ba219c3e132f927fbe520a.png" src="_images/42a89ed76f0be1dde84dc528fb5338fbd7cfccbc50ba219c3e132f927fbe520a.png" />
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_4760\984286448.py:12: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_5316\984286448.py:12: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
@@ -2176,7 +2195,7 @@ R-squared Score: -0.01
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_4760\3845146598.py:4: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_5316\3845146598.py:4: UserWarning: color is redundantly defined by the &#39;color&#39; keyword argument and the fmt string &quot;k--&quot; (-&gt; color=&#39;k&#39;). The keyword argument will take precedence.
   plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], &quot;k--&quot;, lw=2, color=&quot;red&quot;)
 </pre></div>
 </div>
@@ -2278,7 +2297,7 @@ D-14/3/90 42857.0 1.5 7.7 238.0 319.0 292.0 33.8 3.5 1261 7.6 170.0 268 31.3 4.2
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_4760\2200278684.py:6: FutureWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Local\Temp\ipykernel_5316\2200278684.py:6: FutureWarning: 
 
 Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
 
@@ -2420,20 +2439,20 @@ C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\sklearn\metrics\_cl
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="9.%20AI%209.html"
+       href="AI_Exercise_9.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lecture 9: Neural Networks</p>
+        <p class="prev-next-title">Exercise 9: Classification</p>
       </div>
     </a>
     <a class="right-next"
-       href="11.%20AI%2011.html"
+       href="AI_Exercise_10.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lecture 11: Introduction to clustering</p>
+        <p class="prev-next-title">Exercise 10: Classification (Evaluation metrics)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

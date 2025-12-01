@@ -65,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_11';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lecture 11: Introduction to clustering" href="11.%20AI%2011.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -164,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
@@ -191,15 +192,20 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
 
 
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.%20AI%2010.html">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_10.html">Exercise 10: Classification (Evaluation metrics)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise 11: Clustering</a></li>
 </ul>
 
     </div>
@@ -483,7 +489,13 @@ Classification relies on labeled data for prediction, while clustering identifie
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/865ad492f77fdab63a4a66910d107050286e4328f3b5cfdd5d8b8ae9f5dc921f.png" src="_images/865ad492f77fdab63a4a66910d107050286e4328f3b5cfdd5d8b8ae9f5dc921f.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\computation\expressions.py:21: UserWarning: Pandas requires version &#39;2.8.4&#39; or newer of &#39;numexpr&#39; (version &#39;2.8.1&#39; currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\arrays\masked.py:61: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.4&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
+<img alt="_images/9bedb2721a2451aca5b8bf29fbf13f69a8143d48f829fdcb751b688fc0418936.png" src="_images/9bedb2721a2451aca5b8bf29fbf13f69a8143d48f829fdcb751b688fc0418936.png" />
 </div>
 </div>
 </section>
@@ -523,7 +535,7 @@ Classification relies on labeled data for prediction, while clustering identifie
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/62e762d8c3554d693627a75b094c48489877d7f9c6f6e4ba5bdde4b24232f140.png" src="_images/62e762d8c3554d693627a75b094c48489877d7f9c6f6e4ba5bdde4b24232f140.png" />
+<img alt="_images/d034aa09673416028e1d463cb089f5f93aba975902ea6a21ddffe8a47b66ff11.png" src="_images/d034aa09673416028e1d463cb089f5f93aba975902ea6a21ddffe8a47b66ff11.png" />
 </div>
 </div>
 </section>
@@ -577,7 +589,7 @@ Classification relies on labeled data for prediction, while clustering identifie
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/4b19eb40bd3ff6a8a37da827c291571dd8203b9da938985062ac4b04a2cabf60.png" src="_images/4b19eb40bd3ff6a8a37da827c291571dd8203b9da938985062ac4b04a2cabf60.png" />
+<img alt="_images/2360788bbd80b0b986675ddb5ecc5292281311b6781f5b1051d05a0c07c6fc4c.png" src="_images/2360788bbd80b0b986675ddb5ecc5292281311b6781f5b1051d05a0c07c6fc4c.png" />
 </div>
 </div>
 </section>
@@ -664,15 +676,15 @@ Classification relies on labeled data for prediction, while clustering identifie
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Homogeneity: 1.000
-Completeness: 1.000
-V-Measure: 1.000
-Adjusted Rand Index (ARI): 1.000
-Normalized Mutual Information (NMI): 1.000
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Homogeneity: 0.736
+Completeness: 0.738
+V-Measure: 0.737
+Adjusted Rand Index (ARI): 0.697
+Normalized Mutual Information (NMI): 0.737
 </pre></div>
 </div>
-<img alt="_images/fbb8d1c9bd51eba14d2926935bb20fab1deeb918b8a1619b0dfebb5ec94656c5.png" src="_images/fbb8d1c9bd51eba14d2926935bb20fab1deeb918b8a1619b0dfebb5ec94656c5.png" />
-<img alt="_images/8211e49142902d00cd2b99b7481acd49739d8d2eaac57fb76549c8ff8429eedb.png" src="_images/8211e49142902d00cd2b99b7481acd49739d8d2eaac57fb76549c8ff8429eedb.png" />
+<img alt="_images/de5bdeeaea59df2bf8fa07ea018442ab4fb611847cb07c6be3c6d0fe0ba49800.png" src="_images/de5bdeeaea59df2bf8fa07ea018442ab4fb611847cb07c6be3c6d0fe0ba49800.png" />
+<img alt="_images/7ea2b371f2d42612f3df84ee053ac3553c7aa3bb344c72a18d0faa23383d0904.png" src="_images/7ea2b371f2d42612f3df84ee053ac3553c7aa3bb344c72a18d0faa23383d0904.png" />
 </div>
 </div>
 </section>
@@ -751,13 +763,13 @@ Normalized Mutual Information (NMI): 1.000
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Silhouette Score: 0.493
-Davies-Bouldin Index: 0.747
-Calinski-Harabasz Index: 3980.643
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Silhouette Score: 0.469
+Davies-Bouldin Index: 0.850
+Calinski-Harabasz Index: 3881.416
 </pre></div>
 </div>
-<img alt="_images/b8016721cda1a9d48f90839c181b03138bb2b15d988169cbe41e03fb1a52619c.png" src="_images/b8016721cda1a9d48f90839c181b03138bb2b15d988169cbe41e03fb1a52619c.png" />
-<img alt="_images/d7272dc1795a4b3fcde9479db58067b7abb677cc4a44cd348fd774dcd09ecb9d.png" src="_images/d7272dc1795a4b3fcde9479db58067b7abb677cc4a44cd348fd774dcd09ecb9d.png" />
+<img alt="_images/e72aab657b44a07b6998a4b2223a01e60fd9a8d71ea41185e831dc83fc5ffc70.png" src="_images/e72aab657b44a07b6998a4b2223a01e60fd9a8d71ea41185e831dc83fc5ffc70.png" />
+<img alt="_images/e5b0d9d10072bf5d8022d0d9933a260111ee33b07d24d196874038afb09da5b6.png" src="_images/e5b0d9d10072bf5d8022d0d9933a260111ee33b07d24d196874038afb09da5b6.png" />
 </div>
 </div>
 </section>
@@ -794,6 +806,15 @@ Calinski-Harabasz Index: 3980.643
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="11.%20AI%2011.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 11: Introduction to clustering</p>
+      </div>
+    </a>
 </div>
                 </footer>
               

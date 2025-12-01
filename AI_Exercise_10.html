@@ -67,6 +67,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'AI_Exercise_10';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lecture 11: Introduction to clustering" href="11.%20AI%2011.html" />
+    <link rel="prev" title="Lecture 10: Examples of use of AI in Bioeconomy" href="10.%20AI%2010.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,7 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="AI_Exercise_1.html">Exercise 1: Python Knowledge Repetition</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="2.%20AI%202.html">Lecture 2: Introduction to Machine Learning tasks and intuition</a></li>
@@ -193,15 +195,20 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
 
 
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.%20AI%2010.html">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise 10: Classification (Evaluation metrics)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_11.html">Exercise 11: Clustering</a></li>
 </ul>
 
     </div>
@@ -574,22 +581,28 @@ This happens when the model fails to identify a positive instance, incorrectly p
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\computation\expressions.py:21: UserWarning: Pandas requires version &#39;2.8.4&#39; or newer of &#39;numexpr&#39; (version &#39;2.8.1&#39; currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\arrays\masked.py:61: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.4&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[119  20]
- [ 10 101]]
+[[117  16]
+ [ 17 100]]
 </pre></div>
 </div>
-<img alt="_images/78cec3df2896b5f43724b29751e623196104655d84cbc6f4e31c9c9527602fd6.png" src="_images/78cec3df2896b5f43724b29751e623196104655d84cbc6f4e31c9c9527602fd6.png" />
+<img alt="_images/146bcec1d7132206d0a6c21c62a6f9cb566011b6e6137a68402cc4d6539ef96c.png" src="_images/146bcec1d7132206d0a6c21c62a6f9cb566011b6e6137a68402cc4d6539ef96c.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.88
-Precision: 0.86
-Recall (Sensitivity, TPR): 0.92
-F1-Score: 0.89
-Specificity (TNR): 0.83
-NPV (Negative Predictive Value): 0.91
+Accuracy: 0.87
+Precision: 0.88
+Recall (Sensitivity, TPR): 0.87
+F1-Score: 0.88
+Specificity (TNR): 0.86
+NPV (Negative Predictive Value): 0.85
 </pre></div>
 </div>
-<img alt="_images/533d63aa1519b3cefed059ce8da2a9450511f8b10fe160d31640385dc589688f.png" src="_images/533d63aa1519b3cefed059ce8da2a9450511f8b10fe160d31640385dc589688f.png" />
+<img alt="_images/395a9aae5a408b0d1d0d75caaa7b7369e92bd5e848818f09856fad21fd74e1bf.png" src="_images/395a9aae5a408b0d1d0d75caaa7b7369e92bd5e848818f09856fad21fd74e1bf.png" />
 </div>
 </div>
 </section>
@@ -688,21 +701,21 @@ NPV (Negative Predictive Value): 0.91
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[125   1]
- [ 12 112]]
+[[110   1]
+ [ 13 126]]
 </pre></div>
 </div>
-<img alt="_images/f6a1ff59d92aa6087a063a89b02a124e97a933f492aaa5fab94adc5852fde4c1.png" src="_images/f6a1ff59d92aa6087a063a89b02a124e97a933f492aaa5fab94adc5852fde4c1.png" />
+<img alt="_images/222a4e477030469269649e2c7382e0efd9ec21494e615682b091a453d5bf7683.png" src="_images/222a4e477030469269649e2c7382e0efd9ec21494e615682b091a453d5bf7683.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.95
+Accuracy: 0.94
 Precision: 0.99
-Recall (Sensitivity, TPR): 0.91
-F1-Score: 0.95
+Recall (Sensitivity, TPR): 0.89
+F1-Score: 0.94
 Specificity (TNR): 0.99
-NPV (Negative Predictive Value): 0.90
+NPV (Negative Predictive Value): 0.91
 </pre></div>
 </div>
-<img alt="_images/f3a6d81c43b98ab530532844cdd2b209331cd13629a1fe5210367dfa27ba1a25.png" src="_images/f3a6d81c43b98ab530532844cdd2b209331cd13629a1fe5210367dfa27ba1a25.png" />
+<img alt="_images/caba7349fee1716c0d192464c52463533c6d1b59cfbd5267ea8ae40a96f57eaf.png" src="_images/caba7349fee1716c0d192464c52463533c6d1b59cfbd5267ea8ae40a96f57eaf.png" />
 </div>
 </div>
 </section>
@@ -800,21 +813,21 @@ NPV (Negative Predictive Value): 0.90
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[120   2]
- [  9 119]]
+[[113   9]
+ [  4 124]]
 </pre></div>
 </div>
-<img alt="_images/17384da61b37dd856beb7d6be8d27d5e8893b03801fdde3737848154428ff8ec.png" src="_images/17384da61b37dd856beb7d6be8d27d5e8893b03801fdde3737848154428ff8ec.png" />
+<img alt="_images/4d68bc86b5578065287cd7cad8d027d2d96f98422c3f8b8010a17ca6d37dca0e.png" src="_images/4d68bc86b5578065287cd7cad8d027d2d96f98422c3f8b8010a17ca6d37dca0e.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.96
-Precision: 0.98
-Recall (Sensitivity, TPR): 0.93
-F1-Score: 0.96
-Specificity (TNR): 0.98
-NPV (Negative Predictive Value): 0.93
+Accuracy: 0.95
+Precision: 0.93
+Recall (Sensitivity, TPR): 0.97
+F1-Score: 0.95
+Specificity (TNR): 0.93
+NPV (Negative Predictive Value): 0.97
 </pre></div>
 </div>
-<img alt="_images/c4fd000d97624f042fca00633cd4d291af0fbb20924bdea88a0d3ab91734f0e8.png" src="_images/c4fd000d97624f042fca00633cd4d291af0fbb20924bdea88a0d3ab91734f0e8.png" />
+<img alt="_images/5efae677e1d73110a64dee5de2c6d47baaeb95959dcbe8dd0d0d465aa1570c9d.png" src="_images/5efae677e1d73110a64dee5de2c6d47baaeb95959dcbe8dd0d0d465aa1570c9d.png" />
 </div>
 </div>
 </section>
@@ -912,21 +925,21 @@ NPV (Negative Predictive Value): 0.93
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[110  19]
- [ 15 106]]
+[[101  11]
+ [ 20 118]]
 </pre></div>
 </div>
-<img alt="_images/8c641ed393ad13d1921895026d37957e66ba4e368d8bfabc75e7305b642cf221.png" src="_images/8c641ed393ad13d1921895026d37957e66ba4e368d8bfabc75e7305b642cf221.png" />
+<img alt="_images/d7a36edb4372b89fbfc7876eeae11ff028a5fbb25b89eb017ed2bc4d546037a7.png" src="_images/d7a36edb4372b89fbfc7876eeae11ff028a5fbb25b89eb017ed2bc4d546037a7.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.86
-Precision: 0.85
-Recall (Sensitivity, TPR): 0.88
+Accuracy: 0.88
+Precision: 0.90
+Recall (Sensitivity, TPR): 0.83
 F1-Score: 0.87
-Specificity (TNR): 0.85
-NPV (Negative Predictive Value): 0.88
+Specificity (TNR): 0.91
+NPV (Negative Predictive Value): 0.86
 </pre></div>
 </div>
-<img alt="_images/45ff8ec2434e335c53fe001dda6a19f90544f1dcdd5a9bb9138c9e3964614a97.png" src="_images/45ff8ec2434e335c53fe001dda6a19f90544f1dcdd5a9bb9138c9e3964614a97.png" />
+<img alt="_images/4e371b3eb6492f9775a57d6cfe9059db08d0e1a8fe7110762c1e4aeb37d2965f.png" src="_images/4e371b3eb6492f9775a57d6cfe9059db08d0e1a8fe7110762c1e4aeb37d2965f.png" />
 </div>
 </div>
 </section>
@@ -1024,21 +1037,21 @@ NPV (Negative Predictive Value): 0.88
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix:
-[[101  17]
- [ 20 112]]
+[[120  10]
+ [ 15 105]]
 </pre></div>
 </div>
-<img alt="_images/4c5b819731aae048e4ef3e199793defd8c25cf21eb52d9054d20b23cab4b56a6.png" src="_images/4c5b819731aae048e4ef3e199793defd8c25cf21eb52d9054d20b23cab4b56a6.png" />
+<img alt="_images/2a2e6151b87a0d6bd58e3d9a3d4f5c5ce796cc0ed8b1933a90631dc7393b7829.png" src="_images/2a2e6151b87a0d6bd58e3d9a3d4f5c5ce796cc0ed8b1933a90631dc7393b7829.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation Metrics:
-Accuracy: 0.85
-Precision: 0.86
-Recall (Sensitivity, TPR): 0.83
-F1-Score: 0.85
-Specificity (TNR): 0.87
-NPV (Negative Predictive Value): 0.85
+Accuracy: 0.90
+Precision: 0.92
+Recall (Sensitivity, TPR): 0.89
+F1-Score: 0.91
+Specificity (TNR): 0.91
+NPV (Negative Predictive Value): 0.88
 </pre></div>
 </div>
-<img alt="_images/3d1d8df30397ffc48e4c23d19482c5aed9865ce1d9eddf994f6ed30a365a0b73.png" src="_images/3d1d8df30397ffc48e4c23d19482c5aed9865ce1d9eddf994f6ed30a365a0b73.png" />
+<img alt="_images/24e8f17555305b89f0c304cb7ef3a34be628305cf4501877f0a39403dc0fd1ce.png" src="_images/24e8f17555305b89f0c304cb7ef3a34be628305cf4501877f0a39403dc0fd1ce.png" />
 </div>
 </div>
 </section>
@@ -1074,6 +1087,24 @@ NPV (Negative Predictive Value): 0.85
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="10.%20AI%2010.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lecture 10: Examples of use of AI in Bioeconomy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11.%20AI%2011.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lecture 11: Introduction to clustering</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               

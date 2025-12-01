@@ -193,15 +193,20 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_7.html">Exercise 7: Implementation (Linear regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8.%20AI%208.html">Lecture 8: Introduction to classification</a></li>
 
 
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_8.html">Exercise 8: Implementation (Advanced regression)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="9.%20AI%209.html">Lecture 9: Neural Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_9.html">Exercise 9: Classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10.%20AI%2010.html">Lecture 10: Examples of use of AI in Bioeconomy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_10.html">Exercise 10: Classification (Evaluation metrics)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11.%20AI%2011.html">Lecture 11: Introduction to clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AI_Exercise_11.html">Exercise 11: Clustering</a></li>
 </ul>
 
     </div>
@@ -433,14 +438,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 5 14  4 12  9 11 14  6  5  9  9 14  5 12 14 11 12 13  5  5  8  5 12 11
-  9  7  6  6 11  8  9  7  3  2  9 11  5  6  6  1  4 11 14  6  6  5 11  5
- 11  9  5 12 11  3  2  2 11  3  4  9  6 10  8  1 13  4  9 11  1  3 13  2
-  5  2  7  1 14 10  7 13  7 13  5  2  3  1  8  1  3  3 10 12  3 12  3 10
-  6  6 13 11]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 9  7  3 14  4  5  4 10 13  1  9  3  7  6 14  8 14 10 10  4  7 14  9 11
+  6  9  9  9  3  9  8  2  1  1 13  7 12  2  8  6 10  6 13 14  8 12 13  8
+ 10 14 13  9 14  3  6 11  1  1  8  6  3  9  7  9  7  9 12 12  1  6  2  4
+  3 12 11 14  2 14  9 12  7  9  4  2  3  5  3 13 12  2  6  5  4 14 13  1
+  2  6 11 13]
 Total Numbers Drawn: 100
-count: 4
-Probability of drawing 10: 0.04
+count: 5
+Probability of drawing 10: 0.05
 </pre></div>
 </div>
 </div>
@@ -459,8 +464,8 @@ Probability of drawing 10: 0.04
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 0 0 0 0 0 1 0]
-Probability of Crop Disease: 10.00%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 0 1 0 1 0 1 0 0 1]
+Probability of Crop Disease: 50.00%
 </pre></div>
 </div>
 </div>
@@ -483,7 +488,7 @@ Probability of Crop Disease: 10.00%
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilities: {3: 0.1, 5: 0.1, 7: 0.08}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilities: {3: 0.2, 5: 0.12, 7: 0.1}
 </pre></div>
 </div>
 </div>
@@ -530,21 +535,27 @@ Probability of Crop Disease: 10.00%
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\computation\expressions.py:21: UserWarning: Pandas requires version &#39;2.8.4&#39; or newer of &#39;numexpr&#39; (version &#39;2.8.1&#39; currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\kamil\AppData\Roaming\Python\Python39\site-packages\pandas\core\arrays\masked.py:61: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.4&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Ball_1  Ball_2  Ball_3  Ball_4  Ball_5  Ball_6
-0         3      12      14       8       5      17
-1        11      22       6      19      31      30
-2        17      30      30      18      20       7
-3         6      31      31      20       4       8
-4        24      10      17      12       9      11
+0         9      24      15      20      19      35
+1        19      23       4       4      11      15
+2        16      19      38      18      16       1
+3        36       7      17      28      29      26
+4        33      36      23       2       1       8
 ..      ...     ...     ...     ...     ...     ...
-145       8      31      14      22      32       7
-146       7      18      18      32      16      34
-147      13      32      24       9      17      37
-148       8      39      10       1      31      29
-149      13      23       1      24      28      31
+145      16       9       2      31      34       2
+146      37      19      14      30       5      26
+147      27      21       5       8      20      33
+148      24       4      14      19      30      35
+149      19      29      39      22      15      15
 
 [150 rows x 6 columns]
-Probability of drawing 25: 0.030
+Probability of drawing 25: 0.017
 </pre></div>
 </div>
 </div>
@@ -597,7 +608,7 @@ Probability of drawing 25: 0.030
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d5463620f6abec871e306b1a0ad4f448bf788a4866d3642efb521c8042a71b3b.png" src="_images/d5463620f6abec871e306b1a0ad4f448bf788a4866d3642efb521c8042a71b3b.png" />
+<img alt="_images/1b43270854be88b2a430509e32d94527fa1292e3a1e9399dae0204ba5f55c93b.png" src="_images/1b43270854be88b2a430509e32d94527fa1292e3a1e9399dae0204ba5f55c93b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -658,11 +669,11 @@ Probability of drawing 25: 0.030
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toss Counts: {&#39;Heads&#39;: 100, &#39;Tails&#39;: 100}
-Probability of Heads: 0.50
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Toss Counts: {&#39;Heads&#39;: 94, &#39;Tails&#39;: 106}
+Probability of Heads: 0.47
 </pre></div>
 </div>
-<img alt="_images/8b15c77dbdc4c87d23c37447e83f8828592276c3dcc38be21e500be4d228486c.png" src="_images/8b15c77dbdc4c87d23c37447e83f8828592276c3dcc38be21e500be4d228486c.png" />
+<img alt="_images/9551cb3df49905d9b3cd391c5befbc70d3e5eaa23732b1d606b68fedb4a5873f.png" src="_images/9551cb3df49905d9b3cd391c5befbc70d3e5eaa23732b1d606b68fedb4a5873f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -689,7 +700,7 @@ Probability of Heads: 0.50
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overall Probability of Pest Infestation: 20.00%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overall Probability of Pest Infestation: 16.00%
 </pre></div>
 </div>
 </div>
